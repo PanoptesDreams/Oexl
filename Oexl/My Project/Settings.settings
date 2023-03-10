@@ -1,7 +1,30 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" UseMySettingsClassName="true">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Theme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Light</Value>
+    </Setting>
+    <Setting Name="OperatorColorPrimary" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">SlateBlue</Value>
+    </Setting>
+    <Setting Name="OperatorColorSecondary" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkOrchid</Value>
+    </Setting>
+    <Setting Name="OperatorJunction" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A:</Value>
+    </Setting>
+    <Setting Name="OperatorName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Operator</Value>
+    </Setting>
+    <Setting Name="SystemMood" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Happy</Value>
+    </Setting>
+    <Setting Name="OperatorDefaultProfile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Loaded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

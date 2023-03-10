@@ -47,17 +47,26 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Common\Resources\oexl_small.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -73,12 +82,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Common\Common.vb" />
+    <Compile Include="Common\Form\Launcher.Designer.vb">
+      <DependentUpon>Launcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Launcher.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Common\Form\Operators.Designer.vb">
+      <DependentUpon>Operators.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Operators.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\RoundedForm.Designer.vb">
+      <DependentUpon>RoundedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\RoundedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Toolbox.Designer.vb">
+      <DependentUpon>Toolbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Toolbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Objects\RoundedButton.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -95,16 +132,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Common\Form\Launcher.resx">
+      <DependentUpon>Launcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Operators.resx">
+      <DependentUpon>Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\RoundedForm.resx">
+      <DependentUpon>RoundedForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Toolbox.resx">
+      <DependentUpon>Toolbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Objects\RoundedButton.resx">
+      <DependentUpon>RoundedButton.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -115,6 +174,22 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Common\Resources\close.png" />
+    <Content Include="Common\Resources\close_grey.png" />
+    <Content Include="Common\Resources\max.png" />
+    <Content Include="Common\Resources\max_grey.png" />
+    <Content Include="Common\Resources\max_grey_reduce.png" />
+    <Content Include="Common\Resources\max_reduce.png" />
+    <Content Include="Common\Resources\minimize.png" />
+    <Content Include="Common\Resources\minimize_grey.png" />
+    <Content Include="Common\Resources\oexl_large.ico" />
+    <Content Include="Common\Resources\oexl_small.ico" />
+    <Content Include="Common\Resources\splash_dark.jpg" />
+    <Content Include="Common\Resources\splash_light.jpg" />
+    <Content Include="Common\Resources\operator_default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
