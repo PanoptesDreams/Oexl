@@ -153,6 +153,23 @@ Public Module Common
 
     End Sub
 
+    Public Sub SetJunctionPath()
+        Dim folderBrowser As New FolderBrowserDialog()
+
+        ' Open the folder browser dialog
+        If folderBrowser.ShowDialog() = DialogResult.OK Then
+            ' Check if the selected path exists and is a directory
+            If Directory.Exists(folderBrowser.SelectedPath) Then
+                My.Settings.OperatorJunction = folderBrowser.SelectedPath
+                My.Settings.Save()
+                MessageBox.Show("Junction path set to: " & My.Settings.OperatorJunction, "Success")
+            Else
+                MessageBox.Show("Invalid path selected. Please select a valid directory.", "Error")
+            End If
+        End If
+    End Sub
+
+
     ' Summoner of Forms
     ''' <summary>
     ''' Opens Forms and Focus' them

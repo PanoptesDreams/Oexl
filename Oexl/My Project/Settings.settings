@@ -15,10 +15,10 @@
       <Value Profile="(Default)">A:</Value>
     </Setting>
     <Setting Name="OperatorName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Operator</Value>
+      <Value Profile="(Default)">Op</Value>
     </Setting>
     <Setting Name="SystemMood" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Happy</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="OperatorDefaultProfile" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

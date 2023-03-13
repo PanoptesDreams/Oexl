@@ -8,6 +8,9 @@
 
     Partial Friend Class MyApplication
 
+
+
+
         Public Sub Oexl_AlreadyOpen() Handles Me.StartupNextInstance
 
 

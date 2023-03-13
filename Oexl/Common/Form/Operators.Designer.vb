@@ -30,6 +30,7 @@ Partial Class Operators
         Me.ButtonSelectOperator = New Oexl.RoundedButton()
         Me.ButtonSetDefaultOperator = New Oexl.RoundedButton()
         Me.ButtonClearDefaultOperator = New Oexl.RoundedButton()
+        Me.ButtonSetJunction = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +61,6 @@ Partial Class Operators
         '
         'ButtonAddOperator
         '
-        Me.ButtonAddOperator.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonAddOperator.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonAddOperator.Location = New System.Drawing.Point(7, 289)
         Me.ButtonAddOperator.Name = "ButtonAddOperator"
@@ -71,7 +71,6 @@ Partial Class Operators
         '
         'ButtonSelectOperator
         '
-        Me.ButtonSelectOperator.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonSelectOperator.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonSelectOperator.Location = New System.Drawing.Point(261, 289)
         Me.ButtonSelectOperator.Name = "ButtonSelectOperator"
@@ -82,7 +81,6 @@ Partial Class Operators
         '
         'ButtonSetDefaultOperator
         '
-        Me.ButtonSetDefaultOperator.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonSetDefaultOperator.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonSetDefaultOperator.Location = New System.Drawing.Point(136, 289)
         Me.ButtonSetDefaultOperator.Name = "ButtonSetDefaultOperator"
@@ -93,7 +91,6 @@ Partial Class Operators
         '
         'ButtonClearDefaultOperator
         '
-        Me.ButtonClearDefaultOperator.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonClearDefaultOperator.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonClearDefaultOperator.Location = New System.Drawing.Point(136, 226)
         Me.ButtonClearDefaultOperator.Name = "ButtonClearDefaultOperator"
@@ -102,16 +99,28 @@ Partial Class Operators
         Me.ButtonClearDefaultOperator.Text = "Clear Default"
         Me.ButtonClearDefaultOperator.UseVisualStyleBackColor = False
         '
+        'ButtonSetJunction
+        '
+        Me.ButtonSetJunction.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonSetJunction.Location = New System.Drawing.Point(7, 226)
+        Me.ButtonSetJunction.Name = "ButtonSetJunction"
+        Me.ButtonSetJunction.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonSetJunction.TabIndex = 7
+        Me.ButtonSetJunction.Text = "Add Operator"
+        Me.ButtonSetJunction.UseVisualStyleBackColor = False
+        '
         'Operators
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(374, 354)
+        Me.Controls.Add(Me.ButtonSetJunction)
         Me.Controls.Add(Me.ButtonClearDefaultOperator)
         Me.Controls.Add(Me.ButtonSetDefaultOperator)
         Me.Controls.Add(Me.ButtonSelectOperator)
         Me.Controls.Add(Me.ButtonAddOperator)
         Me.Controls.Add(Me.CheckedListBoxOperators)
+        Me.ForeColor = System.Drawing.Color.DarkOrchid
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Name = "Operators"
@@ -125,6 +134,7 @@ Partial Class Operators
         Me.Controls.SetChildIndex(Me.ButtonSelectOperator, 0)
         Me.Controls.SetChildIndex(Me.ButtonSetDefaultOperator, 0)
         Me.Controls.SetChildIndex(Me.ButtonClearDefaultOperator, 0)
+        Me.Controls.SetChildIndex(Me.ButtonSetJunction, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -138,4 +148,5 @@ Partial Class Operators
     Friend WithEvents ButtonSelectOperator As RoundedButton
     Friend WithEvents ButtonSetDefaultOperator As RoundedButton
     Friend WithEvents ButtonClearDefaultOperator As RoundedButton
+    Friend WithEvents ButtonSetJunction As RoundedButton
 End Class

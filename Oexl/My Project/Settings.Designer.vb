@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Operator")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Op")>  _
         Public Property OperatorName() As String
             Get
                 Return CType(Me("OperatorName"),String)
@@ -116,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Happy")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property SystemMood() As String
             Get
                 Return CType(Me("SystemMood"),String)

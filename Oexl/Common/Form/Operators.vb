@@ -4,12 +4,29 @@ Public Class Operators
 
     ' Variables
     Dim OperatorJunction As String = My.Settings.OperatorJunction
-    Dim SelectedOperator As String = My.Settings.OperatorName
+    Dim SelectedOperator As String
 
 
     Private Sub Operators_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         PopulateList()
+
+        If My.Settings.Loaded = False Then
+
+            My.Settings.Loaded = True
+
+            ProcessCommandLineArgs()
+
+            SelectedOperator = My.Settings.OperatorName
+
+            ActivateOperator()
+
+            Summon(Launcher)
+
+            Me.Close()
+
+        End If
+
 
         If My.Settings.Loaded = False AndAlso My.Settings.OperatorDefaultProfile <> "" Then
 
@@ -68,6 +85,28 @@ Public Class Operators
 
     End Sub
 
+    Private Sub ProcessCommandLineArgs()
+
+        Dim args As String() = Environment.GetCommandLineArgs()
+
+        For i As Integer = 1 To args.Length - 1
+            Select Case args(i)
+                Case "/op"
+                    If i < args.Length - 1 Then
+                        ' The next argument is the username
+                        Dim username As String = args(i + 1)
+                        ' Do something with the username...
+                        My.Settings.OperatorName = username
+                        ASave()
+                    Else
+                        ' The -u flag is missing the username argument
+                        MsgBox("Missing -u argument")
+                    End If
+            End Select
+        Next
+
+    End Sub
+
     ' CheckBox's act like a radio button
     Private Sub CheckedListBoxOperators_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBoxOperators.SelectedIndexChanged
 
@@ -123,6 +162,7 @@ Public Class Operators
 
         My.Settings.OperatorName = SelectedOperator
 
+        SelectedOperator = StrConv(SelectedOperator, VbStrConv.ProperCase)
 
         CloseOtherForms(Me)
 
@@ -163,4 +203,14 @@ Public Class Operators
         PopulateList()
 
     End Sub
+
+    Private Sub ButtonSetJunction_Click(sender As Object, e As EventArgs) Handles ButtonSetJunction.Click
+
+        SetJunctionPath()
+
+        PopulateList()
+
+    End Sub
+
+
 End Class

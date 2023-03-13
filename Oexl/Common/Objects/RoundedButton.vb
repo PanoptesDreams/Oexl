@@ -7,6 +7,7 @@ Public Class RoundedButton
     Private BorderPath As New GraphicsPath()
     Private BorderColor As Color = My.Settings.OperatorColorSecondary
 
+
     ' Add custom properties, methods, and event handlers here
     Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
         ' Call the base class's OnPaint method to draw the basic button
@@ -15,7 +16,6 @@ Public Class RoundedButton
         ' Draw custom graphics or modify the appearance of the button here
         ' BackColor = BorderColorize(My.Settings.OperatorColorPrimary)
         SetRoundEdges()
-
         ' Draw a custom border using Pen and predetermined Arc Paths in SetRoundEdges()
         Dim pen1 As New Pen(BorderColor, 9)
         e.Graphics.DrawPath(pen1, BorderPath)
@@ -78,14 +78,5 @@ Public Class RoundedButton
         Return newColor
     End Function
 
-    Private Sub InitializeComponent()
-        Me.SuspendLayout()
-        '
-        'RoundedButton
-        '
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ResumeLayout(False)
-
-    End Sub
 End Class
 
