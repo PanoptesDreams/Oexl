@@ -33,4 +33,28 @@
         BuildOperatorTree(InputBox("Please enter an existing Operator", "Build Operator tree"))
 
     End Sub
+
+    Private Sub ButtonWingetInstall_Click(sender As Object, e As EventArgs) Handles ButtonWingetInstall.Click
+
+        Summon(WingetInstaller)
+
+    End Sub
+
+    Private Sub ButtonAlcoholCalc_Click(sender As Object, e As EventArgs) Handles ButtonAlcoholCalc.Click
+
+        Summon(AlcoholCalulator)
+
+    End Sub
+
+    Private Sub ButtonNotes_Click(sender As Object, e As EventArgs) Handles ButtonNotes.Click
+
+        Summon(Notes)
+
+    End Sub
+
+    Private Sub ButtonToolbox_Click(sender As Object, e As EventArgs) Handles ButtonToolbox.Click
+
+        Summon(Settings)
+
+    End Sub
 End Class

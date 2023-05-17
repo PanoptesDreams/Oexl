@@ -27,6 +27,10 @@ Partial Class Toolbox
         Me.ButtonRenameSystem = New Oexl.RoundedButton()
         Me.ButtonAddOperator = New Oexl.RoundedButton()
         Me.ButtonBuildOperatorTree = New Oexl.RoundedButton()
+        Me.ButtonWingetInstall = New Oexl.RoundedButton()
+        Me.ButtonAlcoholCalc = New Oexl.RoundedButton()
+        Me.ButtonNotes = New Oexl.RoundedButton()
+        Me.ButtonToolbox = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,11 +88,59 @@ Partial Class Toolbox
         Me.ButtonBuildOperatorTree.Text = "Build Op Tree"
         Me.ButtonBuildOperatorTree.UseVisualStyleBackColor = False
         '
+        'ButtonWingetInstall
+        '
+        Me.ButtonWingetInstall.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonWingetInstall.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonWingetInstall.Location = New System.Drawing.Point(6, 195)
+        Me.ButtonWingetInstall.Name = "ButtonWingetInstall"
+        Me.ButtonWingetInstall.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonWingetInstall.TabIndex = 4
+        Me.ButtonWingetInstall.Text = "Winget Install"
+        Me.ButtonWingetInstall.UseVisualStyleBackColor = False
+        '
+        'ButtonAlcoholCalc
+        '
+        Me.ButtonAlcoholCalc.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonAlcoholCalc.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonAlcoholCalc.Location = New System.Drawing.Point(6, 258)
+        Me.ButtonAlcoholCalc.Name = "ButtonAlcoholCalc"
+        Me.ButtonAlcoholCalc.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonAlcoholCalc.TabIndex = 5
+        Me.ButtonAlcoholCalc.Text = "Alcohol Calculator"
+        Me.ButtonAlcoholCalc.UseVisualStyleBackColor = False
+        '
+        'ButtonNotes
+        '
+        Me.ButtonNotes.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonNotes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonNotes.Location = New System.Drawing.Point(6, 321)
+        Me.ButtonNotes.Name = "ButtonNotes"
+        Me.ButtonNotes.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonNotes.TabIndex = 6
+        Me.ButtonNotes.Text = "Notes"
+        Me.ButtonNotes.UseVisualStyleBackColor = False
+        '
+        'ButtonToolbox
+        '
+        Me.ButtonToolbox.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonToolbox.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonToolbox.Location = New System.Drawing.Point(6, 492)
+        Me.ButtonToolbox.Name = "ButtonToolbox"
+        Me.ButtonToolbox.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonToolbox.TabIndex = 7
+        Me.ButtonToolbox.Text = "Toolbox"
+        Me.ButtonToolbox.UseVisualStyleBackColor = False
+        '
         'Toolbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(285, 561)
+        Me.Controls.Add(Me.ButtonToolbox)
+        Me.Controls.Add(Me.ButtonNotes)
+        Me.Controls.Add(Me.ButtonAlcoholCalc)
+        Me.Controls.Add(Me.ButtonWingetInstall)
         Me.Controls.Add(Me.ButtonBuildOperatorTree)
         Me.Controls.Add(Me.ButtonAddOperator)
         Me.Controls.Add(Me.ButtonRenameSystem)
@@ -97,7 +149,6 @@ Partial Class Toolbox
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Name = "Toolbox"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Toolbox"
         Me.Controls.SetChildIndex(Me.ButtonAddFont, 0)
         Me.Controls.SetChildIndex(Me.ButtonRenameSystem, 0)
@@ -106,6 +157,10 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
+        Me.Controls.SetChildIndex(Me.ButtonWingetInstall, 0)
+        Me.Controls.SetChildIndex(Me.ButtonAlcoholCalc, 0)
+        Me.Controls.SetChildIndex(Me.ButtonNotes, 0)
+        Me.Controls.SetChildIndex(Me.ButtonToolbox, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -117,4 +172,8 @@ Partial Class Toolbox
     Friend WithEvents ButtonRenameSystem As RoundedButton
     Friend WithEvents ButtonAddOperator As RoundedButton
     Friend WithEvents ButtonBuildOperatorTree As RoundedButton
+    Friend WithEvents ButtonWingetInstall As RoundedButton
+    Friend WithEvents ButtonAlcoholCalc As RoundedButton
+    Friend WithEvents ButtonNotes As RoundedButton
+    Friend WithEvents ButtonToolbox As RoundedButton
 End Class

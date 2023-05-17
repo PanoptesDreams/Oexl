@@ -22,7 +22,6 @@ Partial Class RoundedForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RoundedForm))
         Me.PictureBoxClose = New System.Windows.Forms.PictureBox()
         Me.PictureBoxMax = New System.Windows.Forms.PictureBox()
         Me.PictureBoxMinimize = New System.Windows.Forms.PictureBox()
@@ -35,13 +34,14 @@ Partial Class RoundedForm
         '
         Me.PictureBoxClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBoxClose.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBoxClose.BackgroundImage = CType(resources.GetObject("PictureBoxClose.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxClose.BackgroundImage = Global.Oexl.My.Resources.Resources.circle_grey
         Me.PictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxClose.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxClose.Location = New System.Drawing.Point(312, 3)
-        Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(309, 6)
+        Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxClose.Name = "PictureBoxClose"
-        Me.PictureBoxClose.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBoxClose.Padding = New System.Windows.Forms.Padding(1)
+        Me.PictureBoxClose.Size = New System.Drawing.Size(21, 21)
         Me.PictureBoxClose.TabIndex = 0
         Me.PictureBoxClose.TabStop = False
         '
@@ -49,13 +49,14 @@ Partial Class RoundedForm
         '
         Me.PictureBoxMax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBoxMax.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBoxMax.BackgroundImage = Global.Oexl.My.Resources.Resources.max_grey
+        Me.PictureBoxMax.BackgroundImage = Global.Oexl.My.Resources.Resources.square_grey
         Me.PictureBoxMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMax.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMax.Location = New System.Drawing.Point(312, 21)
-        Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(309, 30)
+        Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMax.Name = "PictureBoxMax"
-        Me.PictureBoxMax.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBoxMax.Padding = New System.Windows.Forms.Padding(1)
+        Me.PictureBoxMax.Size = New System.Drawing.Size(21, 21)
         Me.PictureBoxMax.TabIndex = 1
         Me.PictureBoxMax.TabStop = False
         '
@@ -63,13 +64,14 @@ Partial Class RoundedForm
         '
         Me.PictureBoxMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBoxMinimize.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBoxMinimize.BackgroundImage = Global.Oexl.My.Resources.Resources.minimize_grey
+        Me.PictureBoxMinimize.BackgroundImage = Global.Oexl.My.Resources.Resources.triangle_grey
         Me.PictureBoxMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMinimize.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(312, 39)
-        Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(309, 54)
+        Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMinimize.Name = "PictureBoxMinimize"
-        Me.PictureBoxMinimize.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBoxMinimize.Padding = New System.Windows.Forms.Padding(1)
+        Me.PictureBoxMinimize.Size = New System.Drawing.Size(21, 21)
         Me.PictureBoxMinimize.TabIndex = 2
         Me.PictureBoxMinimize.TabStop = False
         '

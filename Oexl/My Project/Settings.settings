@@ -6,10 +6,10 @@
       <Value Profile="(Default)">Light</Value>
     </Setting>
     <Setting Name="OperatorColorPrimary" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">SlateBlue</Value>
+      <Value Profile="(Default)">Control</Value>
     </Setting>
     <Setting Name="OperatorColorSecondary" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">DarkOrchid</Value>
+      <Value Profile="(Default)">Indigo</Value>
     </Setting>
     <Setting Name="OperatorJunction" Type="System.String" Scope="User">
       <Value Profile="(Default)">A:</Value>

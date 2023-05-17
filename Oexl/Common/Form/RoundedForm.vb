@@ -9,6 +9,7 @@ Public Class RoundedForm
     ' Movement
     Private isDragging As Boolean = False
     Private mouseOffset As Point
+    Private cursorUp As Point
 
 
     ' Form Loading event handler
@@ -112,7 +113,17 @@ Public Class RoundedForm
 
         If e.Button = MouseButtons.Left Then ' Move form on Left Mouse down, activation
 
-            isDragging = True
+
+            If WindowState = FormWindowState.Maximized Then
+
+                WindowState = FormWindowState.Normal
+
+            Else
+
+                isDragging = True
+
+            End If
+
             mouseOffset = New Point(-e.X, -e.Y)
 
         End If
@@ -124,7 +135,7 @@ Public Class RoundedForm
 
         If isDragging Then ' Move form on Left Mouse down, movement
 
-            Dim mousePos As Point = Control.MousePosition
+            Dim mousePos As Point = MousePosition
             mousePos.Offset(mouseOffset.X, mouseOffset.Y)
             Me.Location = mousePos
 
@@ -139,6 +150,8 @@ Public Class RoundedForm
 
             isDragging = False
 
+            cursorUp = MousePosition
+
         End If
 
     End Sub
@@ -148,13 +161,13 @@ Public Class RoundedForm
     ' Close
     Private Sub PictureBoxClose_MouseEnter(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseEnter
 
-        PictureBoxClose.BackgroundImage = My.Resources.close
+        PictureBoxClose.BackgroundImage = My.Resources.circle
 
     End Sub
 
     Private Sub PictureBoxClose_MouseLeave(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseLeave
 
-        PictureBoxClose.BackgroundImage = My.Resources.close_grey
+        PictureBoxClose.BackgroundImage = My.Resources.circle_grey
 
     End Sub
 
@@ -168,9 +181,9 @@ Public Class RoundedForm
     Private Sub PictureBoxMax_MouseEnter(sender As Object, e As EventArgs) Handles PictureBoxMax.MouseEnter
 
         If WindowState = FormWindowState.Maximized Then
-            PictureBoxMax.BackgroundImage = My.Resources.max_reduce
+            PictureBoxMax.BackgroundImage = My.Resources.square
         Else
-            PictureBoxMax.BackgroundImage = My.Resources.max
+            PictureBoxMax.BackgroundImage = My.Resources.square
         End If
 
     End Sub
@@ -178,9 +191,9 @@ Public Class RoundedForm
     Private Sub PictureBoxMax_MouseLeave(sender As Object, e As EventArgs) Handles PictureBoxMax.MouseLeave
 
         If WindowState = FormWindowState.Maximized Then
-            PictureBoxMax.BackgroundImage = My.Resources.max_grey_reduce
+            PictureBoxMax.BackgroundImage = My.Resources.square_grey
         Else
-            PictureBoxMax.BackgroundImage = My.Resources.max_grey
+            PictureBoxMax.BackgroundImage = My.Resources.square_grey
         End If
 
     End Sub
@@ -194,13 +207,13 @@ Public Class RoundedForm
     ' Minimize
     Private Sub PictureBoxMinimize_MouseEnter(sender As Object, e As EventArgs) Handles PictureBoxMinimize.MouseEnter
 
-        PictureBoxMinimize.BackgroundImage = My.Resources.minimize
+        PictureBoxMinimize.BackgroundImage = My.Resources.triangle
 
     End Sub
 
     Private Sub PictureBoxMinimize_MouseLeave(sender As Object, e As EventArgs) Handles PictureBoxMinimize.MouseLeave
 
-        PictureBoxMinimize.BackgroundImage = My.Resources.minimize_grey
+        PictureBoxMinimize.BackgroundImage = My.Resources.triangle_grey
 
     End Sub
 

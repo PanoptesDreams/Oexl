@@ -77,12 +77,17 @@
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.Win32" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Runtime.InteropServices" />
+    <Import Include="System.Text" />
+    <Import Include="System.Threading" />
     <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
@@ -91,10 +96,22 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Common\Common.vb" />
+    <Compile Include="Common\Form\AlcoholCalulator.Designer.vb">
+      <DependentUpon>AlcoholCalulator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\AlcoholCalulator.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Launcher.Designer.vb">
       <DependentUpon>Launcher.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\Launcher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Notes.Designer.vb">
+      <DependentUpon>Notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Notes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\Form\Operators.Designer.vb">
@@ -109,6 +126,12 @@
     <Compile Include="Common\Form\RoundedForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Splash.Designer.vb">
       <DependentUpon>Splash.vb</DependentUpon>
     </Compile>
@@ -119,6 +142,12 @@
       <DependentUpon>Toolbox.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\Toolbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\WingetInstaller.Designer.vb">
+      <DependentUpon>WingetInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\WingetInstaller.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\Objects\RoundedButton.vb">
@@ -142,8 +171,14 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Common\Form\AlcoholCalulator.resx">
+      <DependentUpon>AlcoholCalulator.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Launcher.resx">
       <DependentUpon>Launcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Notes.resx">
+      <DependentUpon>Notes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Operators.resx">
       <DependentUpon>Operators.vb</DependentUpon>
@@ -151,11 +186,17 @@
     <EmbeddedResource Include="Common\Form\RoundedForm.resx">
       <DependentUpon>RoundedForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Toolbox.resx">
       <DependentUpon>Toolbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\WingetInstaller.resx">
+      <DependentUpon>WingetInstaller.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Objects\RoundedButton.resx">
       <DependentUpon>RoundedButton.vb</DependentUpon>
@@ -184,8 +225,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Common\Resources\circle.png" />
+    <None Include="Common\Resources\triangle_grey.png" />
+    <None Include="Common\Resources\circle_grey.png" />
     <Content Include="Common\Resources\close.png" />
     <Content Include="Common\Resources\close_grey.png" />
+    <Content Include="Common\Resources\cross.png" />
+    <None Include="Common\Resources\cross_grey.png" />
     <Content Include="Common\Resources\max.png" />
     <Content Include="Common\Resources\max_grey.png" />
     <Content Include="Common\Resources\max_grey_reduce.png" />
@@ -197,9 +243,12 @@
     <Content Include="Common\Resources\splash_dark.jpg" />
     <Content Include="Common\Resources\splash_light.jpg" />
     <Content Include="Common\Resources\operator_default.png" />
+    <Content Include="Common\Resources\square.png" />
+    <None Include="Common\Resources\square_grey.png" />
+    <Content Include="Common\Resources\triangle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>robocopy $(TargetDir) A:\Adam\Software\Shell\Oexl\p.data</PostBuildEvent>
+    <PostBuildEvent>copy /y $(TargetDir) %25OperatorJunction%25\%25OperatorName%25\Software\Shell\Oexl\p.data</PostBuildEvent>
   </PropertyGroup>
 </Project>

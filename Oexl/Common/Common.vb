@@ -1,8 +1,5 @@
 ﻿Imports System.Drawing.Text
-Imports System.IO
 Imports System.Management
-Imports System.Runtime.InteropServices
-Imports Microsoft.Win32
 
 
 Public Module Common
@@ -292,6 +289,8 @@ Public Module Common
         Return Greet
 
     End Function
+
+
 
     ' System Name Validity Checker
     ''' <summary>

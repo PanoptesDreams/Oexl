@@ -1,6 +1,4 @@
-﻿Imports System.IO
-
-Public Class Launcher
+﻿Public Class Launcher
 
 
     Private Sub Launcher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,6 +8,12 @@ Public Class Launcher
         PositionElements()
 
         Positioner(Me, "Top")
+
+        Dim Jeff As New RoundedButton
+        Jeff.Location = New Point(3, 3)
+        Jeff.Text = "My name Jeff"
+
+        MaximumSize = New Size(Screen.PrimaryScreen.Bounds.Width, 77)
 
     End Sub
 
@@ -46,6 +50,18 @@ Public Class Launcher
     Private Sub LabelOperatorName_Click(sender As Object, e As EventArgs) Handles LabelOperatorName.Click
 
         Summon(Operators)
+
+    End Sub
+
+    Private Sub PictureBoxToolbox_Click(sender As Object, e As EventArgs) Handles PictureBoxToolbox.Click
+
+        Summon(Toolbox)
+
+    End Sub
+
+    Private Sub Launcher_SizeChanged(sender As Object, e As EventArgs) Handles MyBase.SizeChanged
+
+
 
     End Sub
 End Class

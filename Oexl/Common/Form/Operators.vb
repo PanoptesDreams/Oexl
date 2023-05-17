@@ -15,7 +15,7 @@ Public Class Operators
 
             My.Settings.Loaded = True
 
-            ProcessCommandLineArgs()
+            ProtocolHandler()
 
             SelectedOperator = My.Settings.OperatorName
 
@@ -46,7 +46,11 @@ Public Class Operators
     ' Populate Checkbox List with Operators
     Public Sub PopulateList()
 
-        Dim OperatorJunction = My.Settings.OperatorJunction
+        Dim OperatorJunction = "A:"
+
+        If My.Settings.OperatorJunction <> "" Then
+            OperatorJunction = My.Settings.OperatorJunction
+        End If
 
         CheckedListBoxOperators.Items.Clear()
 
@@ -85,24 +89,35 @@ Public Class Operators
 
     End Sub
 
-    Private Sub ProcessCommandLineArgs()
+    ' This is not functioning as intended, we know how to fix it, can't do it right now
+    Private Sub ProtocolHandler()
 
         Dim args As String() = Environment.GetCommandLineArgs()
+        Dim ArgsB As String = "oexl:"
 
         For i As Integer = 1 To args.Length - 1
+
             Select Case args(i)
-                Case "/op"
+
+                Case "op"
+
                     If i < args.Length - 1 Then
+
                         ' The next argument is the username
                         Dim username As String = args(i + 1)
                         ' Do something with the username...
                         My.Settings.OperatorName = username
                         ASave()
+
                     Else
+
                         ' The -u flag is missing the username argument
                         MsgBox("Missing -u argument")
+
                     End If
+
             End Select
+
         Next
 
     End Sub
@@ -212,5 +227,14 @@ Public Class Operators
 
     End Sub
 
+    Private Sub RoundedButton1_Click(sender As Object, e As EventArgs) Handles RoundedButton1.Click
 
+
+        For Each item In Environment.GetCommandLineArgs
+
+            CheckedListBoxOperators.Items.Add(item)
+
+        Next
+
+    End Sub
 End Class
