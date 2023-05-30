@@ -102,6 +102,18 @@
     <Compile Include="Common\Form\AlcoholCalulator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\DesktopClock.Designer.vb">
+      <DependentUpon>DesktopClock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\DesktopClock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\DesktopClockSettings.Designer.vb">
+      <DependentUpon>DesktopClockSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\DesktopClockSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Launcher.Designer.vb">
       <DependentUpon>Launcher.vb</DependentUpon>
     </Compile>
@@ -136,6 +148,12 @@
       <DependentUpon>Splash.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\TemplateForm.Designer.vb">
+      <DependentUpon>TemplateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\TemplateForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\Form\Toolbox.Designer.vb">
@@ -174,6 +192,12 @@
     <EmbeddedResource Include="Common\Form\AlcoholCalulator.resx">
       <DependentUpon>AlcoholCalulator.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\DesktopClock.resx">
+      <DependentUpon>DesktopClock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\DesktopClockSettings.resx">
+      <DependentUpon>DesktopClockSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Launcher.resx">
       <DependentUpon>Launcher.vb</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\TemplateForm.resx">
+      <DependentUpon>TemplateForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Toolbox.resx">
       <DependentUpon>Toolbox.vb</DependentUpon>
@@ -228,6 +255,8 @@
     <Content Include="Common\Resources\circle.png" />
     <None Include="Common\Resources\triangle_grey.png" />
     <None Include="Common\Resources\circle_grey.png" />
+    <None Include="Common\Resources\clock.png" />
+    <None Include="Common\Resources\clock.ico" />
     <Content Include="Common\Resources\close.png" />
     <Content Include="Common\Resources\close_grey.png" />
     <Content Include="Common\Resources\cross.png" />

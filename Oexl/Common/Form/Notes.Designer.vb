@@ -25,6 +25,7 @@ Partial Class Notes
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Notes))
         Me.ListBoxNotes = New System.Windows.Forms.ListBox()
         Me.TextBoxNotes = New System.Windows.Forms.RichTextBox()
+        Me.ButtonOpenNotesFolder = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,10 +49,10 @@ Partial Class Notes
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ListBoxNotes.FormattingEnabled = True
         Me.ListBoxNotes.ItemHeight = 20
-        Me.ListBoxNotes.Location = New System.Drawing.Point(18, 18)
+        Me.ListBoxNotes.Location = New System.Drawing.Point(18, 15)
         Me.ListBoxNotes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListBoxNotes.Name = "ListBoxNotes"
-        Me.ListBoxNotes.Size = New System.Drawing.Size(212, 604)
+        Me.ListBoxNotes.Size = New System.Drawing.Size(212, 644)
         Me.ListBoxNotes.TabIndex = 0
         '
         'TextBoxNotes
@@ -59,17 +60,29 @@ Partial Class Notes
         Me.TextBoxNotes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxNotes.Location = New System.Drawing.Point(268, 63)
+        Me.TextBoxNotes.Location = New System.Drawing.Point(257, 81)
         Me.TextBoxNotes.Name = "TextBoxNotes"
-        Me.TextBoxNotes.Size = New System.Drawing.Size(652, 559)
+        Me.TextBoxNotes.Size = New System.Drawing.Size(652, 578)
         Me.TextBoxNotes.TabIndex = 3
         Me.TextBoxNotes.Text = ""
+        '
+        'ButtonOpenNotesFolder
+        '
+        Me.ButtonOpenNotesFolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonOpenNotesFolder.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonOpenNotesFolder.Location = New System.Drawing.Point(257, 14)
+        Me.ButtonOpenNotesFolder.Name = "ButtonOpenNotesFolder"
+        Me.ButtonOpenNotesFolder.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonOpenNotesFolder.TabIndex = 4
+        Me.ButtonOpenNotesFolder.Text = "Open Folder"
+        Me.ButtonOpenNotesFolder.UseVisualStyleBackColor = False
         '
         'Notes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(962, 652)
+        Me.ClientSize = New System.Drawing.Size(962, 671)
+        Me.Controls.Add(Me.ButtonOpenNotesFolder)
         Me.Controls.Add(Me.TextBoxNotes)
         Me.Controls.Add(Me.ListBoxNotes)
         Me.ForeColor = System.Drawing.Color.DarkOrchid
@@ -83,6 +96,7 @@ Partial Class Notes
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
         Me.Controls.SetChildIndex(Me.TextBoxNotes, 0)
+        Me.Controls.SetChildIndex(Me.ButtonOpenNotesFolder, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -92,4 +106,5 @@ Partial Class Notes
 
     Friend WithEvents ListBoxNotes As ListBox
     Friend WithEvents TextBoxNotes As RichTextBox
+    Friend WithEvents ButtonOpenNotesFolder As RoundedButton
 End Class

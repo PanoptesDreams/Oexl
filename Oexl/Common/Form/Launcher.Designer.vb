@@ -22,17 +22,27 @@ Partial Class Launcher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Launcher))
         Me.LabelOperatorName = New System.Windows.Forms.Label()
         Me.LabelGreeting = New System.Windows.Forms.Label()
         Me.PictureBoxOperator = New System.Windows.Forms.PictureBox()
         Me.PictureBoxToolbox = New System.Windows.Forms.PictureBox()
         Me.LabelArgs = New System.Windows.Forms.Label()
+        Me.TrayCommon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.TrayMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TrayMenuLauncher = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TrayMenuDestopClock = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuToolbox = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TrayMenuExit = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxOperator, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxToolbox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBoxClose
@@ -95,6 +105,57 @@ Partial Class Launcher
         Me.LabelArgs.TabIndex = 5
         Me.LabelArgs.Text = "Greeting"
         '
+        'TrayCommon
+        '
+        Me.TrayCommon.ContextMenuStrip = Me.TrayMenu
+        Me.TrayCommon.Icon = CType(resources.GetObject("TrayCommon.Icon"), System.Drawing.Icon)
+        Me.TrayCommon.Text = "Oh My GAASSHHH"
+        Me.TrayCommon.Visible = True
+        '
+        'TrayMenu
+        '
+        Me.TrayMenu.BackColor = System.Drawing.SystemColors.Control
+        Me.TrayMenu.DropShadowEnabled = False
+        Me.TrayMenu.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrayMenuLauncher, Me.TrayMenuSeparator1, Me.TrayMenuDestopClock, Me.TrayMenuToolbox, Me.TrayMenuSeparator2, Me.TrayMenuExit})
+        Me.TrayMenu.Name = "TrayMenu"
+        Me.TrayMenu.Size = New System.Drawing.Size(188, 142)
+        '
+        'TrayMenuLauncher
+        '
+        Me.TrayMenuLauncher.Name = "TrayMenuLauncher"
+        Me.TrayMenuLauncher.Size = New System.Drawing.Size(187, 26)
+        Me.TrayMenuLauncher.Text = "Show Launcher"
+        '
+        'TrayMenuSeparator1
+        '
+        Me.TrayMenuSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.TrayMenuSeparator1.Name = "TrayMenuSeparator1"
+        Me.TrayMenuSeparator1.Size = New System.Drawing.Size(184, 6)
+        '
+        'TrayMenuDestopClock
+        '
+        Me.TrayMenuDestopClock.Name = "TrayMenuDestopClock"
+        Me.TrayMenuDestopClock.Size = New System.Drawing.Size(187, 26)
+        Me.TrayMenuDestopClock.Text = "Desktop Clock"
+        '
+        'TrayMenuToolbox
+        '
+        Me.TrayMenuToolbox.Name = "TrayMenuToolbox"
+        Me.TrayMenuToolbox.Size = New System.Drawing.Size(187, 26)
+        Me.TrayMenuToolbox.Text = "Toolbox"
+        '
+        'TrayMenuSeparator2
+        '
+        Me.TrayMenuSeparator2.Name = "TrayMenuSeparator2"
+        Me.TrayMenuSeparator2.Size = New System.Drawing.Size(184, 6)
+        '
+        'TrayMenuExit
+        '
+        Me.TrayMenuExit.Name = "TrayMenuExit"
+        Me.TrayMenuExit.Size = New System.Drawing.Size(187, 26)
+        Me.TrayMenuExit.Text = "Exit"
+        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -125,6 +186,7 @@ Partial Class Launcher
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxOperator, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxToolbox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TrayMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -135,4 +197,12 @@ Partial Class Launcher
     Friend WithEvents PictureBoxOperator As PictureBox
     Friend WithEvents PictureBoxToolbox As PictureBox
     Friend WithEvents LabelArgs As Label
+    Friend WithEvents TrayCommon As NotifyIcon
+    Friend WithEvents TrayMenu As ContextMenuStrip
+    Friend WithEvents TrayMenuLauncher As ToolStripMenuItem
+    Friend WithEvents TrayMenuSeparator1 As ToolStripSeparator
+    Friend WithEvents TrayMenuDestopClock As ToolStripMenuItem
+    Friend WithEvents TrayMenuToolbox As ToolStripMenuItem
+    Friend WithEvents TrayMenuSeparator2 As ToolStripSeparator
+    Friend WithEvents TrayMenuExit As ToolStripMenuItem
 End Class

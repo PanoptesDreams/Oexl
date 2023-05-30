@@ -204,6 +204,11 @@ Public Module Common
     End Sub
 
     ' Form Positioner
+    ''' <summary>
+    ''' Positions a form for you.
+    ''' </summary>
+    ''' <param name="Sender">Always Me</param>
+    ''' <param name="Placement">Top, Bottom, Left, Right, Center</param>
     Public Sub Positioner(Sender As Form, Placement As String)
 
         Select Case Placement

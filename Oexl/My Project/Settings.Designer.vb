@@ -149,6 +149,66 @@ Namespace My
                 Me("Loaded") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Hart Clock")>  _
+        Public Property ClockName() As String
+            Get
+                Return CType(Me("ClockName"),String)
+            End Get
+            Set
+                Me("ClockName") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("13")>  _
+        Public Property ClockUTC() As String
+            Get
+                Return CType(Me("ClockUTC"),String)
+            End Get
+            Set
+                Me("ClockUTC") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ClockFormat() As String
+            Get
+                Return CType(Me("ClockFormat"),String)
+            End Get
+            Set
+                Me("ClockFormat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property DestopClockActive() As Boolean
+            Get
+                Return CType(Me("DestopClockActive"),Boolean)
+            End Get
+            Set
+                Me("DestopClockActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property LauncherActive() As Boolean
+            Get
+                Return CType(Me("LauncherActive"),Boolean)
+            End Get
+            Set
+                Me("LauncherActive") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

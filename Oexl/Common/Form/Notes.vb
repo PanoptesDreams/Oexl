@@ -61,5 +61,11 @@
         End If
     End Sub
 
+    Private Sub ButtonOpenNotesFolder_Click(sender As Object, e As EventArgs) Handles ButtonOpenNotesFolder.Click
 
+        Dim startInfo As New ProcessStartInfo("explorer.exe")
+        startInfo.Arguments = folderPath
+        Process.Start(startInfo)
+
+    End Sub
 End Class

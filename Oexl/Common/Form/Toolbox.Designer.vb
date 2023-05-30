@@ -30,19 +30,24 @@ Partial Class Toolbox
         Me.ButtonWingetInstall = New Oexl.RoundedButton()
         Me.ButtonAlcoholCalc = New Oexl.RoundedButton()
         Me.ButtonNotes = New Oexl.RoundedButton()
-        Me.ButtonToolbox = New Oexl.RoundedButton()
+        Me.ButtonSettings = New Oexl.RoundedButton()
+        Me.ButtonTemplate = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'PictureBoxClose
+        '
+        Me.PictureBoxClose.Location = New System.Drawing.Point(257, 3)
+        '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(312, 24)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(260, 24)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(312, 45)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(260, 45)
         '
         'ButtonAddFont
         '
@@ -121,23 +126,35 @@ Partial Class Toolbox
         Me.ButtonNotes.Text = "Notes"
         Me.ButtonNotes.UseVisualStyleBackColor = False
         '
-        'ButtonToolbox
+        'ButtonSettings
         '
-        Me.ButtonToolbox.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.ButtonToolbox.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonToolbox.Location = New System.Drawing.Point(6, 492)
-        Me.ButtonToolbox.Name = "ButtonToolbox"
-        Me.ButtonToolbox.Size = New System.Drawing.Size(106, 57)
-        Me.ButtonToolbox.TabIndex = 7
-        Me.ButtonToolbox.Text = "Toolbox"
-        Me.ButtonToolbox.UseVisualStyleBackColor = False
+        Me.ButtonSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonSettings.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonSettings.Location = New System.Drawing.Point(6, 492)
+        Me.ButtonSettings.Name = "ButtonSettings"
+        Me.ButtonSettings.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonSettings.TabIndex = 7
+        Me.ButtonSettings.Text = "Settings"
+        Me.ButtonSettings.UseVisualStyleBackColor = False
+        '
+        'ButtonTemplate
+        '
+        Me.ButtonTemplate.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonTemplate.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonTemplate.Location = New System.Drawing.Point(118, 492)
+        Me.ButtonTemplate.Name = "ButtonTemplate"
+        Me.ButtonTemplate.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonTemplate.TabIndex = 8
+        Me.ButtonTemplate.Text = "Template"
+        Me.ButtonTemplate.UseVisualStyleBackColor = False
         '
         'Toolbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(285, 561)
-        Me.Controls.Add(Me.ButtonToolbox)
+        Me.ClientSize = New System.Drawing.Size(233, 561)
+        Me.Controls.Add(Me.ButtonTemplate)
+        Me.Controls.Add(Me.ButtonSettings)
         Me.Controls.Add(Me.ButtonNotes)
         Me.Controls.Add(Me.ButtonAlcoholCalc)
         Me.Controls.Add(Me.ButtonWingetInstall)
@@ -160,7 +177,8 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.ButtonWingetInstall, 0)
         Me.Controls.SetChildIndex(Me.ButtonAlcoholCalc, 0)
         Me.Controls.SetChildIndex(Me.ButtonNotes, 0)
-        Me.Controls.SetChildIndex(Me.ButtonToolbox, 0)
+        Me.Controls.SetChildIndex(Me.ButtonSettings, 0)
+        Me.Controls.SetChildIndex(Me.ButtonTemplate, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -175,5 +193,6 @@ Partial Class Toolbox
     Friend WithEvents ButtonWingetInstall As RoundedButton
     Friend WithEvents ButtonAlcoholCalc As RoundedButton
     Friend WithEvents ButtonNotes As RoundedButton
-    Friend WithEvents ButtonToolbox As RoundedButton
+    Friend WithEvents ButtonSettings As RoundedButton
+    Friend WithEvents ButtonTemplate As RoundedButton
 End Class

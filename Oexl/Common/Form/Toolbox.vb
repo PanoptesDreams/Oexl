@@ -5,6 +5,9 @@
 
         Positioner(Me, "Left")
 
+        toggleHide = False ' Close don't hide
+
+
     End Sub
 
 
@@ -52,7 +55,7 @@
 
     End Sub
 
-    Private Sub ButtonToolbox_Click(sender As Object, e As EventArgs) Handles ButtonToolbox.Click
+    Private Sub ButtonToolbox_Click(sender As Object, e As EventArgs) Handles ButtonSettings.Click
 
         Summon(Settings)
 

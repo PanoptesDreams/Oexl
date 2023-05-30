@@ -15,6 +15,14 @@
 
         MaximumSize = New Size(Screen.PrimaryScreen.Bounds.Width, 77)
 
+        PrepareTray()
+
+        If My.Settings.DestopClockActive = True Then
+
+            Summon(DesktopClock)
+
+        End If
+
     End Sub
 
     ' Operator Loader
@@ -59,9 +67,67 @@
 
     End Sub
 
-    Private Sub Launcher_SizeChanged(sender As Object, e As EventArgs) Handles MyBase.SizeChanged
+
+    Private Sub TrayMenuLauncher_Click(sender As Object, e As EventArgs) Handles TrayMenuLauncher.Click
+
+        If TrayMenuLauncher.Checked = True Then
+
+            Hide()
+
+            TrayMenuLauncher.Checked = False
+
+        Else
+
+            Show()
+
+            TrayMenuLauncher.Checked = True
+
+        End If
 
 
+    End Sub
+
+    Private Sub TrayMenuExit_Click(sender As Object, e As EventArgs) Handles TrayMenuExit.Click
+
+        Application.Exit()
+
+    End Sub
+
+    ' Set Tray States
+    Private Sub PrepareTray()
+
+        TrayMenuLauncher.Checked = My.Settings.LauncherActive
+
+        TrayMenuDestopClock.Checked = My.Settings.DestopClockActive
+
+
+    End Sub
+
+    Private Sub TrayMenuDestopClock_Click(sender As Object, e As EventArgs) Handles TrayMenuDestopClock.Click
+
+        If TrayMenuDestopClock.Checked = True Then
+
+            DesktopClock.Close()
+
+            TrayMenuDestopClock.Checked = False
+
+        Else
+
+            Summon(DesktopClock)
+
+            TrayMenuDestopClock.Checked = True
+
+        End If
+
+        My.Settings.DestopClockActive = TrayMenuDestopClock.Checked
+
+        ASave()
+
+    End Sub
+
+    Private Sub TrayMenuToolbox_Click(sender As Object, e As EventArgs) Handles TrayMenuToolbox.Click
+
+        Summon(Toolbox)
 
     End Sub
 End Class
