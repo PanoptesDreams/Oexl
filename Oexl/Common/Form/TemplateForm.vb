@@ -5,6 +5,8 @@
     ' Most handling is done in the RoundedForm, so if you want sweeping changes, go there
     ' This is for tweaking each unique butterfly
 
+    ' Do not directly copy the file, individually copy parts you need.
+
 
     Private Sub TemplateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

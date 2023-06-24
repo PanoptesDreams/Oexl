@@ -33,7 +33,7 @@
       <Value Profile="(Default)">13</Value>
     </Setting>
     <Setting Name="ClockFormat" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">hh mm ss tt</Value>
     </Setting>
     <Setting Name="DestopClockActive" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

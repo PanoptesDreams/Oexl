@@ -11,34 +11,7 @@ Public Class Operators
 
         PopulateList()
 
-        If My.Settings.Loaded = False Then
 
-            My.Settings.Loaded = True
-
-            ProtocolHandler()
-
-            SelectedOperator = My.Settings.OperatorName
-
-            ActivateOperator()
-
-            Summon(Launcher)
-
-            Me.Close()
-
-        End If
-
-
-        If My.Settings.Loaded = False AndAlso My.Settings.OperatorDefaultProfile <> "" Then
-
-            My.Settings.Loaded = True
-
-            ActivateOperator()
-
-            Summon(Launcher)
-
-            Me.Close()
-
-        End If
 
 
     End Sub

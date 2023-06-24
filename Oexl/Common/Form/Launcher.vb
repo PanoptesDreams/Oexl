@@ -23,6 +23,9 @@
 
         End If
 
+        Summon(Shortcuts)
+
+
     End Sub
 
     ' Operator Loader
@@ -129,5 +132,23 @@
 
         Summon(Toolbox)
 
+    End Sub
+
+    Private Sub Launcher_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+
+        If Visible = False Then
+
+            TrayMenuLauncher.Checked = False
+
+        ElseIf Visible = True Then
+
+            TrayMenuLauncher.Checked = True
+
+        End If
+
+    End Sub
+
+    Private Sub TrayMenuShortcuts_Click(sender As Object, e As EventArgs) Handles TrayMenuShortcuts.Click
+        Summon(Shortcuts)
     End Sub
 End Class

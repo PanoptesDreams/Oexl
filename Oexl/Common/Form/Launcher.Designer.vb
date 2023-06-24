@@ -34,6 +34,7 @@ Partial Class Launcher
         Me.TrayMenuLauncher = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrayMenuSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.TrayMenuDestopClock = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrayMenuShortcuts = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrayMenuToolbox = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrayMenuSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TrayMenuExit = New System.Windows.Forms.ToolStripMenuItem()
@@ -117,9 +118,9 @@ Partial Class Launcher
         Me.TrayMenu.BackColor = System.Drawing.SystemColors.Control
         Me.TrayMenu.DropShadowEnabled = False
         Me.TrayMenu.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrayMenuLauncher, Me.TrayMenuSeparator1, Me.TrayMenuDestopClock, Me.TrayMenuToolbox, Me.TrayMenuSeparator2, Me.TrayMenuExit})
+        Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrayMenuLauncher, Me.TrayMenuSeparator1, Me.TrayMenuDestopClock, Me.TrayMenuShortcuts, Me.TrayMenuToolbox, Me.TrayMenuSeparator2, Me.TrayMenuExit})
         Me.TrayMenu.Name = "TrayMenu"
-        Me.TrayMenu.Size = New System.Drawing.Size(188, 142)
+        Me.TrayMenu.Size = New System.Drawing.Size(188, 168)
         '
         'TrayMenuLauncher
         '
@@ -138,6 +139,13 @@ Partial Class Launcher
         Me.TrayMenuDestopClock.Name = "TrayMenuDestopClock"
         Me.TrayMenuDestopClock.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuDestopClock.Text = "Desktop Clock"
+        '
+        'TrayMenuShortcuts
+        '
+        Me.TrayMenuShortcuts.Name = "TrayMenuShortcuts"
+        Me.TrayMenuShortcuts.Size = New System.Drawing.Size(187, 26)
+        Me.TrayMenuShortcuts.Tag = "shortcut"
+        Me.TrayMenuShortcuts.Text = "Shortcut"
         '
         'TrayMenuToolbox
         '
@@ -198,11 +206,12 @@ Partial Class Launcher
     Friend WithEvents PictureBoxToolbox As PictureBox
     Friend WithEvents LabelArgs As Label
     Friend WithEvents TrayCommon As NotifyIcon
-    Friend WithEvents TrayMenu As ContextMenuStrip
     Friend WithEvents TrayMenuLauncher As ToolStripMenuItem
     Friend WithEvents TrayMenuSeparator1 As ToolStripSeparator
     Friend WithEvents TrayMenuDestopClock As ToolStripMenuItem
     Friend WithEvents TrayMenuToolbox As ToolStripMenuItem
     Friend WithEvents TrayMenuSeparator2 As ToolStripSeparator
     Friend WithEvents TrayMenuExit As ToolStripMenuItem
+    Friend WithEvents TrayMenuShortcuts As ToolStripMenuItem
+    Public WithEvents TrayMenu As ContextMenuStrip
 End Class

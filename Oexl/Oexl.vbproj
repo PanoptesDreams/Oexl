@@ -126,6 +126,12 @@
     <Compile Include="Common\Form\Notes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\NoteTaker.Designer.vb">
+      <DependentUpon>NoteTaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\NoteTaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Operators.Designer.vb">
       <DependentUpon>Operators.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,12 @@
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Shortcuts.Designer.vb">
+      <DependentUpon>Shortcuts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Shortcuts.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\Form\Splash.Designer.vb">
@@ -204,6 +216,9 @@
     <EmbeddedResource Include="Common\Form\Notes.resx">
       <DependentUpon>Notes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\NoteTaker.resx">
+      <DependentUpon>NoteTaker.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Operators.resx">
       <DependentUpon>Operators.vb</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Shortcuts.resx">
+      <DependentUpon>Shortcuts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>

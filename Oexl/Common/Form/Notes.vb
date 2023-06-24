@@ -68,4 +68,10 @@
         Process.Start(startInfo)
 
     End Sub
+
+    Private Sub RoundedButton1_Click(sender As Object, e As EventArgs) Handles ButtonTakeNote.Click
+
+        Summon(NoteTaker)
+
+    End Sub
 End Class

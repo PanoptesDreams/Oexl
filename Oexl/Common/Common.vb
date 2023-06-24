@@ -6,6 +6,7 @@ Public Module Common
 
 #Region "Subroutines"
 
+
     ' Save Settings To My.Settings
     Public Sub ASave()
 
@@ -252,6 +253,8 @@ Public Module Common
             Return (process.ExitCode = 0)
 
         Catch ex As Exception
+
+            MsgBox(ex.Message)
 
             Return False
 

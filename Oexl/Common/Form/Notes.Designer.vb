@@ -26,6 +26,7 @@ Partial Class Notes
         Me.ListBoxNotes = New System.Windows.Forms.ListBox()
         Me.TextBoxNotes = New System.Windows.Forms.RichTextBox()
         Me.ButtonOpenNotesFolder = New Oexl.RoundedButton()
+        Me.ButtonTakeNote = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,18 +71,30 @@ Partial Class Notes
         '
         Me.ButtonOpenNotesFolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonOpenNotesFolder.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonOpenNotesFolder.Location = New System.Drawing.Point(257, 14)
+        Me.ButtonOpenNotesFolder.Location = New System.Drawing.Point(803, 14)
         Me.ButtonOpenNotesFolder.Name = "ButtonOpenNotesFolder"
         Me.ButtonOpenNotesFolder.Size = New System.Drawing.Size(106, 57)
         Me.ButtonOpenNotesFolder.TabIndex = 4
         Me.ButtonOpenNotesFolder.Text = "Open Folder"
         Me.ButtonOpenNotesFolder.UseVisualStyleBackColor = False
         '
+        'ButtonTakeNote
+        '
+        Me.ButtonTakeNote.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonTakeNote.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonTakeNote.Location = New System.Drawing.Point(257, 15)
+        Me.ButtonTakeNote.Name = "ButtonTakeNote"
+        Me.ButtonTakeNote.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonTakeNote.TabIndex = 5
+        Me.ButtonTakeNote.Text = "Take Note"
+        Me.ButtonTakeNote.UseVisualStyleBackColor = False
+        '
         'Notes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(962, 671)
+        Me.Controls.Add(Me.ButtonTakeNote)
         Me.Controls.Add(Me.ButtonOpenNotesFolder)
         Me.Controls.Add(Me.TextBoxNotes)
         Me.Controls.Add(Me.ListBoxNotes)
@@ -97,6 +110,7 @@ Partial Class Notes
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
         Me.Controls.SetChildIndex(Me.TextBoxNotes, 0)
         Me.Controls.SetChildIndex(Me.ButtonOpenNotesFolder, 0)
+        Me.Controls.SetChildIndex(Me.ButtonTakeNote, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -107,4 +121,5 @@ Partial Class Notes
     Friend WithEvents ListBoxNotes As ListBox
     Friend WithEvents TextBoxNotes As RichTextBox
     Friend WithEvents ButtonOpenNotesFolder As RoundedButton
+    Friend WithEvents ButtonTakeNote As RoundedButton
 End Class
