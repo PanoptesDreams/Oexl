@@ -27,6 +27,7 @@ Partial Class Notes
         Me.TextBoxNotes = New System.Windows.Forms.RichTextBox()
         Me.ButtonOpenNotesFolder = New Oexl.RoundedButton()
         Me.ButtonTakeNote = New Oexl.RoundedButton()
+        Me.ImmatatoButton = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,11 +90,23 @@ Partial Class Notes
         Me.ButtonTakeNote.Text = "Take Note"
         Me.ButtonTakeNote.UseVisualStyleBackColor = False
         '
+        'ImmatatoButton
+        '
+        Me.ImmatatoButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ImmatatoButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ImmatatoButton.Location = New System.Drawing.Point(643, 14)
+        Me.ImmatatoButton.Name = "ImmatatoButton"
+        Me.ImmatatoButton.Size = New System.Drawing.Size(106, 57)
+        Me.ImmatatoButton.TabIndex = 6
+        Me.ImmatatoButton.Text = "IMm-ATATO OPEN"
+        Me.ImmatatoButton.UseVisualStyleBackColor = False
+        '
         'Notes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(962, 671)
+        Me.Controls.Add(Me.ImmatatoButton)
         Me.Controls.Add(Me.ButtonTakeNote)
         Me.Controls.Add(Me.ButtonOpenNotesFolder)
         Me.Controls.Add(Me.TextBoxNotes)
@@ -111,6 +124,7 @@ Partial Class Notes
         Me.Controls.SetChildIndex(Me.TextBoxNotes, 0)
         Me.Controls.SetChildIndex(Me.ButtonOpenNotesFolder, 0)
         Me.Controls.SetChildIndex(Me.ButtonTakeNote, 0)
+        Me.Controls.SetChildIndex(Me.ImmatatoButton, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -122,4 +136,5 @@ Partial Class Notes
     Friend WithEvents TextBoxNotes As RichTextBox
     Friend WithEvents ButtonOpenNotesFolder As RoundedButton
     Friend WithEvents ButtonTakeNote As RoundedButton
+    Friend WithEvents ImmatatoButton As RoundedButton
 End Class

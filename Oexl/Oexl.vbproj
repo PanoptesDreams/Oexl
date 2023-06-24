@@ -102,6 +102,12 @@
     <Compile Include="Common\Form\AlcoholCalulator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\Applications.Designer.vb">
+      <DependentUpon>Applications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Applications.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\DesktopClock.Designer.vb">
       <DependentUpon>DesktopClock.vb</DependentUpon>
     </Compile>
@@ -203,6 +209,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Common\Form\AlcoholCalulator.resx">
       <DependentUpon>AlcoholCalulator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Applications.resx">
+      <DependentUpon>Applications.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\DesktopClock.resx">
       <DependentUpon>DesktopClock.vb</DependentUpon>

@@ -32,6 +32,7 @@ Partial Class Toolbox
         Me.ButtonNotes = New Oexl.RoundedButton()
         Me.ButtonSettings = New Oexl.RoundedButton()
         Me.ButtonTemplate = New Oexl.RoundedButton()
+        Me.ButtonApplications = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,11 +149,23 @@ Partial Class Toolbox
         Me.ButtonTemplate.Text = "Template"
         Me.ButtonTemplate.UseVisualStyleBackColor = False
         '
+        'ButtonApplications
+        '
+        Me.ButtonApplications.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonApplications.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonApplications.Location = New System.Drawing.Point(6, 384)
+        Me.ButtonApplications.Name = "ButtonApplications"
+        Me.ButtonApplications.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonApplications.TabIndex = 9
+        Me.ButtonApplications.Text = "App Boi"
+        Me.ButtonApplications.UseVisualStyleBackColor = False
+        '
         'Toolbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(233, 561)
+        Me.Controls.Add(Me.ButtonApplications)
         Me.Controls.Add(Me.ButtonTemplate)
         Me.Controls.Add(Me.ButtonSettings)
         Me.Controls.Add(Me.ButtonNotes)
@@ -179,6 +192,7 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.ButtonNotes, 0)
         Me.Controls.SetChildIndex(Me.ButtonSettings, 0)
         Me.Controls.SetChildIndex(Me.ButtonTemplate, 0)
+        Me.Controls.SetChildIndex(Me.ButtonApplications, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -195,4 +209,5 @@ Partial Class Toolbox
     Friend WithEvents ButtonNotes As RoundedButton
     Friend WithEvents ButtonSettings As RoundedButton
     Friend WithEvents ButtonTemplate As RoundedButton
+    Friend WithEvents ButtonApplications As RoundedButton
 End Class

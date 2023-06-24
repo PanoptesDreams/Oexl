@@ -60,4 +60,10 @@
         Summon(Settings)
 
     End Sub
+
+    Private Sub ButtonApplications_Click(sender As Object, e As EventArgs) Handles ButtonApplications.Click
+
+        Summon(Applications)
+
+    End Sub
 End Class

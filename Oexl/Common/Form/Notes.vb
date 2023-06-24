@@ -69,9 +69,16 @@
 
     End Sub
 
-    Private Sub RoundedButton1_Click(sender As Object, e As EventArgs) Handles ButtonTakeNote.Click
+    Private Sub ButtonTakeNote_Click(sender As Object, e As EventArgs) Handles ButtonTakeNote.Click
 
         Summon(NoteTaker)
+
+    End Sub
+
+    ' Demo subroutine that serves to teach the imitating of a click
+    Private Sub ImmatatoButton_Click(sender As Object, e As EventArgs) Handles ImmatatoButton.Click
+
+        ButtonTakeNote.PerformClick()
 
     End Sub
 End Class
