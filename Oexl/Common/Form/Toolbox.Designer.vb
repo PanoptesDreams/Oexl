@@ -33,6 +33,9 @@ Partial Class Toolbox
         Me.ButtonSettings = New Oexl.RoundedButton()
         Me.ButtonTemplate = New Oexl.RoundedButton()
         Me.ButtonApplications = New Oexl.RoundedButton()
+        Me.ButtonNotesPlusOne = New Oexl.RoundedButton()
+        Me.ButtonShortcutArrowRemove = New Oexl.RoundedButton()
+        Me.ButtonSystemStats = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -160,11 +163,47 @@ Partial Class Toolbox
         Me.ButtonApplications.Text = "App Boi"
         Me.ButtonApplications.UseVisualStyleBackColor = False
         '
+        'ButtonNotesPlusOne
+        '
+        Me.ButtonNotesPlusOne.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonNotesPlusOne.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonNotesPlusOne.Location = New System.Drawing.Point(118, 321)
+        Me.ButtonNotesPlusOne.Name = "ButtonNotesPlusOne"
+        Me.ButtonNotesPlusOne.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonNotesPlusOne.TabIndex = 10
+        Me.ButtonNotesPlusOne.Text = "Notes +1"
+        Me.ButtonNotesPlusOne.UseVisualStyleBackColor = False
+        '
+        'ButtonShortcutArrowRemove
+        '
+        Me.ButtonShortcutArrowRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonShortcutArrowRemove.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonShortcutArrowRemove.Location = New System.Drawing.Point(118, 384)
+        Me.ButtonShortcutArrowRemove.Name = "ButtonShortcutArrowRemove"
+        Me.ButtonShortcutArrowRemove.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonShortcutArrowRemove.TabIndex = 11
+        Me.ButtonShortcutArrowRemove.Text = "Remove Lnk Arrow"
+        Me.ButtonShortcutArrowRemove.UseVisualStyleBackColor = False
+        '
+        'ButtonSystemStats
+        '
+        Me.ButtonSystemStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonSystemStats.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonSystemStats.Location = New System.Drawing.Point(118, 69)
+        Me.ButtonSystemStats.Name = "ButtonSystemStats"
+        Me.ButtonSystemStats.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonSystemStats.TabIndex = 12
+        Me.ButtonSystemStats.Text = "System Stats"
+        Me.ButtonSystemStats.UseVisualStyleBackColor = False
+        '
         'Toolbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(233, 561)
+        Me.Controls.Add(Me.ButtonSystemStats)
+        Me.Controls.Add(Me.ButtonShortcutArrowRemove)
+        Me.Controls.Add(Me.ButtonNotesPlusOne)
         Me.Controls.Add(Me.ButtonApplications)
         Me.Controls.Add(Me.ButtonTemplate)
         Me.Controls.Add(Me.ButtonSettings)
@@ -193,6 +232,9 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.ButtonSettings, 0)
         Me.Controls.SetChildIndex(Me.ButtonTemplate, 0)
         Me.Controls.SetChildIndex(Me.ButtonApplications, 0)
+        Me.Controls.SetChildIndex(Me.ButtonNotesPlusOne, 0)
+        Me.Controls.SetChildIndex(Me.ButtonShortcutArrowRemove, 0)
+        Me.Controls.SetChildIndex(Me.ButtonSystemStats, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -210,4 +252,7 @@ Partial Class Toolbox
     Friend WithEvents ButtonSettings As RoundedButton
     Friend WithEvents ButtonTemplate As RoundedButton
     Friend WithEvents ButtonApplications As RoundedButton
+    Friend WithEvents ButtonNotesPlusOne As RoundedButton
+    Friend WithEvents ButtonShortcutArrowRemove As RoundedButton
+    Friend WithEvents ButtonSystemStats As RoundedButton
 End Class

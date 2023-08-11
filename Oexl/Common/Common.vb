@@ -47,6 +47,26 @@ Public Module Common
         Next
     End Sub
 
+    Sub ClearIconCache()
+        Try
+            Dim iconCachePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "IconCache.db")
+
+            ' Kill the explorer.exe process to release locks on the icon cache file
+            For Each process As Process In Process.GetProcessesByName("explorer")
+                process.Kill()
+                process.WaitForExit()
+            Next
+
+            ' Delete the icon cache file
+            If File.Exists(iconCachePath) Then
+                File.Delete(iconCachePath)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while clearing the icon cache: " & ex.Message)
+        End Try
+    End Sub
+
+
     ' Create Operator
     Public Function CreateOperator(OperatorName As String)
 
@@ -102,6 +122,15 @@ Public Module Common
         Return 1
 
     End Function
+
+    Public Sub RemoveShortcutArrow()
+
+        'change shortcut .ico location
+
+        ClearIconCache() ' Clear Cache to view changes
+
+    End Sub
+
 
     ' Rename  System
     ''' <summary>
@@ -333,6 +362,27 @@ Public Module Common
         Return True
 
     End Function
+
+
+    Function CreateRegistryKey(ByVal keyPath As String, ByVal valueName As String, ByVal valueData As String) As Boolean
+        Try
+            Using key As RegistryKey = Registry.ClassesRoot.OpenSubKey(keyPath, writable:=True)
+                If key IsNot Nothing Then
+                    Return False
+                End If
+
+                Using newKey As RegistryKey = Registry.ClassesRoot.CreateSubKey(keyPath)
+                    newKey.SetValue(valueName, valueData)
+                End Using
+
+                Return True
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+
 
     ' Image Resizer
     ''' <summary>

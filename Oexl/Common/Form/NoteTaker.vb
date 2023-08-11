@@ -27,11 +27,12 @@
                 writer.WriteLine(noteContent)
             End Using
 
-            MessageBox.Show("Note saved to " & fileName)
+            ' MessageBox.Show("Note saved to " & fileName)
+            PicStatus.Image = My.Resources.complete
 
             Notes.PopulateListBoxWithFileNames(folderPath)
 
-            Close()
+
 
         Catch ex As Exception
             MessageBox.Show("Error occurred while saving the note: " & ex.Message)

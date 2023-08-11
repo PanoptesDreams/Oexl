@@ -126,6 +126,12 @@
     <Compile Include="Common\Form\Launcher.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\Music.Designer.vb">
+      <DependentUpon>Music.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Music.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Notes.Designer.vb">
       <DependentUpon>Notes.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,12 @@
     <Compile Include="Common\Form\Splash.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\SystemStats.Designer.vb">
+      <DependentUpon>SystemStats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SystemStats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\TemplateForm.Designer.vb">
       <DependentUpon>TemplateForm.vb</DependentUpon>
     </Compile>
@@ -180,11 +192,20 @@
     <Compile Include="Common\Form\Toolbox.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\TrayIcon.Designer.vb">
+      <DependentUpon>TrayIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\TrayIcon.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\WingetInstaller.Designer.vb">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\WingetInstaller.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Objects\HartTabs.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Common\Objects\RoundedButton.vb">
       <SubType>Component</SubType>
@@ -222,6 +243,9 @@
     <EmbeddedResource Include="Common\Form\Launcher.resx">
       <DependentUpon>Launcher.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Music.resx">
+      <DependentUpon>Music.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Notes.resx">
       <DependentUpon>Notes.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,11 +267,17 @@
     <EmbeddedResource Include="Common\Form\Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SystemStats.resx">
+      <DependentUpon>SystemStats.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\TemplateForm.resx">
       <DependentUpon>TemplateForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Toolbox.resx">
       <DependentUpon>Toolbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\TrayIcon.resx">
+      <DependentUpon>TrayIcon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\WingetInstaller.resx">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
@@ -277,7 +307,25 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Common\Resources\circle.png" />
     <None Include="Common\Resources\triangle_grey.png" />
@@ -286,6 +334,7 @@
     <None Include="Common\Resources\clock.ico" />
     <Content Include="Common\Resources\close.png" />
     <Content Include="Common\Resources\close_grey.png" />
+    <Content Include="Common\Resources\complete.gif" />
     <Content Include="Common\Resources\cross.png" />
     <None Include="Common\Resources\cross_grey.png" />
     <Content Include="Common\Resources\max.png" />

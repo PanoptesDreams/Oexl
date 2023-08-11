@@ -26,9 +26,11 @@ Partial Class NoteTaker
         Me.TextBoxNoteTitle = New System.Windows.Forms.TextBox()
         Me.TextBoxNoteBody = New System.Windows.Forms.RichTextBox()
         Me.ButtonSaveNote = New Oexl.RoundedButton()
+        Me.PicStatus = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBoxClose
@@ -60,6 +62,7 @@ Partial Class NoteTaker
         '
         'ButtonSaveNote
         '
+        Me.ButtonSaveNote.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonSaveNote.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonSaveNote.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonSaveNote.Location = New System.Drawing.Point(16, 440)
@@ -69,11 +72,22 @@ Partial Class NoteTaker
         Me.ButtonSaveNote.Text = "Save Note"
         Me.ButtonSaveNote.UseVisualStyleBackColor = False
         '
+        'PicStatus
+        '
+        Me.PicStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PicStatus.Location = New System.Drawing.Point(128, 440)
+        Me.PicStatus.Name = "PicStatus"
+        Me.PicStatus.Size = New System.Drawing.Size(59, 57)
+        Me.PicStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PicStatus.TabIndex = 8
+        Me.PicStatus.TabStop = False
+        '
         'NoteTaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 506)
+        Me.Controls.Add(Me.PicStatus)
         Me.Controls.Add(Me.ButtonSaveNote)
         Me.Controls.Add(Me.TextBoxNoteBody)
         Me.Controls.Add(Me.TextBoxNoteTitle)
@@ -87,9 +101,11 @@ Partial Class NoteTaker
         Me.Controls.SetChildIndex(Me.TextBoxNoteTitle, 0)
         Me.Controls.SetChildIndex(Me.TextBoxNoteBody, 0)
         Me.Controls.SetChildIndex(Me.ButtonSaveNote, 0)
+        Me.Controls.SetChildIndex(Me.PicStatus, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicStatus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -98,4 +114,5 @@ Partial Class NoteTaker
     Friend WithEvents TextBoxNoteTitle As TextBox
     Friend WithEvents TextBoxNoteBody As RichTextBox
     Friend WithEvents ButtonSaveNote As RoundedButton
+    Friend WithEvents PicStatus As PictureBox
 End Class

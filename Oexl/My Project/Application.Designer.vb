@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Oexl.Launcher
+            Me.MainForm = Global.Oexl.TrayIcon
         End Sub
     End Class
 End Namespace

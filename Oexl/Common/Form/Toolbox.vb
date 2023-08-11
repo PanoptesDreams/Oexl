@@ -66,4 +66,22 @@
         Summon(Applications)
 
     End Sub
+
+    Private Sub ButtonNotesPlusOne_Click(sender As Object, e As EventArgs) Handles ButtonNotesPlusOne.Click
+
+        Summon(NoteTaker)
+
+    End Sub
+
+    Private Sub ButtonShortcutArrowRemove_Click(sender As Object, e As EventArgs) Handles ButtonShortcutArrowRemove.Click
+
+        RemoveShortcutArrow()
+
+    End Sub
+
+    Private Sub ButtonSystemStats_Click(sender As Object, e As EventArgs) Handles ButtonSystemStats.Click
+
+        Summon(SystemStats)
+
+    End Sub
 End Class

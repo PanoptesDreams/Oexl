@@ -15,7 +15,6 @@
 
         MaximumSize = New Size(Screen.PrimaryScreen.Bounds.Width, 77)
 
-        PrepareTray()
 
         If My.Settings.DestopClockActive = True Then
 
@@ -71,84 +70,19 @@
     End Sub
 
 
-    Private Sub TrayMenuLauncher_Click(sender As Object, e As EventArgs) Handles TrayMenuLauncher.Click
-
-        If TrayMenuLauncher.Checked = True Then
-
-            Hide()
-
-            TrayMenuLauncher.Checked = False
-
-        Else
-
-            Show()
-
-            TrayMenuLauncher.Checked = True
-
-        End If
-
-
-    End Sub
-
-    Private Sub TrayMenuExit_Click(sender As Object, e As EventArgs) Handles TrayMenuExit.Click
-
-        Application.Exit()
-
-    End Sub
-
-    ' Set Tray States
-    Private Sub PrepareTray()
-
-        TrayMenuLauncher.Checked = My.Settings.LauncherActive
-
-        TrayMenuDestopClock.Checked = My.Settings.DestopClockActive
-
-
-    End Sub
-
-    Private Sub TrayMenuDestopClock_Click(sender As Object, e As EventArgs) Handles TrayMenuDestopClock.Click
-
-        If TrayMenuDestopClock.Checked = True Then
-
-            DesktopClock.Close()
-
-            TrayMenuDestopClock.Checked = False
-
-        Else
-
-            Summon(DesktopClock)
-
-            TrayMenuDestopClock.Checked = True
-
-        End If
-
-        My.Settings.DestopClockActive = TrayMenuDestopClock.Checked
-
-        ASave()
-
-    End Sub
-
-    Private Sub TrayMenuToolbox_Click(sender As Object, e As EventArgs) Handles TrayMenuToolbox.Click
-
-        Summon(Toolbox)
-
-    End Sub
 
     Private Sub Launcher_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
 
         If Visible = False Then
 
-            TrayMenuLauncher.Checked = False
+            TrayIcon.TrayMenuLauncher.Checked = False
 
         ElseIf Visible = True Then
 
-            TrayMenuLauncher.Checked = True
+            TrayIcon.TrayMenuLauncher.Checked = True
 
         End If
 
     End Sub
 
-    Private Sub TrayMenuShortcuts_Click(sender As Object, e As EventArgs) Handles TrayMenuShortcuts.Click
-        Summon(Shortcuts)
-    End Sub
 End Class

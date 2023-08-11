@@ -6,6 +6,7 @@ Public Class RoundedButton
     ' Border
     Private BorderPath As New GraphicsPath()
     Private BorderColor As Color = My.Settings.OperatorColorSecondary
+    Private OpBackColor As Color = My.Settings.OperatorColorPrimary
 
 
     ' Add custom properties, methods, and event handlers here
