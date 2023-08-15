@@ -12,7 +12,7 @@
 
         Positioner(Me, "Center") ' Override where you want the form to go
 
-        toggleHide = False ' This changes the inherent hiding of a form to a close instead
+        HideOnClose = False ' This changes the inherent hiding of a form to a close instead
 
     End Sub
 

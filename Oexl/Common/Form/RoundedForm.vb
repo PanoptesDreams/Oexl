@@ -12,7 +12,7 @@ Public Class RoundedForm
     Private cursorUp As Point
 
     ' Close Toggle
-    Public toggleHide As Boolean = True
+    Public HideOnClose As Boolean = True
 
     ' Form Loading event handler
     Private Sub RoundedForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -175,7 +175,7 @@ Public Class RoundedForm
 
     Private Sub PictureBoxClose_Click(sender As Object, e As EventArgs) Handles PictureBoxClose.Click
 
-        If toggleHide = True Then
+        If HideOnClose = True Then
             Hide()
         Else
             Close()

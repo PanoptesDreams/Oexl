@@ -7,6 +7,8 @@
 
         Positioner(Me, "Right")
 
+        HideOnClose = False ' Ensures shortcut list refreshes each time
+
         AddShortcutFilesToListBox()
 
     End Sub

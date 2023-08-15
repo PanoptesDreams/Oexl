@@ -5,7 +5,7 @@
 
         Positioner(Me, "Left")
 
-        toggleHide = False ' Close don't hide
+        HideOnClose = False ' Close don't hide
 
 
     End Sub
@@ -82,6 +82,12 @@
     Private Sub ButtonSystemStats_Click(sender As Object, e As EventArgs) Handles ButtonSystemStats.Click
 
         Summon(SystemStats)
+
+    End Sub
+
+    Private Sub ButtonGame_Click(sender As Object, e As EventArgs) Handles ButtonGame.Click
+
+        Summon(Game)
 
     End Sub
 End Class
