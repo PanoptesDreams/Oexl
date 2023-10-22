@@ -1,6 +1,6 @@
 ﻿Public Class Shortcuts
 
-    Dim ShortcutDirectory As String = "R:\Adam\Operator\Shortcut"
+    Dim ShortcutDirectory As String = "O:\Operator\Shortcut"
 
 
     Private Sub Shortcuts_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -12,7 +12,7 @@
       <Value Profile="(Default)">Indigo</Value>
     </Setting>
     <Setting Name="OperatorJunction" Type="System.String" Scope="User">
-      <Value Profile="(Default)">A:</Value>
+      <Value Profile="(Default)">O:</Value>
     </Setting>
     <Setting Name="OperatorName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Op</Value>

@@ -37,6 +37,7 @@ Partial Class Toolbox
         Me.ButtonShortcutArrowRemove = New Oexl.RoundedButton()
         Me.ButtonSystemStats = New Oexl.RoundedButton()
         Me.ButtonGame = New Oexl.RoundedButton()
+        Me.ButtonToDo = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -208,11 +209,23 @@ Partial Class Toolbox
         Me.ButtonGame.Text = "Game"
         Me.ButtonGame.UseVisualStyleBackColor = False
         '
+        'ButtonToDo
+        '
+        Me.ButtonToDo.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonToDo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonToDo.Location = New System.Drawing.Point(118, 258)
+        Me.ButtonToDo.Name = "ButtonToDo"
+        Me.ButtonToDo.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonToDo.TabIndex = 14
+        Me.ButtonToDo.Text = "ToDo"
+        Me.ButtonToDo.UseVisualStyleBackColor = False
+        '
         'Toolbox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(233, 561)
+        Me.Controls.Add(Me.ButtonToDo)
         Me.Controls.Add(Me.ButtonGame)
         Me.Controls.Add(Me.ButtonSystemStats)
         Me.Controls.Add(Me.ButtonShortcutArrowRemove)
@@ -249,6 +262,7 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.ButtonShortcutArrowRemove, 0)
         Me.Controls.SetChildIndex(Me.ButtonSystemStats, 0)
         Me.Controls.SetChildIndex(Me.ButtonGame, 0)
+        Me.Controls.SetChildIndex(Me.ButtonToDo, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -270,4 +284,5 @@ Partial Class Toolbox
     Friend WithEvents ButtonShortcutArrowRemove As RoundedButton
     Friend WithEvents ButtonSystemStats As RoundedButton
     Friend WithEvents ButtonGame As RoundedButton
+    Friend WithEvents ButtonToDo As RoundedButton
 End Class

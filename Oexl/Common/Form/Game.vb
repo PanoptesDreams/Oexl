@@ -23,7 +23,7 @@ Public Class Game
     'Directories
     Dim ArgusDir As String = Environment.GetEnvironmentVariable("argus")
     ' Dim GameLibDir As String = ArgusDir + My.Settings.GameLib 'A:\Software\Gaming\Library
-    Dim GameLibDir As String = "A:\Software\Gaming\Library"
+    Dim GameLibDir As String = "O:\Software\Gaming\Library"
 
     Dim GameboyDir As String = GameLibDir + "\Gameboy Advanced" 'A:\Software\Gaming\Library\Gameboy Advanced (Please fix)
 

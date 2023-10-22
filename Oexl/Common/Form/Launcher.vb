@@ -38,7 +38,7 @@
 
         Try ' Loading Operator image from the default path
 
-            OperatorPicture = Image.FromFile(Path.Combine(My.Settings.OperatorJunction & "\" & My.Settings.OperatorName & "\Operator\avatar.png"))
+            OperatorPicture = Image.FromFile(Path.Combine(My.Settings.OperatorJunction & "\" & "\Operator\avatar.png"))
 
         Catch ex As Exception ' Insert default image instead
 

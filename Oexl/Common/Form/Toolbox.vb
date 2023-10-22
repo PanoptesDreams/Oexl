@@ -90,4 +90,10 @@
         Summon(Game)
 
     End Sub
+
+    Private Sub ButtonToDo_Click(sender As Object, e As EventArgs) Handles ButtonToDo.Click
+
+        Summon(ToDo)
+
+    End Sub
 End Class
