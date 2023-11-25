@@ -13,7 +13,7 @@
         LabelSettingThemeDisplay.Text = My.Settings.Theme
         LabelSettingOperatorColorPrimaryDisplay.Text = My.Settings.OperatorColorPrimary.ToString
         LabelSettingOperatorColorSecondaryDisplay.Text = My.Settings.OperatorColorSecondary.ToString
-        LabelSettingOperatorJunctionDisplay.Text = My.Settings.OperatorJunction
+        LabelSettingOperatorJunctionDisplay.Text = My.Settings.OperatorRoot
         LabelSettingOperatorNameDisplay.Text = My.Settings.OperatorName
         LabelSettingSystemMoodDisplay.Text = My.Settings.SystemMood
         LabelSettingOperatorDefaultProfileDisplay.Text = My.Settings.OperatorDefaultProfile

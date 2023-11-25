@@ -3,7 +3,7 @@
 Public Class Operators
 
     ' Variables
-    Dim OperatorJunction As String = My.Settings.OperatorJunction
+    Dim OperatorJunction As String = My.Settings.OperatorRoot & "\"
     Dim SelectedOperator As String
 
 
@@ -19,10 +19,9 @@ Public Class Operators
     ' Populate Checkbox List with Operators
     Public Sub PopulateList()
 
-        Dim OperatorJunction = "A:"
 
-        If My.Settings.OperatorJunction <> "" Then
-            OperatorJunction = My.Settings.OperatorJunction
+        If My.Settings.OperatorRoot <> "" Then
+            OperatorJunction = My.Settings.OperatorRoot & "\"
         End If
 
         CheckedListBoxOperators.Items.Clear()
@@ -135,7 +134,7 @@ Public Class Operators
 
         Summon(Launcher)
 
-        Me.Close()
+        Application.Restart()
 
     End Sub
 
@@ -210,4 +209,8 @@ Public Class Operators
         Next
 
     End Sub
+
+
+
+
 End Class

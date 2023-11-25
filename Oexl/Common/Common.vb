@@ -23,7 +23,7 @@ Public Module Common
     ''' <param name="OperatorName">Name of Operator to have folders generatred for.</param>
     Public Sub BuildOperatorTree(OperatorName As String)
 
-        Dim OperatorDirectory = Path.Combine(My.Settings.OperatorJunction & OperatorName)
+        Dim OperatorDirectory = Path.Combine(My.Settings.OperatorRoot & OperatorName)
 
         Dim BasePaths() As String = {".tmp", ".cloud", "Media", "Operator", "Software"}
         Dim MediaPaths() As String = {"Book", "Font", "Image", "Model", "Theme", "Video"}
@@ -70,8 +70,10 @@ Public Module Common
     ' Create Operator
     Public Function CreateOperator(OperatorName As String)
 
-        Dim folderPath As String = Path.Combine("R:\", OperatorName)
-        Dim junctionPath As String = Path.Combine("A:\", OperatorName)
+        Return 1
+
+        Dim folderPath As String = Path.Combine("O:\", OperatorName)
+        Dim junctionPath As String = Path.Combine("O:\", OperatorName)
 
         If Directory.Exists(folderPath) Then ' Check if the folder already exists in R:
 
@@ -187,9 +189,9 @@ Public Module Common
         If folderBrowser.ShowDialog() = DialogResult.OK Then
             ' Check if the selected path exists and is a directory
             If Directory.Exists(folderBrowser.SelectedPath) Then
-                My.Settings.OperatorJunction = folderBrowser.SelectedPath
+                My.Settings.OperatorRoot = folderBrowser.SelectedPath
                 My.Settings.Save()
-                MessageBox.Show("Junction path set to: " & My.Settings.OperatorJunction, "Success")
+                MessageBox.Show("Junction path set to: " & My.Settings.OperatorRoot, "Success")
             Else
                 MessageBox.Show("Invalid path selected. Please select a valid directory.", "Error")
             End If
@@ -322,7 +324,7 @@ Public Module Common
             Case "18", "19", "20", "21", "22", "23"
                 Greet += "Evening, "
         End Select
-
+        Greet += My.Settings.OperatorName
         Return Greet
 
     End Function

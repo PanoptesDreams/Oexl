@@ -407,6 +407,6 @@
   <PropertyGroup>
     <PostBuildEvent>:: Commented out
 
-:: copy /y $(TargetDir) %25OperatorJunction%25\%25OperatorName%25\Software\Shell\Oexl\p.data</PostBuildEvent>
+:: copy /y $(TargetDir) %25OperatorRoot%25\%25OperatorName%25\Software\Shell\Oexl\p.data</PostBuildEvent>
   </PropertyGroup>
 </Project>

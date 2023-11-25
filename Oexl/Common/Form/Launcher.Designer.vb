@@ -37,31 +37,34 @@ Partial Class Launcher
         '
         'PictureBoxClose
         '
-        Me.PictureBoxClose.Location = New System.Drawing.Point(694, 3)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(771, 3)
+        Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(694, 21)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(771, 23)
+        Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(694, 39)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(771, 43)
+        Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'LabelOperatorName
         '
         Me.LabelOperatorName.AutoSize = True
-        Me.LabelOperatorName.Location = New System.Drawing.Point(7, 39)
+        Me.LabelOperatorName.Location = New System.Drawing.Point(8, 43)
         Me.LabelOperatorName.Name = "LabelOperatorName"
-        Me.LabelOperatorName.Size = New System.Drawing.Size(114, 20)
+        Me.LabelOperatorName.Size = New System.Drawing.Size(128, 22)
         Me.LabelOperatorName.TabIndex = 1
         Me.LabelOperatorName.Text = "OperatorName"
         '
         'LabelGreeting
         '
         Me.LabelGreeting.AutoSize = True
-        Me.LabelGreeting.Location = New System.Drawing.Point(7, 19)
+        Me.LabelGreeting.Location = New System.Drawing.Point(8, 21)
         Me.LabelGreeting.Name = "LabelGreeting"
-        Me.LabelGreeting.Size = New System.Drawing.Size(71, 20)
+        Me.LabelGreeting.Size = New System.Drawing.Size(79, 22)
         Me.LabelGreeting.TabIndex = 2
         Me.LabelGreeting.Text = "Greeting"
         '
@@ -69,9 +72,9 @@ Partial Class Launcher
         '
         Me.PictureBoxOperator.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBoxOperator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxOperator.Location = New System.Drawing.Point(318, 13)
+        Me.PictureBoxOperator.Location = New System.Drawing.Point(353, 14)
         Me.PictureBoxOperator.Name = "PictureBoxOperator"
-        Me.PictureBoxOperator.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBoxOperator.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxOperator.TabIndex = 3
         Me.PictureBoxOperator.TabStop = False
         '
@@ -80,26 +83,26 @@ Partial Class Launcher
         Me.PictureBoxToolbox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBoxToolbox.BackgroundImage = Global.Oexl.My.Resources.Resources.max
         Me.PictureBoxToolbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxToolbox.Location = New System.Drawing.Point(374, 13)
+        Me.PictureBoxToolbox.Location = New System.Drawing.Point(416, 14)
         Me.PictureBoxToolbox.Name = "PictureBoxToolbox"
-        Me.PictureBoxToolbox.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBoxToolbox.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxToolbox.TabIndex = 4
         Me.PictureBoxToolbox.TabStop = False
         '
         'LabelArgs
         '
         Me.LabelArgs.AutoSize = True
-        Me.LabelArgs.Location = New System.Drawing.Point(444, 19)
+        Me.LabelArgs.Location = New System.Drawing.Point(493, 21)
         Me.LabelArgs.Name = "LabelArgs"
-        Me.LabelArgs.Size = New System.Drawing.Size(71, 20)
+        Me.LabelArgs.Size = New System.Drawing.Size(79, 22)
         Me.LabelArgs.TabIndex = 5
         Me.LabelArgs.Text = "Greeting"
         '
         'Launcher
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(666, 77)
+        Me.ClientSize = New System.Drawing.Size(740, 85)
         Me.Controls.Add(Me.LabelArgs)
         Me.Controls.Add(Me.PictureBoxToolbox)
         Me.Controls.Add(Me.PictureBoxOperator)
@@ -107,10 +110,10 @@ Partial Class Launcher
         Me.Controls.Add(Me.LabelOperatorName)
         Me.ForeColor = System.Drawing.Color.Purple
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.MaximumSize = New System.Drawing.Size(1080, 77)
+        Me.Margin = New System.Windows.Forms.Padding(7, 9, 7, 9)
+        Me.MaximumSize = New System.Drawing.Size(1200, 85)
         Me.Name = "Launcher"
-        Me.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Padding = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Text = "Launcher"
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)

@@ -40,6 +40,7 @@ Public Class RoundedButton
         Me.Region = New Region(BorderPath) ' Set the form's Region property to the GraphicsPath object
 
     End Sub
+
     Private Function BorderColorize(ByVal color As Color) As Color
         'Calculate the perceived brightness of the color using the formula for relative luminance from the sRGB color space.
         Dim luminance As Double = 0.2126 * color.R + 0.7152 * color.G + 0.0722 * color.B

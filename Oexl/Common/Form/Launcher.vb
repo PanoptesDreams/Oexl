@@ -30,7 +30,9 @@
     ' Operator Loader
     Public Sub OperatorLoader()
 
-        LabelGreeting.Text = Greeting() ' Greet the Operator
+        Dim OperatorGreeting = Greeting()
+
+        LabelGreeting.Text = OperatorGreeting ' Greet the Operator
 
         LabelOperatorName.Text = My.Settings.OperatorName ' Retrieve name
 
@@ -38,7 +40,7 @@
 
         Try ' Loading Operator image from the default path
 
-            OperatorPicture = Image.FromFile(Path.Combine(My.Settings.OperatorJunction & "\" & "\Operator\avatar.png"))
+            OperatorPicture = Image.FromFile(Path.Combine(My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\" & "\Operator\avatar.png"))
 
         Catch ex As Exception ' Insert default image instead
 
