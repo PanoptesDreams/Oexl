@@ -54,13 +54,13 @@
 
         End Try
 
-        PictureBoxOperator.Image = ResizeImage(OperatorPicture, PictureBoxOperator.Width, PictureBoxOperator.Height) ' Resize imported image and apply
+        PictureBoxOperatorAvatar.Image = ResizeImage(OperatorPicture, PictureBoxOperatorAvatar.Width, PictureBoxOperatorAvatar.Height) ' Resize imported image and apply
 
     End Sub
 
     Private Sub PositionElements()
 
-        PictureBoxOperator.Location = New Point(Me.Width / 2 - PictureBoxOperator.Width / 2, Me.Height / 2 - PictureBoxOperator.Height / 2) ' fix
+        PictureBoxOperatorAvatar.Location = New Point(Me.Width / 2 - PictureBoxOperatorAvatar.Width / 2, Me.Height / 2 - PictureBoxOperatorAvatar.Height / 2) ' fix
 
     End Sub
 
