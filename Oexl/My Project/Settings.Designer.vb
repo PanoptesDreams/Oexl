@@ -209,6 +209,18 @@ Namespace My
                 Me("LauncherActive") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property OperatorWebHome() As String
+            Get
+                Return CType(Me("OperatorWebHome"),String)
+            End Get
+            Set
+                Me("OperatorWebHome") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

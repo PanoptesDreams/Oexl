@@ -279,6 +279,12 @@
     <Compile Include="Common\Form\Updater.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\WebHome.Designer.vb">
+      <DependentUpon>WebHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\WebHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\WingetInstaller.Designer.vb">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Updater.resx">
       <DependentUpon>Updater.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\WebHome.resx">
+      <DependentUpon>WebHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\WingetInstaller.resx">
       <DependentUpon>WingetInstaller.vb</DependentUpon>

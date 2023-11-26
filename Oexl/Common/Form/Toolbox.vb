@@ -98,6 +98,14 @@
     End Sub
 
     Private Sub ButtonUpdater_Click(sender As Object, e As EventArgs) Handles ButtonUpdater.Click
+
         Summon(Updater)
+
+    End Sub
+
+    Private Sub ButtonWebHome_Click(sender As Object, e As EventArgs) Handles ButtonWebHome.Click
+
+        Summon(WebHome)
+
     End Sub
 End Class
