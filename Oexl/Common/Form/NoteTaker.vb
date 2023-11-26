@@ -6,20 +6,14 @@
     Private Sub ButtonSaveNote_Click(sender As Object, e As EventArgs) Handles ButtonSaveNote.Click
 
         ' Get the note title and body text
-        Dim noteTitle As String = TextBoxNoteTitle.Text.Trim()
+        Dim noteTitle As String = Date.Now.ToString("MMMM dd, yyyy - HHmmss")
         Dim noteBody As String = TextBoxNoteBody.Text.Trim()
-
-        ' Verify that the note has content
-        If String.IsNullOrWhiteSpace(noteTitle) AndAlso String.IsNullOrWhiteSpace(noteBody) Then
-            MessageBox.Show("Please enter a note title or body.")
-            Return
-        End If
 
         ' Combine the note title and body with appropriate new lines
         Dim noteContent As String = noteTitle & Environment.NewLine & Environment.NewLine & noteBody
 
         ' Save the note to a text file
-        Dim fileName As String = folderPath & noteTitle & ".txt" ' update path
+        Dim fileName As String = folderPath & "\" & noteTitle & ".txt" ' update path
 
         Try
             ' Write the note content to the text file

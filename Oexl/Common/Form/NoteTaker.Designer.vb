@@ -23,7 +23,6 @@ Partial Class NoteTaker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NoteTaker))
-        Me.TextBoxNoteTitle = New System.Windows.Forms.TextBox()
         Me.TextBoxNoteBody = New System.Windows.Forms.RichTextBox()
         Me.ButtonSaveNote = New Oexl.RoundedButton()
         Me.PicStatus = New System.Windows.Forms.PictureBox()
@@ -48,18 +47,11 @@ Partial Class NoteTaker
         Me.PictureBoxMinimize.Location = New System.Drawing.Point(862, 56)
         Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
-        'TextBoxNoteTitle
-        '
-        Me.TextBoxNoteTitle.Location = New System.Drawing.Point(18, 18)
-        Me.TextBoxNoteTitle.Name = "TextBoxNoteTitle"
-        Me.TextBoxNoteTitle.Size = New System.Drawing.Size(736, 28)
-        Me.TextBoxNoteTitle.TabIndex = 3
-        '
         'TextBoxNoteBody
         '
-        Me.TextBoxNoteBody.Location = New System.Drawing.Point(18, 56)
+        Me.TextBoxNoteBody.Location = New System.Drawing.Point(17, 17)
         Me.TextBoxNoteBody.Name = "TextBoxNoteBody"
-        Me.TextBoxNoteBody.Size = New System.Drawing.Size(825, 393)
+        Me.TextBoxNoteBody.Size = New System.Drawing.Size(825, 447)
         Me.TextBoxNoteBody.TabIndex = 4
         Me.TextBoxNoteBody.Text = ""
         '
@@ -93,17 +85,15 @@ Partial Class NoteTaker
         Me.Controls.Add(Me.PicStatus)
         Me.Controls.Add(Me.ButtonSaveNote)
         Me.Controls.Add(Me.TextBoxNoteBody)
-        Me.Controls.Add(Me.TextBoxNoteTitle)
         Me.ForeColor = System.Drawing.Color.Indigo
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "NoteTaker"
-        Me.Padding = New System.Windows.Forms.Padding(14, 14, 14, 14)
+        Me.Padding = New System.Windows.Forms.Padding(14)
         Me.Text = "NoteTaker"
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
-        Me.Controls.SetChildIndex(Me.TextBoxNoteTitle, 0)
         Me.Controls.SetChildIndex(Me.TextBoxNoteBody, 0)
         Me.Controls.SetChildIndex(Me.ButtonSaveNote, 0)
         Me.Controls.SetChildIndex(Me.PicStatus, 0)
@@ -112,11 +102,8 @@ Partial Class NoteTaker
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PicStatus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBoxNoteTitle As TextBox
     Friend WithEvents TextBoxNoteBody As RichTextBox
     Friend WithEvents ButtonSaveNote As RoundedButton
     Friend WithEvents PicStatus As PictureBox
