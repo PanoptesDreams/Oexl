@@ -130,4 +130,11 @@
     End Sub
 
 
+    Private Sub LabelSettingUpdaterSummon_Click(sender As Object, e As EventArgs) Handles LabelSettingUpdaterSummon.Click
+
+        Summon(Updater)
+
+    End Sub
+
+
 End Class

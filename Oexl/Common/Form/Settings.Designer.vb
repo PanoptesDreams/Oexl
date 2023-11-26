@@ -42,6 +42,8 @@ Partial Class Settings
         Me.LabelSettingOperatorAvatar = New System.Windows.Forms.Label()
         Me.PanelSettingsOperatorPictureChange = New System.Windows.Forms.Panel()
         Me.PictureBoxSettingsOperatorAvatar = New System.Windows.Forms.PictureBox()
+        Me.LabelSettingOexlUpdate = New System.Windows.Forms.Label()
+        Me.LabelSettingUpdaterSummon = New System.Windows.Forms.Label()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -295,11 +297,38 @@ Partial Class Settings
         Me.PictureBoxSettingsOperatorAvatar.TabIndex = 21
         Me.PictureBoxSettingsOperatorAvatar.TabStop = False
         '
+        'LabelSettingOexlUpdate
+        '
+        Me.LabelSettingOexlUpdate.AutoSize = True
+        Me.LabelSettingOexlUpdate.Location = New System.Drawing.Point(185, 372)
+        Me.LabelSettingOexlUpdate.Margin = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingOexlUpdate.Name = "LabelSettingOexlUpdate"
+        Me.LabelSettingOexlUpdate.Padding = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingOexlUpdate.Size = New System.Drawing.Size(122, 28)
+        Me.LabelSettingOexlUpdate.TabIndex = 22
+        Me.LabelSettingOexlUpdate.Text = "Oexl Updater"
+        Me.LabelSettingOexlUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'LabelSettingUpdaterSummon
+        '
+        Me.LabelSettingUpdaterSummon.AutoSize = True
+        Me.LabelSettingUpdaterSummon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSettingUpdaterSummon.Location = New System.Drawing.Point(315, 372)
+        Me.LabelSettingUpdaterSummon.Margin = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingUpdaterSummon.Name = "LabelSettingUpdaterSummon"
+        Me.LabelSettingUpdaterSummon.Padding = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingUpdaterSummon.Size = New System.Drawing.Size(263, 28)
+        Me.LabelSettingUpdaterSummon.TabIndex = 23
+        Me.LabelSettingUpdaterSummon.Text = "Click here to check for updates"
+        Me.LabelSettingUpdaterSummon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(759, 603)
+        Me.Controls.Add(Me.LabelSettingUpdaterSummon)
+        Me.Controls.Add(Me.LabelSettingOexlUpdate)
         Me.Controls.Add(Me.PanelSettingsOperatorPictureChange)
         Me.Controls.Add(Me.LabelSettingOperatorAvatar)
         Me.Controls.Add(Me.LabelSettingLoadedDisplay)
@@ -347,6 +376,8 @@ Partial Class Settings
         Me.Controls.SetChildIndex(Me.LabelSettingLoadedDisplay, 0)
         Me.Controls.SetChildIndex(Me.LabelSettingOperatorAvatar, 0)
         Me.Controls.SetChildIndex(Me.PanelSettingsOperatorPictureChange, 0)
+        Me.Controls.SetChildIndex(Me.LabelSettingOexlUpdate, 0)
+        Me.Controls.SetChildIndex(Me.LabelSettingUpdaterSummon, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -375,4 +406,6 @@ Partial Class Settings
     Friend WithEvents LabelSettingOperatorAvatar As Label
     Friend WithEvents PanelSettingsOperatorPictureChange As Panel
     Friend WithEvents PictureBoxSettingsOperatorAvatar As PictureBox
+    Friend WithEvents LabelSettingOexlUpdate As Label
+    Friend WithEvents LabelSettingUpdaterSummon As Label
 End Class

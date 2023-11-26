@@ -34,20 +34,20 @@ Partial Class Updater
         '
         'PictureBoxClose
         '
-        Me.PictureBoxClose.Location = New System.Drawing.Point(776, 3)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(669, 3)
         '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(776, 27)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(669, 27)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(776, 51)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(669, 51)
         '
         'LabelCurrentVersion
         '
         Me.LabelCurrentVersion.AutoSize = True
-        Me.LabelCurrentVersion.Location = New System.Drawing.Point(323, 51)
+        Me.LabelCurrentVersion.Location = New System.Drawing.Point(36, 50)
         Me.LabelCurrentVersion.Name = "LabelCurrentVersion"
         Me.LabelCurrentVersion.Size = New System.Drawing.Size(152, 22)
         Me.LabelCurrentVersion.TabIndex = 4
@@ -56,7 +56,7 @@ Partial Class Updater
         'LabelVersionAlert
         '
         Me.LabelVersionAlert.AutoSize = True
-        Me.LabelVersionAlert.Location = New System.Drawing.Point(323, 93)
+        Me.LabelVersionAlert.Location = New System.Drawing.Point(36, 92)
         Me.LabelVersionAlert.Name = "LabelVersionAlert"
         Me.LabelVersionAlert.Size = New System.Drawing.Size(35, 22)
         Me.LabelVersionAlert.TabIndex = 5
@@ -65,7 +65,7 @@ Partial Class Updater
         'LabelWebVersion
         '
         Me.LabelWebVersion.AutoSize = True
-        Me.LabelWebVersion.Location = New System.Drawing.Point(323, 135)
+        Me.LabelWebVersion.Location = New System.Drawing.Point(36, 134)
         Me.LabelWebVersion.Name = "LabelWebVersion"
         Me.LabelWebVersion.Size = New System.Drawing.Size(129, 22)
         Me.LabelWebVersion.TabIndex = 6
@@ -74,7 +74,7 @@ Partial Class Updater
         'ButtonFetchUpdate
         '
         Me.ButtonFetchUpdate.Enabled = False
-        Me.ButtonFetchUpdate.Location = New System.Drawing.Point(61, 51)
+        Me.ButtonFetchUpdate.Location = New System.Drawing.Point(409, 51)
         Me.ButtonFetchUpdate.Name = "ButtonFetchUpdate"
         Me.ButtonFetchUpdate.Size = New System.Drawing.Size(229, 106)
         Me.ButtonFetchUpdate.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class Updater
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 197)
+        Me.ClientSize = New System.Drawing.Size(693, 197)
         Me.Controls.Add(Me.LabelWebVersion)
         Me.Controls.Add(Me.LabelVersionAlert)
         Me.Controls.Add(Me.LabelCurrentVersion)
