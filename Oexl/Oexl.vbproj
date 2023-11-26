@@ -359,6 +359,9 @@
     <EmbeddedResource Include="Common\Form\TrayIcon.resx">
       <DependentUpon>TrayIcon.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Updater.resx">
+      <DependentUpon>Updater.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\WingetInstaller.resx">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
     </EmbeddedResource>

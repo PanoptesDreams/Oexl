@@ -96,4 +96,8 @@
         Summon(ToDo)
 
     End Sub
+
+    Private Sub ButtonUpdater_Click(sender As Object, e As EventArgs) Handles ButtonUpdater.Click
+        Summon(Updater)
+    End Sub
 End Class

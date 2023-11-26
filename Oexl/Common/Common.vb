@@ -259,6 +259,19 @@ Public Module Common
 
     End Sub
 
+    ' Error logger
+    Public Sub Imadeanoopsie(ByVal textToAppend As String)
+
+        Dim filepath As String = "oopsie.txt"
+
+        Using writer As StreamWriter = File.AppendText(filepath)
+
+            writer.WriteLine(textToAppend)
+
+        End Using
+
+    End Sub
+
 #End Region
 
 
