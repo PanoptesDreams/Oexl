@@ -44,31 +44,36 @@ Partial Class Settings
         Me.PictureBoxSettingsOperatorAvatar = New System.Windows.Forms.PictureBox()
         Me.LabelSettingOexlUpdate = New System.Windows.Forms.Label()
         Me.LabelSettingUpdaterSummon = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelSettingsOperatorPictureChange.SuspendLayout()
         CType(Me.PictureBoxSettingsOperatorAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBoxClose
         '
-        Me.PictureBoxClose.Location = New System.Drawing.Point(736, 3)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(757, 3)
         Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(736, 26)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(757, 26)
         Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(736, 50)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(757, 50)
         Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'LabelSettingTheme
         '
         Me.LabelSettingTheme.AutoSize = True
-        Me.LabelSettingTheme.Location = New System.Drawing.Point(237, 26)
+        Me.LabelSettingTheme.Location = New System.Drawing.Point(257, 16)
         Me.LabelSettingTheme.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingTheme.Name = "LabelSettingTheme"
         Me.LabelSettingTheme.Padding = New System.Windows.Forms.Padding(3)
@@ -80,7 +85,7 @@ Partial Class Settings
         'LabelSettingOperatorColorPrimary
         '
         Me.LabelSettingOperatorColorPrimary.AutoSize = True
-        Me.LabelSettingOperatorColorPrimary.Location = New System.Drawing.Point(122, 62)
+        Me.LabelSettingOperatorColorPrimary.Location = New System.Drawing.Point(138, 50)
         Me.LabelSettingOperatorColorPrimary.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorColorPrimary.Name = "LabelSettingOperatorColorPrimary"
         Me.LabelSettingOperatorColorPrimary.Padding = New System.Windows.Forms.Padding(3)
@@ -92,7 +97,7 @@ Partial Class Settings
         'LabelSettingOperatorJunction
         '
         Me.LabelSettingOperatorJunction.AutoSize = True
-        Me.LabelSettingOperatorJunction.Location = New System.Drawing.Point(154, 132)
+        Me.LabelSettingOperatorJunction.Location = New System.Drawing.Point(175, 118)
         Me.LabelSettingOperatorJunction.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorJunction.Name = "LabelSettingOperatorJunction"
         Me.LabelSettingOperatorJunction.Padding = New System.Windows.Forms.Padding(3)
@@ -104,7 +109,7 @@ Partial Class Settings
         'LabelSettingOperatorColorSecondary
         '
         Me.LabelSettingOperatorColorSecondary.AutoSize = True
-        Me.LabelSettingOperatorColorSecondary.Location = New System.Drawing.Point(96, 97)
+        Me.LabelSettingOperatorColorSecondary.Location = New System.Drawing.Point(113, 84)
         Me.LabelSettingOperatorColorSecondary.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorColorSecondary.Name = "LabelSettingOperatorColorSecondary"
         Me.LabelSettingOperatorColorSecondary.Padding = New System.Windows.Forms.Padding(3)
@@ -116,7 +121,7 @@ Partial Class Settings
         'LabelSettingLoaded
         '
         Me.LabelSettingLoaded.AutoSize = True
-        Me.LabelSettingLoaded.Location = New System.Drawing.Point(231, 273)
+        Me.LabelSettingLoaded.Location = New System.Drawing.Point(253, 254)
         Me.LabelSettingLoaded.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingLoaded.Name = "LabelSettingLoaded"
         Me.LabelSettingLoaded.Padding = New System.Windows.Forms.Padding(3)
@@ -128,7 +133,7 @@ Partial Class Settings
         'LabelSettingOperatorDefaultProfile
         '
         Me.LabelSettingOperatorDefaultProfile.AutoSize = True
-        Me.LabelSettingOperatorDefaultProfile.Location = New System.Drawing.Point(114, 238)
+        Me.LabelSettingOperatorDefaultProfile.Location = New System.Drawing.Point(134, 220)
         Me.LabelSettingOperatorDefaultProfile.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorDefaultProfile.Name = "LabelSettingOperatorDefaultProfile"
         Me.LabelSettingOperatorDefaultProfile.Padding = New System.Windows.Forms.Padding(3)
@@ -140,7 +145,7 @@ Partial Class Settings
         'LabelSettingSystemMood
         '
         Me.LabelSettingSystemMood.AutoSize = True
-        Me.LabelSettingSystemMood.Location = New System.Drawing.Point(188, 202)
+        Me.LabelSettingSystemMood.Location = New System.Drawing.Point(210, 186)
         Me.LabelSettingSystemMood.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingSystemMood.Name = "LabelSettingSystemMood"
         Me.LabelSettingSystemMood.Padding = New System.Windows.Forms.Padding(3)
@@ -152,7 +157,7 @@ Partial Class Settings
         'LabelSettingOperatorName
         '
         Me.LabelSettingOperatorName.AutoSize = True
-        Me.LabelSettingOperatorName.Location = New System.Drawing.Point(174, 167)
+        Me.LabelSettingOperatorName.Location = New System.Drawing.Point(195, 152)
         Me.LabelSettingOperatorName.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorName.Name = "LabelSettingOperatorName"
         Me.LabelSettingOperatorName.Padding = New System.Windows.Forms.Padding(3)
@@ -165,7 +170,7 @@ Partial Class Settings
         '
         Me.LabelSettingThemeDisplay.AutoSize = True
         Me.LabelSettingThemeDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingThemeDisplay.Location = New System.Drawing.Point(314, 26)
+        Me.LabelSettingThemeDisplay.Location = New System.Drawing.Point(16, 16)
         Me.LabelSettingThemeDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingThemeDisplay.Name = "LabelSettingThemeDisplay"
         Me.LabelSettingThemeDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -178,7 +183,7 @@ Partial Class Settings
         '
         Me.LabelSettingOperatorColorPrimaryDisplay.AutoSize = True
         Me.LabelSettingOperatorColorPrimaryDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingOperatorColorPrimaryDisplay.Location = New System.Drawing.Point(314, 62)
+        Me.LabelSettingOperatorColorPrimaryDisplay.Location = New System.Drawing.Point(16, 50)
         Me.LabelSettingOperatorColorPrimaryDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorColorPrimaryDisplay.Name = "LabelSettingOperatorColorPrimaryDisplay"
         Me.LabelSettingOperatorColorPrimaryDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -191,7 +196,7 @@ Partial Class Settings
         '
         Me.LabelSettingOperatorJunctionDisplay.AutoSize = True
         Me.LabelSettingOperatorJunctionDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingOperatorJunctionDisplay.Location = New System.Drawing.Point(314, 132)
+        Me.LabelSettingOperatorJunctionDisplay.Location = New System.Drawing.Point(16, 118)
         Me.LabelSettingOperatorJunctionDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorJunctionDisplay.Name = "LabelSettingOperatorJunctionDisplay"
         Me.LabelSettingOperatorJunctionDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -204,7 +209,7 @@ Partial Class Settings
         '
         Me.LabelSettingOperatorColorSecondaryDisplay.AutoSize = True
         Me.LabelSettingOperatorColorSecondaryDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingOperatorColorSecondaryDisplay.Location = New System.Drawing.Point(314, 97)
+        Me.LabelSettingOperatorColorSecondaryDisplay.Location = New System.Drawing.Point(16, 84)
         Me.LabelSettingOperatorColorSecondaryDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorColorSecondaryDisplay.Name = "LabelSettingOperatorColorSecondaryDisplay"
         Me.LabelSettingOperatorColorSecondaryDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -217,7 +222,7 @@ Partial Class Settings
         '
         Me.LabelSettingSystemMoodDisplay.AutoSize = True
         Me.LabelSettingSystemMoodDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingSystemMoodDisplay.Location = New System.Drawing.Point(314, 202)
+        Me.LabelSettingSystemMoodDisplay.Location = New System.Drawing.Point(16, 186)
         Me.LabelSettingSystemMoodDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingSystemMoodDisplay.Name = "LabelSettingSystemMoodDisplay"
         Me.LabelSettingSystemMoodDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -230,7 +235,7 @@ Partial Class Settings
         '
         Me.LabelSettingOperatorNameDisplay.AutoSize = True
         Me.LabelSettingOperatorNameDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingOperatorNameDisplay.Location = New System.Drawing.Point(314, 167)
+        Me.LabelSettingOperatorNameDisplay.Location = New System.Drawing.Point(16, 152)
         Me.LabelSettingOperatorNameDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorNameDisplay.Name = "LabelSettingOperatorNameDisplay"
         Me.LabelSettingOperatorNameDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -243,7 +248,7 @@ Partial Class Settings
         '
         Me.LabelSettingLoadedDisplay.AutoSize = True
         Me.LabelSettingLoadedDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingLoadedDisplay.Location = New System.Drawing.Point(314, 273)
+        Me.LabelSettingLoadedDisplay.Location = New System.Drawing.Point(16, 254)
         Me.LabelSettingLoadedDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingLoadedDisplay.Name = "LabelSettingLoadedDisplay"
         Me.LabelSettingLoadedDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -256,7 +261,7 @@ Partial Class Settings
         '
         Me.LabelSettingOperatorDefaultProfileDisplay.AutoSize = True
         Me.LabelSettingOperatorDefaultProfileDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingOperatorDefaultProfileDisplay.Location = New System.Drawing.Point(314, 238)
+        Me.LabelSettingOperatorDefaultProfileDisplay.Location = New System.Drawing.Point(16, 220)
         Me.LabelSettingOperatorDefaultProfileDisplay.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorDefaultProfileDisplay.Name = "LabelSettingOperatorDefaultProfileDisplay"
         Me.LabelSettingOperatorDefaultProfileDisplay.Padding = New System.Windows.Forms.Padding(3)
@@ -268,7 +273,7 @@ Partial Class Settings
         'LabelSettingOperatorAvatar
         '
         Me.LabelSettingOperatorAvatar.AutoSize = True
-        Me.LabelSettingOperatorAvatar.Location = New System.Drawing.Point(163, 307)
+        Me.LabelSettingOperatorAvatar.Location = New System.Drawing.Point(185, 288)
         Me.LabelSettingOperatorAvatar.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOperatorAvatar.Name = "LabelSettingOperatorAvatar"
         Me.LabelSettingOperatorAvatar.Padding = New System.Windows.Forms.Padding(3)
@@ -282,16 +287,16 @@ Partial Class Settings
         Me.PanelSettingsOperatorPictureChange.AllowDrop = True
         Me.PanelSettingsOperatorPictureChange.BackColor = System.Drawing.Color.Transparent
         Me.PanelSettingsOperatorPictureChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelSettingsOperatorPictureChange.Location = New System.Drawing.Point(318, 307)
+        Me.PanelSettingsOperatorPictureChange.Controls.Add(Me.PictureBoxSettingsOperatorAvatar)
+        Me.PanelSettingsOperatorPictureChange.Location = New System.Drawing.Point(20, 288)
         Me.PanelSettingsOperatorPictureChange.Name = "PanelSettingsOperatorPictureChange"
         Me.PanelSettingsOperatorPictureChange.Size = New System.Drawing.Size(56, 55)
         Me.PanelSettingsOperatorPictureChange.TabIndex = 20
         '
         'PictureBoxSettingsOperatorAvatar
         '
-        Me.PictureBoxSettingsOperatorAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBoxSettingsOperatorAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxSettingsOperatorAvatar.Location = New System.Drawing.Point(318, 307)
+        Me.PictureBoxSettingsOperatorAvatar.Location = New System.Drawing.Point(-1, -1)
         Me.PictureBoxSettingsOperatorAvatar.Name = "PictureBoxSettingsOperatorAvatar"
         Me.PictureBoxSettingsOperatorAvatar.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxSettingsOperatorAvatar.TabIndex = 21
@@ -300,7 +305,7 @@ Partial Class Settings
         'LabelSettingOexlUpdate
         '
         Me.LabelSettingOexlUpdate.AutoSize = True
-        Me.LabelSettingOexlUpdate.Location = New System.Drawing.Point(185, 372)
+        Me.LabelSettingOexlUpdate.Location = New System.Drawing.Point(207, 344)
         Me.LabelSettingOexlUpdate.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingOexlUpdate.Name = "LabelSettingOexlUpdate"
         Me.LabelSettingOexlUpdate.Padding = New System.Windows.Forms.Padding(3)
@@ -313,7 +318,7 @@ Partial Class Settings
         '
         Me.LabelSettingUpdaterSummon.AutoSize = True
         Me.LabelSettingUpdaterSummon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LabelSettingUpdaterSummon.Location = New System.Drawing.Point(315, 372)
+        Me.LabelSettingUpdaterSummon.Location = New System.Drawing.Point(16, 344)
         Me.LabelSettingUpdaterSummon.Margin = New System.Windows.Forms.Padding(3)
         Me.LabelSettingUpdaterSummon.Name = "LabelSettingUpdaterSummon"
         Me.LabelSettingUpdaterSummon.Padding = New System.Windows.Forms.Padding(3)
@@ -322,68 +327,72 @@ Partial Class Settings
         Me.LabelSettingUpdaterSummon.Text = "Click here to check for updates"
         Me.LabelSettingUpdaterSummon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.LabelSettingOexlUpdate)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorAvatar)
+        Me.Panel1.Controls.Add(Me.LabelSettingLoaded)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorDefaultProfile)
+        Me.Panel1.Controls.Add(Me.LabelSettingSystemMood)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorName)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorJunction)
+        Me.Panel1.Controls.Add(Me.LabelSettingTheme)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorColorPrimary)
+        Me.Panel1.Controls.Add(Me.LabelSettingOperatorColorSecondary)
+        Me.Panel1.Location = New System.Drawing.Point(27, 27)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(13, 13, 9, 13)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(13, 13, 13, 0)
+        Me.Panel1.Size = New System.Drawing.Size(345, 397)
+        Me.Panel1.TabIndex = 24
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.LabelSettingOperatorJunctionDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingThemeDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingUpdaterSummon)
+        Me.Panel2.Controls.Add(Me.LabelSettingOperatorColorPrimaryDisplay)
+        Me.Panel2.Controls.Add(Me.PanelSettingsOperatorPictureChange)
+        Me.Panel2.Controls.Add(Me.LabelSettingOperatorColorSecondaryDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingLoadedDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingOperatorNameDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingOperatorDefaultProfileDisplay)
+        Me.Panel2.Controls.Add(Me.LabelSettingSystemMoodDisplay)
+        Me.Panel2.Location = New System.Drawing.Point(394, 27)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(13, 9, 13, 13)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(13, 13, 13, 0)
+        Me.Panel2.Size = New System.Drawing.Size(345, 397)
+        Me.Panel2.TabIndex = 25
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(759, 603)
-        Me.Controls.Add(Me.LabelSettingUpdaterSummon)
-        Me.Controls.Add(Me.LabelSettingOexlUpdate)
-        Me.Controls.Add(Me.PanelSettingsOperatorPictureChange)
-        Me.Controls.Add(Me.LabelSettingOperatorAvatar)
-        Me.Controls.Add(Me.LabelSettingLoadedDisplay)
-        Me.Controls.Add(Me.LabelSettingOperatorDefaultProfileDisplay)
-        Me.Controls.Add(Me.LabelSettingSystemMoodDisplay)
-        Me.Controls.Add(Me.LabelSettingOperatorNameDisplay)
-        Me.Controls.Add(Me.LabelSettingOperatorJunctionDisplay)
-        Me.Controls.Add(Me.LabelSettingOperatorColorSecondaryDisplay)
-        Me.Controls.Add(Me.LabelSettingOperatorColorPrimaryDisplay)
-        Me.Controls.Add(Me.LabelSettingThemeDisplay)
-        Me.Controls.Add(Me.LabelSettingLoaded)
-        Me.Controls.Add(Me.LabelSettingOperatorDefaultProfile)
-        Me.Controls.Add(Me.LabelSettingSystemMood)
-        Me.Controls.Add(Me.LabelSettingOperatorName)
-        Me.Controls.Add(Me.LabelSettingOperatorJunction)
-        Me.Controls.Add(Me.LabelSettingOperatorColorSecondary)
-        Me.Controls.Add(Me.LabelSettingOperatorColorPrimary)
-        Me.Controls.Add(Me.LabelSettingTheme)
-        Me.Controls.Add(Me.PictureBoxSettingsOperatorAvatar)
+        Me.ClientSize = New System.Drawing.Size(780, 451)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.Color.DarkOrchid
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "Settings"
         Me.Padding = New System.Windows.Forms.Padding(14)
         Me.Text = "Settings"
-        Me.Controls.SetChildIndex(Me.PictureBoxSettingsOperatorAvatar, 0)
+        Me.Controls.SetChildIndex(Me.Panel1, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingTheme, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorColorPrimary, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorColorSecondary, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorJunction, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorName, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingSystemMood, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorDefaultProfile, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingLoaded, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingThemeDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorColorPrimaryDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorColorSecondaryDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorJunctionDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorNameDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingSystemMoodDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorDefaultProfileDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingLoadedDisplay, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOperatorAvatar, 0)
-        Me.Controls.SetChildIndex(Me.PanelSettingsOperatorPictureChange, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingOexlUpdate, 0)
-        Me.Controls.SetChildIndex(Me.LabelSettingUpdaterSummon, 0)
+        Me.Controls.SetChildIndex(Me.Panel2, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelSettingsOperatorPictureChange.ResumeLayout(False)
         CType(Me.PictureBoxSettingsOperatorAvatar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -408,4 +417,6 @@ Partial Class Settings
     Friend WithEvents PictureBoxSettingsOperatorAvatar As PictureBox
     Friend WithEvents LabelSettingOexlUpdate As Label
     Friend WithEvents LabelSettingUpdaterSummon As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class
