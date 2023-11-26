@@ -1,7 +1,7 @@
 ﻿Public Class Shortcuts
 
     Dim ShortcutDirectory As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Operator\Shortcut"
-
+    Const NoShortcus As String = "No Shorcuts Available"
 
     Private Sub Shortcuts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -27,6 +27,8 @@
 
     Sub AddShortcutFilesToListBox()
 
+        Dim itemsadded As Integer = 0
+
         ' Clear the ListBox first
         ListBoxShortcuts.Items.Clear()
 
@@ -42,6 +44,8 @@
 
             ' Add the file name to the ListBox
             ListBoxShortcuts.Items.Add(fileName)
+
+            itemsadded += 1
         Next
 
         For Each urlFile As String In urlFiles
@@ -49,7 +53,13 @@
 
             ' Add the file name to the ListBox
             ListBoxShortcuts.Items.Add(fileName)
+
+            itemsadded += 1
         Next
+
+        If itemsadded = 0 Then
+            ListBoxShortcuts.Items.Add(NoShortcus)
+        End If
 
         ListBoxShortcuts.SelectedIndex = 0
 
@@ -57,6 +67,14 @@
 
 
     Sub StartApp()
+
+        If ListBoxShortcuts.SelectedItem.ToString = NoShortcus Then
+
+            MsgBox("Drag and drop your shortcuts on the list to add.")
+
+            GoTo 0
+
+        End If
 
         Try
 
@@ -75,13 +93,19 @@
 
         Catch ex As Exception
 
-
+            MsgBox("An error has occured")
 
         End Try
-
+0:
     End Sub
 
     Private Sub ListBoxShortcuts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBoxShortcuts.SelectedIndexChanged
+
+        If ListBoxShortcuts.SelectedItem.ToString = NoShortcus Then
+
+            GoTo 0
+
+        End If
 
         Dim selectedShortcut As String = ListBoxShortcuts.SelectedItem.ToString()
         Dim shortcutPath As String = Path.Combine(ShortcutDirectory, selectedShortcut & ".lnk")
@@ -94,7 +118,7 @@
             Dim icon As Icon = Icon.ExtractAssociatedIcon(shortcutPath)
             PictureBoxIcon.Image = icon.ToBitmap()
         End If
-
+0:
     End Sub
 
     ' Drag and drop
