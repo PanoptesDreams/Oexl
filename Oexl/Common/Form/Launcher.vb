@@ -93,14 +93,4 @@
     End Sub
 
 
-
-    Private Sub LabelArgs_Click(sender As Object, e As EventArgs) Handles LabelArgs.Click
-
-        Summon(Arguments)
-
-    End Sub
-
-
-
-
 End Class

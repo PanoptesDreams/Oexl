@@ -35,26 +35,29 @@ Partial Class Notes
         '
         'PictureBoxClose
         '
-        Me.PictureBoxClose.Location = New System.Drawing.Point(940, 18)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(1044, 20)
+        Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(940, 50)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(1044, 55)
+        Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(940, 82)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(1044, 90)
+        Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
         '
         'ListBoxNotes
         '
         Me.ListBoxNotes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ListBoxNotes.FormattingEnabled = True
-        Me.ListBoxNotes.ItemHeight = 20
-        Me.ListBoxNotes.Location = New System.Drawing.Point(18, 15)
-        Me.ListBoxNotes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ListBoxNotes.ItemHeight = 22
+        Me.ListBoxNotes.Location = New System.Drawing.Point(20, 17)
+        Me.ListBoxNotes.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.ListBoxNotes.Name = "ListBoxNotes"
-        Me.ListBoxNotes.Size = New System.Drawing.Size(212, 644)
+        Me.ListBoxNotes.Size = New System.Drawing.Size(235, 686)
         Me.ListBoxNotes.TabIndex = 0
         '
         'TextBoxNotes
@@ -62,9 +65,9 @@ Partial Class Notes
         Me.TextBoxNotes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxNotes.Location = New System.Drawing.Point(257, 81)
+        Me.TextBoxNotes.Location = New System.Drawing.Point(286, 89)
         Me.TextBoxNotes.Name = "TextBoxNotes"
-        Me.TextBoxNotes.Size = New System.Drawing.Size(652, 578)
+        Me.TextBoxNotes.Size = New System.Drawing.Size(724, 614)
         Me.TextBoxNotes.TabIndex = 3
         Me.TextBoxNotes.Text = ""
         '
@@ -72,9 +75,9 @@ Partial Class Notes
         '
         Me.ButtonOpenNotesFolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonOpenNotesFolder.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonOpenNotesFolder.Location = New System.Drawing.Point(803, 14)
+        Me.ButtonOpenNotesFolder.Location = New System.Drawing.Point(892, 15)
         Me.ButtonOpenNotesFolder.Name = "ButtonOpenNotesFolder"
-        Me.ButtonOpenNotesFolder.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonOpenNotesFolder.Size = New System.Drawing.Size(118, 63)
         Me.ButtonOpenNotesFolder.TabIndex = 4
         Me.ButtonOpenNotesFolder.Text = "Open Folder"
         Me.ButtonOpenNotesFolder.UseVisualStyleBackColor = False
@@ -83,9 +86,9 @@ Partial Class Notes
         '
         Me.ButtonTakeNote.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonTakeNote.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonTakeNote.Location = New System.Drawing.Point(257, 15)
+        Me.ButtonTakeNote.Location = New System.Drawing.Point(286, 17)
         Me.ButtonTakeNote.Name = "ButtonTakeNote"
-        Me.ButtonTakeNote.Size = New System.Drawing.Size(106, 57)
+        Me.ButtonTakeNote.Size = New System.Drawing.Size(118, 63)
         Me.ButtonTakeNote.TabIndex = 5
         Me.ButtonTakeNote.Text = "Take Note"
         Me.ButtonTakeNote.UseVisualStyleBackColor = False
@@ -94,18 +97,18 @@ Partial Class Notes
         '
         Me.ImmatatoButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ImmatatoButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ImmatatoButton.Location = New System.Drawing.Point(643, 14)
+        Me.ImmatatoButton.Location = New System.Drawing.Point(714, 15)
         Me.ImmatatoButton.Name = "ImmatatoButton"
-        Me.ImmatatoButton.Size = New System.Drawing.Size(106, 57)
+        Me.ImmatatoButton.Size = New System.Drawing.Size(118, 63)
         Me.ImmatatoButton.TabIndex = 6
         Me.ImmatatoButton.Text = "IMm-ATATO OPEN"
         Me.ImmatatoButton.UseVisualStyleBackColor = False
         '
         'Notes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(962, 671)
+        Me.ClientSize = New System.Drawing.Size(1069, 738)
         Me.Controls.Add(Me.ImmatatoButton)
         Me.Controls.Add(Me.ButtonTakeNote)
         Me.Controls.Add(Me.ButtonOpenNotesFolder)
@@ -113,9 +116,9 @@ Partial Class Notes
         Me.Controls.Add(Me.ListBoxNotes)
         Me.ForeColor = System.Drawing.Color.DarkOrchid
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.Margin = New System.Windows.Forms.Padding(7, 9, 7, 9)
         Me.Name = "Notes"
-        Me.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Padding = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Text = "Notes"
         Me.Controls.SetChildIndex(Me.ListBoxNotes, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)

@@ -27,7 +27,6 @@ Partial Class Launcher
         Me.LabelGreeting = New System.Windows.Forms.Label()
         Me.PictureBoxOperatorAvatar = New System.Windows.Forms.PictureBox()
         Me.PictureBoxToolbox = New System.Windows.Forms.PictureBox()
-        Me.LabelArgs = New System.Windows.Forms.Label()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,21 +88,11 @@ Partial Class Launcher
         Me.PictureBoxToolbox.TabIndex = 4
         Me.PictureBoxToolbox.TabStop = False
         '
-        'LabelArgs
-        '
-        Me.LabelArgs.AutoSize = True
-        Me.LabelArgs.Location = New System.Drawing.Point(415, 43)
-        Me.LabelArgs.Name = "LabelArgs"
-        Me.LabelArgs.Size = New System.Drawing.Size(96, 22)
-        Me.LabelArgs.TabIndex = 5
-        Me.LabelArgs.Text = "Arguments"
-        '
         'Launcher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(740, 85)
-        Me.Controls.Add(Me.LabelArgs)
         Me.Controls.Add(Me.PictureBoxToolbox)
         Me.Controls.Add(Me.PictureBoxOperatorAvatar)
         Me.Controls.Add(Me.LabelGreeting)
@@ -122,7 +111,6 @@ Partial Class Launcher
         Me.Controls.SetChildIndex(Me.LabelGreeting, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxOperatorAvatar, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxToolbox, 0)
-        Me.Controls.SetChildIndex(Me.LabelArgs, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -137,5 +125,4 @@ Partial Class Launcher
     Friend WithEvents LabelGreeting As Label
     Friend WithEvents PictureBoxOperatorAvatar As PictureBox
     Friend WithEvents PictureBoxToolbox As PictureBox
-    Friend WithEvents LabelArgs As Label
 End Class

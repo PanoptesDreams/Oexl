@@ -1,6 +1,6 @@
 ﻿Public Class NoteTaker
 
-    Dim folderPath As String = "R:\Adam\Operator\Note\"
+    Dim folderPath As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Operator\Note"
 
 
     Private Sub ButtonSaveNote_Click(sender As Object, e As EventArgs) Handles ButtonSaveNote.Click
