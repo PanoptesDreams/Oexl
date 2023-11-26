@@ -76,7 +76,7 @@ Partial Class Shortcuts
         '
         'PictureBoxIcon
         '
-        Me.PictureBoxIcon.Location = New System.Drawing.Point(383, 348)
+        Me.PictureBoxIcon.Location = New System.Drawing.Point(383, 346)
         Me.PictureBoxIcon.Name = "PictureBoxIcon"
         Me.PictureBoxIcon.Size = New System.Drawing.Size(66, 55)
         Me.PictureBoxIcon.TabIndex = 11

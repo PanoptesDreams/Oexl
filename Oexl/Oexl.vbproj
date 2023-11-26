@@ -139,6 +139,12 @@
     <Compile Include="Common\Form\Applications.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\Arguments.Designer.vb">
+      <DependentUpon>Arguments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Arguments.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\DesktopClock.Designer.vb">
       <DependentUpon>DesktopClock.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,12 @@
     <Compile Include="Common\Form\TrayIcon.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\Updater.Designer.vb">
+      <DependentUpon>Updater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Updater.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\WingetInstaller.Designer.vb">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
     </Compile>
@@ -277,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Applications.resx">
       <DependentUpon>Applications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Arguments.resx">
+      <DependentUpon>Arguments.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\DesktopClock.resx">
       <DependentUpon>DesktopClock.vb</DependentUpon>

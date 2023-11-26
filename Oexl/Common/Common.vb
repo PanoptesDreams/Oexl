@@ -324,7 +324,7 @@ Public Module Common
             Case "18", "19", "20", "21", "22", "23"
                 Greet += "Evening, "
         End Select
-        Greet += My.Settings.OperatorName
+
         Return Greet
 
     End Function

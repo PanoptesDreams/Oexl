@@ -199,18 +199,5 @@ Public Class Operators
 
     End Sub
 
-    Private Sub RoundedButton1_Click(sender As Object, e As EventArgs) Handles RoundedButton1.Click
-
-
-        For Each item In Environment.GetCommandLineArgs
-
-            CheckedListBoxOperators.Items.Add(item)
-
-        Next
-
-    End Sub
-
-
-
 
 End Class

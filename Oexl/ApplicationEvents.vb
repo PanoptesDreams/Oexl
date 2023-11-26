@@ -19,7 +19,7 @@
 
         Private Sub Oexl_Closing() Handles Me.Shutdown
 
-            My.Settings.Loaded = False
+            Settings.Loaded = False
 
         End Sub
 

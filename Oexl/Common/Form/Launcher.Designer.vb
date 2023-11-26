@@ -83,7 +83,7 @@ Partial Class Launcher
         Me.PictureBoxToolbox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBoxToolbox.BackgroundImage = Global.Oexl.My.Resources.Resources.max
         Me.PictureBoxToolbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxToolbox.Location = New System.Drawing.Point(416, 14)
+        Me.PictureBoxToolbox.Location = New System.Drawing.Point(291, 14)
         Me.PictureBoxToolbox.Name = "PictureBoxToolbox"
         Me.PictureBoxToolbox.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxToolbox.TabIndex = 4
@@ -92,14 +92,15 @@ Partial Class Launcher
         'LabelArgs
         '
         Me.LabelArgs.AutoSize = True
-        Me.LabelArgs.Location = New System.Drawing.Point(493, 21)
+        Me.LabelArgs.Location = New System.Drawing.Point(415, 43)
         Me.LabelArgs.Name = "LabelArgs"
-        Me.LabelArgs.Size = New System.Drawing.Size(79, 22)
+        Me.LabelArgs.Size = New System.Drawing.Size(96, 22)
         Me.LabelArgs.TabIndex = 5
-        Me.LabelArgs.Text = "Greeting"
+        Me.LabelArgs.Text = "Arguments"
         '
         'Launcher
         '
+        Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(740, 85)

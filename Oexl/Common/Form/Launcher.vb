@@ -36,6 +36,12 @@
 
         LabelOperatorName.Text = My.Settings.OperatorName ' Retrieve name
 
+        LoadOperatorAvatar()
+
+    End Sub
+
+    Public Sub LoadOperatorAvatar()
+
         Dim OperatorPicture As Image
 
         Try ' Loading Operator image from the default path
@@ -49,7 +55,6 @@
         End Try
 
         PictureBoxOperator.Image = ResizeImage(OperatorPicture, PictureBoxOperator.Width, PictureBoxOperator.Height) ' Resize imported image and apply
-
 
     End Sub
 
@@ -86,5 +91,16 @@
         End If
 
     End Sub
+
+
+
+    Private Sub LabelArgs_Click(sender As Object, e As EventArgs) Handles LabelArgs.Click
+
+        Summon(Arguments)
+
+    End Sub
+
+
+
 
 End Class
