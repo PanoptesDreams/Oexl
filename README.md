@@ -30,4 +30,6 @@ Microsoft Office 2010 (Including developer kit)
 
 ## Builds
 
-[Latest Dev Build](https://panoptes.jp-osa-1.linodeobjects.com/oexl/package/oexl.zip)
+[Latest Developer Build]() - Unavailable. build it yourself from source.
+
+[Latest Release Build](https://panoptes.jp-osa-1.linodeobjects.com/oexl/package/oexl-0.18732.42323.zip) - Version 0.1
