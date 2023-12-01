@@ -1,13 +1,25 @@
 ﻿
 Public Class Game
 
-    Dim PSXBinDir As String = "C:\\Users\panoptes.live\Desktop\duck\duckstation-qt-x64-ReleaseLTCG.exe"
+
+    Dim GameLibrary As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software\Game\Library" 'A:\Software\Gaming\Library
+
+    Dim EmulatorRoot As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software"
+
+
+    Dim EmulatorPlaystation1 As String = EmulatorRoot & "\Duckstation\p.data\duckstation-qt-x64-ReleaseLTCG.exe"
+    Dim EmulatorPlaystation2 As String = EmulatorRoot & ""
+    Dim EmulatorPlaystation3 As String = EmulatorRoot & ""
+    Dim EmulatorGameBoy As String = EmulatorRoot & ""
+    Dim EmulatorGameBoyColor As String = EmulatorRoot & ""
+    Dim EmulatorGameBoyAdvanced As String = EmulatorRoot & ""
+
 
     Private Sub ButtonPSXLaunch_Click(sender As Object, e As EventArgs) Handles ButtonPSXLaunch.Click
 
         Dim PSXBin As New Process()
 
-        PSXBin.StartInfo.FileName = PSXBinDir
+        PSXBin.StartInfo.FileName = EmulatorPlaystation1
         PSXBin.StartInfo.UseShellExecute = True
 
         PSXBin.Start()
@@ -22,10 +34,10 @@ Public Class Game
 
     'Directories
     Dim ArgusDir As String = Environment.GetEnvironmentVariable("argus")
-    ' Dim GameLibDir As String = ArgusDir + My.Settings.GameLib 'A:\Software\Gaming\Library
-    Dim GameLibDir As String = "O:\Software\Gaming\Library"
+    Dim GameLibDir As String = GameLibrary
+    ' Dim GameLibDir As String = "O:\Software\Gaming\Library"
 
-    Dim GameboyDir As String = GameLibDir + "\Gameboy Advanced" 'A:\Software\Gaming\Library\Gameboy Advanced (Please fix)
+    Dim GameboyDir As String = GameLibDir & "\Gameboy Advanced" 'A:\Software\Gaming\Library\Gameboy Advanced (Please fix)
 
     Dim PlayStationDir As String = GameLibDir + "\PlayStation"
     Dim PlayStation2Dir As String = GameLibDir + "\PlayStation2"
@@ -58,8 +70,6 @@ Public Class Game
     'Form Load
     Private Sub FormGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' UniThemer not available here. We use roundedform
-        ' UniThemer(Me)
 
         'LoadGame()
 
