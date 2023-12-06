@@ -37,7 +37,7 @@ Partial Class RoundedForm
         Me.PictureBoxClose.BackgroundImage = Global.Oexl.My.Resources.Resources.circle_grey
         Me.PictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxClose.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxClose.Location = New System.Drawing.Point(299, 16)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(1837, 22)
         Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxClose.Name = "PictureBoxClose"
         Me.PictureBoxClose.Padding = New System.Windows.Forms.Padding(1)
@@ -52,7 +52,7 @@ Partial Class RoundedForm
         Me.PictureBoxMax.BackgroundImage = Global.Oexl.My.Resources.Resources.square_grey
         Me.PictureBoxMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMax.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMax.Location = New System.Drawing.Point(299, 40)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(1837, 46)
         Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMax.Name = "PictureBoxMax"
         Me.PictureBoxMax.Padding = New System.Windows.Forms.Padding(1)
@@ -67,7 +67,7 @@ Partial Class RoundedForm
         Me.PictureBoxMinimize.BackgroundImage = Global.Oexl.My.Resources.Resources.triangle_grey
         Me.PictureBoxMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMinimize.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(299, 64)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(1837, 70)
         Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMinimize.Name = "PictureBoxMinimize"
         Me.PictureBoxMinimize.Padding = New System.Windows.Forms.Padding(1)
@@ -80,7 +80,7 @@ Partial Class RoundedForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(333, 333)
+        Me.ClientSize = New System.Drawing.Size(1880, 1000)
         Me.Controls.Add(Me.PictureBoxMinimize)
         Me.Controls.Add(Me.PictureBoxMax)
         Me.Controls.Add(Me.PictureBoxClose)

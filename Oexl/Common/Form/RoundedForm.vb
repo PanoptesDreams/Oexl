@@ -2,6 +2,13 @@
 
 Public Class RoundedForm
 
+    ' Notes
+    ' • The default form size of 1880x1000 is semi-arbitrary and was chosen for two reasons:
+    '   1) It is slightly smaller than the common 1920x1080 resolution
+    '   2) The Visual Studio IDE has behavioral issues when inheriting and editing this form,
+    '      that being the child form is forced to the lower right corner of the screen.
+
+
     ' Border
     Private BorderPath As New GraphicsPath()
     Private BorderColor As Color = BorderColorize(BackColor)
@@ -34,6 +41,7 @@ Public Class RoundedForm
 
 
     Private Function BorderColorize(ByVal color As Color) As Color
+
         'Calculate the perceived brightness of the color using the formula for relative luminance from the sRGB color space.
         Dim luminance As Double = 0.2126 * color.R + 0.7152 * color.G + 0.0722 * color.B
 
@@ -70,6 +78,7 @@ Public Class RoundedForm
         Dim newColor As Color = Color.FromArgb(newR, newG, newB)
 
         Return newColor
+
     End Function
 
 
@@ -110,10 +119,11 @@ Public Class RoundedForm
 
     End Sub
 
-    ' Mouse Click down event handler
-    Private Sub RoundedForm_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+#Region "Form Movement"
 
-        If e.Button = MouseButtons.Left Then ' Move form on Left Mouse down, activation
+    Private Sub RoundedForm_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown ' Move form on Left Mouse down
+
+        If e.Button = MouseButtons.Left Then
 
 
             If WindowState = FormWindowState.Maximized Then
@@ -132,42 +142,45 @@ Public Class RoundedForm
 
     End Sub
 
-    ' Mouse Movement event handler
-    Private Sub RoundedForm_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+    Private Sub RoundedForm_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove ' Moves form
 
-        If isDragging Then ' Move form on Left Mouse down, movement
+        If isDragging Then
 
             Dim mousePos As Point = MousePosition
+
             mousePos.Offset(mouseOffset.X, mouseOffset.Y)
-            Me.Location = mousePos
+
+            Location = mousePos
 
         End If
 
     End Sub
 
-    ' Mouse Click up event handler
-    Private Sub RoundedForm_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp
+    Private Sub RoundedForm_MouseUp(sender As Object, e As MouseEventArgs) Handles Me.MouseUp ' Releases form on Left Mouse up
 
-        If e.Button = MouseButtons.Left Then ' Move form on Left Mouse down, deactivation
+        If e.Button = MouseButtons.Left Then
 
             isDragging = False
 
-            cursorUp = MousePosition
+            cursorUp = MousePosition ' What exactly does this do again?
+            ' I think it's a vestige of the "last position" system from argus
 
         End If
 
     End Sub
 
+#End Region
+
 #Region "Buttons"
 
-    ' Close
-    Private Sub PictureBoxClose_MouseEnter(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseEnter
+    ' Close Button
+    Private Sub PictureBoxClose_MouseEnter(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseEnter ' Change close button to highlighted
 
         PictureBoxClose.BackgroundImage = My.Resources.circle
 
     End Sub
 
-    Private Sub PictureBoxClose_MouseLeave(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseLeave
+    Private Sub PictureBoxClose_MouseLeave(sender As Object, e As EventArgs) Handles PictureBoxClose.MouseLeave ' Change close button to away
 
         PictureBoxClose.BackgroundImage = My.Resources.circle_grey
 

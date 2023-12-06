@@ -1,5 +1,8 @@
 ﻿Imports System.Net
 
+' THIS NEEDS TO BE REMOVED
+' THIS HAS BEEN EXPORTED TO A SEPARTE APP
+
 Public Class Updater
 
     Dim LocalVersion As String

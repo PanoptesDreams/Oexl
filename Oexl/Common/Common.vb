@@ -1,5 +1,8 @@
 ﻿Imports System.Drawing.Text
 Imports System.Management
+Imports SharpCompress.Archives
+Imports SharpCompress.Archives.Zip
+Imports SharpCompress.Common
 
 
 Public Module Common
@@ -270,6 +273,16 @@ Public Module Common
 
         End Using
 
+    End Sub
+
+    Public Sub ExtractZip(ByVal archivePath As String, ByVal outputPath As String)
+        Using archive As IArchive = ZipArchive.Open(archivePath)
+            For Each entry In archive.Entries
+                If Not entry.IsDirectory Then
+                    entry.WriteToDirectory(outputPath, New ExtractionOptions With {.ExtractFullPath = True, .Overwrite = True})
+                End If
+            Next
+        End Using
     End Sub
 
 #End Region

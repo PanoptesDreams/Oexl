@@ -2,30 +2,55 @@
 Public Class Game
 
 
-    Dim GameLibrary As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software\Game\Library" 'A:\Software\Gaming\Library
-
-    Dim EmulatorRoot As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software"
+    Dim GameLibrary As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software\Game\Library"
+    Dim RomLibrary As String = GameLibrary & "\ROM"
+    Dim EmulatorRoot As String = My.Settings.OperatorRoot & "\" & My.Settings.OperatorName & "\Software\Emulation"
 
 
     Dim EmulatorPlaystation1 As String = EmulatorRoot & "\Duckstation\p.data\duckstation-qt-x64-ReleaseLTCG.exe"
-    Dim EmulatorPlaystation2 As String = EmulatorRoot & ""
+    Dim EmulatorPlaystation2 As String = EmulatorRoot & "\pcsx2"
     Dim EmulatorPlaystation3 As String = EmulatorRoot & ""
     Dim EmulatorGameBoy As String = EmulatorRoot & ""
     Dim EmulatorGameBoyColor As String = EmulatorRoot & ""
     Dim EmulatorGameBoyAdvanced As String = EmulatorRoot & ""
 
+    ' Start Emulator with ROM
+    ''' <summary>
+    ''' Launches a ROM using an Emulator
+    ''' </summary>
+    ''' <param name="Emulator">Full path to Emulator binary</param>
+    ''' <param name="ROM">Full path to Disc Image</param>
+    Public Sub StartEmulation(ByRef Emulator As String, ByRef ROM As String)
+
+        Dim EmulationEngine As New Process()
+
+        EmulationEngine.StartInfo.FileName = Emulator
+        EmulationEngine.StartInfo.UseShellExecute = True
+
+        EmulationEngine.Start()
+
+    End Sub
+
 
     Private Sub ButtonPSXLaunch_Click(sender As Object, e As EventArgs) Handles ButtonPSXLaunch.Click
 
-        Dim PSXBin As New Process()
-
-        PSXBin.StartInfo.FileName = EmulatorPlaystation1
-        PSXBin.StartInfo.UseShellExecute = True
-
-        PSXBin.Start()
+        StartEmulation(EmulatorPlaystation1, "O:\Hewe\Software\Game\ROM\Playstation\CTR - Crash Team Racing.chd")
 
 
     End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     'Variable Start
     ' Debug switch not implemented yet
@@ -35,14 +60,14 @@ Public Class Game
     'Directories
     Dim ArgusDir As String = Environment.GetEnvironmentVariable("argus")
     Dim GameLibDir As String = GameLibrary
-    ' Dim GameLibDir As String = "O:\Software\Gaming\Library"
+
 
     Dim GameboyDir As String = GameLibDir & "\Gameboy Advanced" 'A:\Software\Gaming\Library\Gameboy Advanced (Please fix)
 
     Dim PlayStationDir As String = GameLibDir + "\PlayStation"
     Dim PlayStation2Dir As String = GameLibDir + "\PlayStation2"
     Dim PlayStation3Dir As String = GameLibDir + "\PlayStation3"
-    Dim WinDir As String = GameLibDir + "\Windows"
+    Dim WinDir As String = GameLibDir
     Dim XboxDir As String = GameLibDir + "\Xbox"
     Dim Xbox360Dir As String = GameLibDir + "\Xbox360"
     Dim Nintendo64Dir As String = GameLibDir + "\Nintendo64"
@@ -70,22 +95,24 @@ Public Class Game
     'Form Load
     Private Sub FormGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        MsgBox(GameLibrary)
+
 
         'LoadGame()
 
-        GameListBuilder("Windows")
-        GameListBuilder("Playstation")
-        GameListBuilder("Xbox")
-        GameListBuilder("Nintendo")
+        'GameListBuilder("Windows")
+        'GameListBuilder("Playstation")
+        'GameListBuilder("Xbox")
+        'GameListBuilder("Nintendo")
 
-        Try
-            ListGamesWin.SelectedIndex = 0
-            ListGamesXbox.SelectedIndex = 0
-            ListGamesPlaystation.SelectedIndex = 0
-            ListGamesNintendo.SelectedIndex = 0
-        Catch ex As Exception
+        ' Try
+        '    ListGamesWin.SelectedIndex = 0
+        '   ListGamesXbox.SelectedIndex = 0
+        '   ListGamesPlaystation.SelectedIndex = 0
+        '   ListGamesNintendo.SelectedIndex = 0
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
 
 
@@ -97,6 +124,11 @@ Public Class Game
     End Sub
 
     'Game list builder
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="Platform">Windows, Playstation, Xbox, Nintendo</param>
+
     Public Sub GameListBuilder(Platform As String)
 
         Dim TargetList As ListBox = ListGamesWin
@@ -111,16 +143,16 @@ Public Class Game
                 TargetList = ListGamesWin
 
             Case = "Playstation"
-                CurrentDir = PlayStationDir + "\rom"
+                CurrentDir = "\rom" & PlayStationDir
                 TargetList = ListGamesPlaystation
 
-            Case = "Xbox"
-                CurrentDir = XboxDir + "\rom"
-                TargetList = ListGamesXbox
+                ' Case = "Xbox"
+                ' CurrentDir = "\rom" & XboxDir
+                'TargetList = ListGamesXbox
 
-            Case = "Nintendo"
-                CurrentDir = GameboyDir + "\rom"
-                TargetList = ListGamesNintendo
+                ' Case = "Nintendo"
+                'CurrentDir = "\rom" & GameboyDir
+                'TargetList = ListGamesNintendo
 
         End Select
 
