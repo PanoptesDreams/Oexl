@@ -12,6 +12,7 @@ Public Class RoundedForm
     ' Border
     Private BorderPath As New GraphicsPath()
     Private BorderColor As Color = BorderColorize(BackColor)
+    Private BorderRadius As Integer = My.Settings.FormRadius
 
     ' Movement
     Private isDragging As Boolean = False
@@ -94,13 +95,13 @@ Public Class RoundedForm
         BorderPath.Reset()
         BorderPath.StartFigure()
 
-        BorderPath.AddArc(New Rectangle(0, 0, 20, 20), 180, 90)
-        BorderPath.AddLine(20, 0, Me.Width - 20, 0)
-        BorderPath.AddArc(New Rectangle(Me.Width - 20, 0, 20, 20), -90, 90)
-        BorderPath.AddLine(Me.Width, 20, Me.Width, Me.Height - 20)
-        BorderPath.AddArc(New Rectangle(Me.Width - 20, Me.Height - 20, 20, 20), 0, 90)
-        BorderPath.AddLine(Me.Width - 20, Me.Height, 20, Me.Height)
-        BorderPath.AddArc(New Rectangle(0, Me.Height - 20, 20, 20), 90, 90)
+        BorderPath.AddArc(New Rectangle(0, 0, BorderRadius, BorderRadius), 180, 90)
+        BorderPath.AddLine(BorderRadius, 0, Me.Width - BorderRadius, 0)
+        BorderPath.AddArc(New Rectangle(Me.Width - BorderRadius, 0, BorderRadius, BorderRadius), -90, 90)
+        BorderPath.AddLine(Me.Width, 20, Me.Width, Me.Height - BorderRadius)
+        BorderPath.AddArc(New Rectangle(Me.Width - BorderRadius, Me.Height - BorderRadius, BorderRadius, BorderRadius), 0, 90)
+        BorderPath.AddLine(Me.Width - BorderRadius, Me.Height, BorderRadius, Me.Height)
+        BorderPath.AddArc(New Rectangle(0, Me.Height - BorderRadius, BorderRadius, BorderRadius), 90, 90)
 
         BorderPath.CloseFigure()
 

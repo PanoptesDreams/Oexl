@@ -47,6 +47,10 @@ Partial Class Settings
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.LabelSettingFormCornerRadius = New System.Windows.Forms.Label()
+        Me.NumUpDownFormCornerRadius = New System.Windows.Forms.NumericUpDown()
+        Me.LabelSettingFormCornerRadiusDisplay = New System.Windows.Forms.Label()
+        Me.PicRestartApp = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +58,9 @@ Partial Class Settings
         CType(Me.PictureBoxSettingsOperatorAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.NumUpDownFormCornerRadius, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PicRestartApp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBoxClose
@@ -73,6 +80,8 @@ Partial Class Settings
         '
         'LabelSettingTheme
         '
+        Me.LabelSettingTheme.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingTheme.AutoSize = True
         Me.LabelSettingTheme.Location = New System.Drawing.Point(257, 16)
         Me.LabelSettingTheme.Margin = New System.Windows.Forms.Padding(3)
@@ -85,6 +94,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorColorPrimary
         '
+        Me.LabelSettingOperatorColorPrimary.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorColorPrimary.AutoSize = True
         Me.LabelSettingOperatorColorPrimary.Location = New System.Drawing.Point(138, 50)
         Me.LabelSettingOperatorColorPrimary.Margin = New System.Windows.Forms.Padding(3)
@@ -97,6 +108,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorJunction
         '
+        Me.LabelSettingOperatorJunction.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorJunction.AutoSize = True
         Me.LabelSettingOperatorJunction.Location = New System.Drawing.Point(175, 118)
         Me.LabelSettingOperatorJunction.Margin = New System.Windows.Forms.Padding(3)
@@ -109,6 +122,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorColorSecondary
         '
+        Me.LabelSettingOperatorColorSecondary.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorColorSecondary.AutoSize = True
         Me.LabelSettingOperatorColorSecondary.Location = New System.Drawing.Point(113, 84)
         Me.LabelSettingOperatorColorSecondary.Margin = New System.Windows.Forms.Padding(3)
@@ -121,6 +136,8 @@ Partial Class Settings
         '
         'LabelSettingLoaded
         '
+        Me.LabelSettingLoaded.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingLoaded.AutoSize = True
         Me.LabelSettingLoaded.Location = New System.Drawing.Point(253, 254)
         Me.LabelSettingLoaded.Margin = New System.Windows.Forms.Padding(3)
@@ -133,6 +150,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorDefaultProfile
         '
+        Me.LabelSettingOperatorDefaultProfile.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorDefaultProfile.AutoSize = True
         Me.LabelSettingOperatorDefaultProfile.Location = New System.Drawing.Point(134, 220)
         Me.LabelSettingOperatorDefaultProfile.Margin = New System.Windows.Forms.Padding(3)
@@ -145,6 +164,8 @@ Partial Class Settings
         '
         'LabelSettingSystemMood
         '
+        Me.LabelSettingSystemMood.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingSystemMood.AutoSize = True
         Me.LabelSettingSystemMood.Location = New System.Drawing.Point(210, 186)
         Me.LabelSettingSystemMood.Margin = New System.Windows.Forms.Padding(3)
@@ -157,6 +178,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorName
         '
+        Me.LabelSettingOperatorName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorName.AutoSize = True
         Me.LabelSettingOperatorName.Location = New System.Drawing.Point(195, 152)
         Me.LabelSettingOperatorName.Margin = New System.Windows.Forms.Padding(3)
@@ -273,6 +296,8 @@ Partial Class Settings
         '
         'LabelSettingOperatorAvatar
         '
+        Me.LabelSettingOperatorAvatar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOperatorAvatar.AutoSize = True
         Me.LabelSettingOperatorAvatar.Location = New System.Drawing.Point(185, 288)
         Me.LabelSettingOperatorAvatar.Margin = New System.Windows.Forms.Padding(3)
@@ -305,6 +330,8 @@ Partial Class Settings
         '
         'LabelSettingOexlUpdate
         '
+        Me.LabelSettingOexlUpdate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelSettingOexlUpdate.AutoSize = True
         Me.LabelSettingOexlUpdate.Location = New System.Drawing.Point(207, 344)
         Me.LabelSettingOexlUpdate.Margin = New System.Windows.Forms.Padding(3)
@@ -332,6 +359,7 @@ Partial Class Settings
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.LabelSettingFormCornerRadius)
         Me.Panel1.Controls.Add(Me.LabelSettingOexlUpdate)
         Me.Panel1.Controls.Add(Me.LabelSettingOperatorAvatar)
         Me.Panel1.Controls.Add(Me.LabelSettingLoaded)
@@ -354,6 +382,8 @@ Partial Class Settings
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.LabelSettingFormCornerRadiusDisplay)
+        Me.Panel2.Controls.Add(Me.NumUpDownFormCornerRadius)
         Me.Panel2.Controls.Add(Me.LabelSettingOperatorJunctionDisplay)
         Me.Panel2.Controls.Add(Me.LabelSettingThemeDisplay)
         Me.Panel2.Controls.Add(Me.LabelSettingUpdaterSummon)
@@ -375,10 +405,58 @@ Partial Class Settings
         '
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.Controls.Add(Me.PicRestartApp)
         Me.Panel3.Location = New System.Drawing.Point(1035, 28)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(199, 527)
         Me.Panel3.TabIndex = 26
+        '
+        'LabelSettingFormCornerRadius
+        '
+        Me.LabelSettingFormCornerRadius.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelSettingFormCornerRadius.AutoSize = True
+        Me.LabelSettingFormCornerRadius.Location = New System.Drawing.Point(216, 377)
+        Me.LabelSettingFormCornerRadius.Margin = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingFormCornerRadius.Name = "LabelSettingFormCornerRadius"
+        Me.LabelSettingFormCornerRadius.Padding = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingFormCornerRadius.Size = New System.Drawing.Size(113, 28)
+        Me.LabelSettingFormCornerRadius.TabIndex = 23
+        Me.LabelSettingFormCornerRadius.Text = "FormRadius"
+        Me.LabelSettingFormCornerRadius.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'NumUpDownFormCornerRadius
+        '
+        Me.NumUpDownFormCornerRadius.Location = New System.Drawing.Point(16, 378)
+        Me.NumUpDownFormCornerRadius.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumUpDownFormCornerRadius.Name = "NumUpDownFormCornerRadius"
+        Me.NumUpDownFormCornerRadius.Size = New System.Drawing.Size(86, 28)
+        Me.NumUpDownFormCornerRadius.TabIndex = 24
+        Me.NumUpDownFormCornerRadius.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NumUpDownFormCornerRadius.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'LabelSettingFormCornerRadiusDisplay
+        '
+        Me.LabelSettingFormCornerRadiusDisplay.AutoSize = True
+        Me.LabelSettingFormCornerRadiusDisplay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSettingFormCornerRadiusDisplay.Location = New System.Drawing.Point(108, 378)
+        Me.LabelSettingFormCornerRadiusDisplay.Margin = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingFormCornerRadiusDisplay.Name = "LabelSettingFormCornerRadiusDisplay"
+        Me.LabelSettingFormCornerRadiusDisplay.Padding = New System.Windows.Forms.Padding(3)
+        Me.LabelSettingFormCornerRadiusDisplay.Size = New System.Drawing.Size(178, 28)
+        Me.LabelSettingFormCornerRadiusDisplay.TabIndex = 25
+        Me.LabelSettingFormCornerRadiusDisplay.Text = "Form Corner Radius"
+        Me.LabelSettingFormCornerRadiusDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PicRestartApp
+        '
+        Me.PicRestartApp.BackgroundImage = Global.Oexl.My.Resources.Resources.cross
+        Me.PicRestartApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PicRestartApp.Location = New System.Drawing.Point(140, 469)
+        Me.PicRestartApp.Name = "PicRestartApp"
+        Me.PicRestartApp.Size = New System.Drawing.Size(56, 55)
+        Me.PicRestartApp.TabIndex = 22
+        Me.PicRestartApp.TabStop = False
         '
         'Settings
         '
@@ -395,11 +473,11 @@ Partial Class Settings
         Me.Padding = New System.Windows.Forms.Padding(14)
         Me.Text = "Settings"
         Me.Controls.SetChildIndex(Me.Panel1, 0)
+        Me.Controls.SetChildIndex(Me.Panel2, 0)
+        Me.Controls.SetChildIndex(Me.Panel3, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxClose, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMax, 0)
         Me.Controls.SetChildIndex(Me.PictureBoxMinimize, 0)
-        Me.Controls.SetChildIndex(Me.Panel2, 0)
-        Me.Controls.SetChildIndex(Me.Panel3, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -409,6 +487,9 @@ Partial Class Settings
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.NumUpDownFormCornerRadius, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PicRestartApp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -437,4 +518,8 @@ Partial Class Settings
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents LabelSettingFormCornerRadius As Label
+    Friend WithEvents LabelSettingFormCornerRadiusDisplay As Label
+    Friend WithEvents NumUpDownFormCornerRadius As NumericUpDown
+    Friend WithEvents PicRestartApp As PictureBox
 End Class

@@ -18,6 +18,7 @@
         LabelSettingSystemMoodDisplay.Text = My.Settings.SystemMood
         LabelSettingOperatorDefaultProfileDisplay.Text = My.Settings.OperatorDefaultProfile
         LabelSettingLoadedDisplay.Text = My.Settings.Loaded
+        NumUpDownFormCornerRadius.Value = My.Settings.FormRadius
 
     End Sub
 
@@ -136,5 +137,17 @@
 
     End Sub
 
+    Private Sub PicRestartApp_Click(sender As Object, e As EventArgs) Handles PicRestartApp.Click
 
+        Application.Restart()
+
+    End Sub
+
+    Private Sub NumUpDownFormCornerRadius_ValueChanged(sender As Object, e As EventArgs) Handles NumUpDownFormCornerRadius.ValueChanged
+
+        My.Settings.FormRadius = NumUpDownFormCornerRadius.Value
+
+        ASave()
+
+    End Sub
 End Class

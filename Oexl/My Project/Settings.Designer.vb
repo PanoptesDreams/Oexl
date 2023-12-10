@@ -221,6 +221,30 @@ Namespace My
                 Me("OperatorWebHome") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property ThroneSize() As Double
+            Get
+                Return CType(Me("ThroneSize"),Double)
+            End Get
+            Set
+                Me("ThroneSize") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("20")>  _
+        Public Property FormRadius() As Decimal
+            Get
+                Return CType(Me("FormRadius"),Decimal)
+            End Get
+            Set
+                Me("FormRadius") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
