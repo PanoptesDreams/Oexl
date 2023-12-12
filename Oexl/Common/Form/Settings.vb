@@ -1,5 +1,15 @@
 ﻿Public Class Settings
 
+    Public OexlTheme As String = My.Settings.Theme
+    Public OexlOperatorColorPrimary As Color = My.Settings.OperatorColorPrimary
+    Public OexlOperatorColorSecondary As Color = My.Settings.OperatorColorSecondary
+    Public OexlOperatorRoot As String = My.Settings.OperatorRoot
+    Public OexlOperatorName As String = My.Settings.OperatorName
+    Public OexlMood As String = My.Settings.SystemMood
+    Public OexlDefaultOperator As String = My.Settings.OperatorDefaultProfile
+    Public OexlAMILOADED As String = My.Settings.Loaded
+    Public OexlFormCornerRadius As Decimal = My.Settings.FormRadius
+
 
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -10,15 +20,15 @@
     ' Writes settings values to labels
     Private Sub PopulateSettings()
 
-        LabelSettingThemeDisplay.Text = My.Settings.Theme
-        LabelSettingOperatorColorPrimaryDisplay.Text = My.Settings.OperatorColorPrimary.ToString
-        LabelSettingOperatorColorSecondaryDisplay.Text = My.Settings.OperatorColorSecondary.ToString
-        LabelSettingOperatorJunctionDisplay.Text = My.Settings.OperatorRoot
-        LabelSettingOperatorNameDisplay.Text = My.Settings.OperatorName
-        LabelSettingSystemMoodDisplay.Text = My.Settings.SystemMood
-        LabelSettingOperatorDefaultProfileDisplay.Text = My.Settings.OperatorDefaultProfile
-        LabelSettingLoadedDisplay.Text = My.Settings.Loaded
-        NumUpDownFormCornerRadius.Value = My.Settings.FormRadius
+        LabelSettingThemeDisplay.Text = OexlTheme
+        LabelSettingOperatorColorPrimaryDisplay.Text = OexlOperatorColorPrimary.ToString
+        LabelSettingOperatorColorSecondaryDisplay.Text = OexlOperatorColorSecondary.ToString
+        LabelSettingOperatorJunctionDisplay.Text = OexlOperatorRoot
+        LabelSettingOperatorNameDisplay.Text = OexlOperatorName
+        LabelSettingSystemMoodDisplay.Text = OexlMood
+        LabelSettingOperatorDefaultProfileDisplay.Text = OexlDefaultOperator
+        LabelSettingLoadedDisplay.Text = OexlAMILOADED
+        NumUpDownFormCornerRadius.Value = OexlFormCornerRadius
 
     End Sub
 
