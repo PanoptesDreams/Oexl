@@ -3,6 +3,7 @@ Imports System.Management
 Imports SharpCompress.Archives
 Imports SharpCompress.Archives.Zip
 Imports SharpCompress.Common
+Imports System.Runtime.InteropServices
 
 
 Public Module Common
@@ -246,18 +247,46 @@ Public Module Common
     ''' <param name="Placement">Top, Bottom, Left, Right, Center</param>
     Public Sub Positioner(Sender As Form, Placement As String)
 
+        Dim TaskbarHeight As Integer = 45 ' Height of Windows Explorer Taskbar. Value also regarded as offset.
+
+        Dim CenterX As Integer = Screen.PrimaryScreen.Bounds.Width / 2 - Sender.Width / 2
+        Dim CenterY As Integer = Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2
+        Dim LeftX As Integer = 3
+        Dim LeftY As Integer = Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2
+        Dim RightX As Integer = Screen.PrimaryScreen.Bounds.Width - Sender.Width - 3
+        Dim RightY As Integer = Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2
+        Dim BottomY As Integer = Screen.PrimaryScreen.Bounds.Height - Sender.Height - 3 - TaskbarHeight
+
         Select Case Placement
 
-            Case = "Top"
-                Sender.Location = New Point((Screen.PrimaryScreen.Bounds.Width / 2 - (Sender.Width / 2)), 3)
-            Case = "Bottom"
-                Sender.Location = New Point((Screen.PrimaryScreen.Bounds.Width / 2 - (Sender.Width / 2)), (Screen.PrimaryScreen.Bounds.Height - 70))
-            Case = "Left"
-                Sender.Location = New Point(1, Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2)
-            Case = "Right"
-                Sender.Location = New Point(Screen.PrimaryScreen.Bounds.Width - Sender.Width, Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2)
-            Case = "Center"
-                Sender.Location = New Point(Screen.PrimaryScreen.Bounds.Width / 2 - (Sender.Width / 2), Screen.PrimaryScreen.Bounds.Height / 2 - Sender.Height / 2)
+
+            Case = "Top-Center"
+                Sender.Location = New Point(CenterX, 3)
+
+            Case = "Top-Left"
+                Sender.Location = New Point(LeftX, 3)
+
+            Case = "Top-Right"
+                Sender.Location = New Point(RightX, 3)
+
+            Case = "Left-Center"
+                Sender.Location = New Point(LeftX, LeftY)
+
+            Case = "Center-Center"
+                Sender.Location = New Point(CenterX, CenterY)
+
+            Case = "Right-Center"
+                Sender.Location = New Point(RightX, CenterY)
+
+            Case = "Bottom-Center"
+                Sender.Location = New Point(CenterX, BottomY)
+
+            Case = "Bottom-Left"
+                Sender.Location = New Point(LeftX, BottomY)
+
+            Case = "Bottom-Right"
+                Sender.Location = New Point(RightX, BottomY)
+
         End Select
 
     End Sub
@@ -511,3 +540,30 @@ Public Module FontManager
 
 End Module
 
+
+Public Class Experiments
+
+    <DllImport("user32.dll", SetLastError:=True)>
+    Private Shared Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+    End Function
+
+    <DllImport("user32.dll")>
+    Private Shared Function GetWindowRect(ByVal hWnd As IntPtr, ByRef lpRect As RECT) As Boolean
+    End Function
+
+    Private Structure RECT
+        Public Left As Integer
+        Public Top As Integer
+        Public Right As Integer
+        Public Bottom As Integer
+    End Structure
+
+    Private Function GetTaskBarHeight() As Integer
+        Dim rect As RECT
+        Dim taskBar As IntPtr = FindWindow("Shell_traywnd", Nothing)
+        If taskBar <> IntPtr.Zero AndAlso GetWindowRect(taskBar, rect) Then
+            Return rect.Bottom - rect.Top
+        End If
+        Return 0
+    End Function
+End Class

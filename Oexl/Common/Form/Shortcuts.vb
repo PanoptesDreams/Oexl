@@ -5,7 +5,7 @@
 
     Private Sub Shortcuts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Positioner(Me, "Right")
+        Positioner(Me, "Bottom-Right")
 
         HideOnClose = False ' Ensures shortcut list refreshes each time
 

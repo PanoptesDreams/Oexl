@@ -3,7 +3,7 @@
 
     Private Sub Toolbox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Positioner(Me, "Left")
+        Positioner(Me, "Left-Center")
 
         HideOnClose = False ' Close don't hide
 

@@ -37,7 +37,7 @@ Partial Class RoundedForm
         Me.PictureBoxClose.BackgroundImage = Global.Oexl.My.Resources.Resources.circle_grey
         Me.PictureBoxClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxClose.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxClose.Location = New System.Drawing.Point(1837, 22)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(1849, 10)
         Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxClose.Name = "PictureBoxClose"
         Me.PictureBoxClose.Padding = New System.Windows.Forms.Padding(1)
@@ -52,7 +52,7 @@ Partial Class RoundedForm
         Me.PictureBoxMax.BackgroundImage = Global.Oexl.My.Resources.Resources.square_grey
         Me.PictureBoxMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMax.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMax.Location = New System.Drawing.Point(1837, 46)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(1849, 34)
         Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMax.Name = "PictureBoxMax"
         Me.PictureBoxMax.Padding = New System.Windows.Forms.Padding(1)
@@ -67,7 +67,7 @@ Partial Class RoundedForm
         Me.PictureBoxMinimize.BackgroundImage = Global.Oexl.My.Resources.Resources.triangle_grey
         Me.PictureBoxMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBoxMinimize.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(1837, 70)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(1849, 58)
         Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 9, 9, 3)
         Me.PictureBoxMinimize.Name = "PictureBoxMinimize"
         Me.PictureBoxMinimize.Padding = New System.Windows.Forms.Padding(1)
@@ -90,7 +90,7 @@ Partial Class RoundedForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "RoundedForm"
-        Me.Padding = New System.Windows.Forms.Padding(13)
+        Me.Padding = New System.Windows.Forms.Padding(1)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "RoudedForm"
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()

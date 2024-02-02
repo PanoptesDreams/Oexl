@@ -34,7 +34,7 @@ Public Class RoundedForm
 
         SetRoundEdges() ' Define the initial shape of the GraphicsPath object to be rounded corners
 
-        Positioner(Me, "Center")
+        Positioner(Me, "Center-Center")
 
         Icon = My.Resources.oexl_small
 

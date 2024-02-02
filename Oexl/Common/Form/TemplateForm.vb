@@ -10,7 +10,7 @@
 
     Private Sub TemplateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Positioner(Me, "Center") ' Override where you want the form to go
+        Positioner(Me, "Center-Center") ' Override where you want the form to go
 
         HideOnClose = False ' This changes the inherent hiding of a form to a close instead
 

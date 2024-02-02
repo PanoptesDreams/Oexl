@@ -7,14 +7,9 @@
 
         PositionElements()
 
-        Positioner(Me, "Top")
+        Positioner(Me, "Top-Center")
 
-        Dim Jeff As New RoundedButton
-        Jeff.Location = New Point(3, 3)
-        Jeff.Text = "My name Jeff"
-
-        MaximumSize = New Size(Screen.PrimaryScreen.Bounds.Width, 77)
-
+        PictureBoxToolbox.Image = ResizeImage(My.Resources.toolbox, PictureBoxToolbox.Width - 3, PictureBoxToolbox.Height - 3)
 
         If My.Settings.DestopClockActive = True Then
 
@@ -38,8 +33,11 @@
 
         LoadOperatorAvatar()
 
+        TrayIcon.TrayCommon.Text = "OEXL - " & My.Settings.OperatorName
+
     End Sub
 
+    ' Operator Avatar Loader
     Public Sub LoadOperatorAvatar()
 
         Dim OperatorPicture As Image
@@ -54,7 +52,7 @@
 
         End Try
 
-        PictureBoxOperatorAvatar.Image = ResizeImage(OperatorPicture, PictureBoxOperatorAvatar.Width, PictureBoxOperatorAvatar.Height) ' Resize imported image and apply
+        PictureBoxOperatorAvatar.Image = ResizeImage(OperatorPicture, PictureBoxOperatorAvatar.Width - 3, PictureBoxOperatorAvatar.Height - 3) ' Resize imported image and apply
 
     End Sub
 
@@ -75,8 +73,6 @@
         Summon(Toolbox)
 
     End Sub
-
-
 
     Private Sub Launcher_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
 

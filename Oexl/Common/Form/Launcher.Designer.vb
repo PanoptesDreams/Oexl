@@ -69,9 +69,9 @@ Partial Class Launcher
         '
         'PictureBoxOperatorAvatar
         '
-        Me.PictureBoxOperatorAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBoxOperatorAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxOperatorAvatar.Location = New System.Drawing.Point(353, 14)
+        Me.PictureBoxOperatorAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxOperatorAvatar.Location = New System.Drawing.Point(339, 14)
         Me.PictureBoxOperatorAvatar.Name = "PictureBoxOperatorAvatar"
         Me.PictureBoxOperatorAvatar.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxOperatorAvatar.TabIndex = 3
@@ -79,11 +79,11 @@ Partial Class Launcher
         '
         'PictureBoxToolbox
         '
-        Me.PictureBoxToolbox.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBoxToolbox.BackgroundImage = Global.Oexl.My.Resources.Resources.max
         Me.PictureBoxToolbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBoxToolbox.Location = New System.Drawing.Point(291, 14)
+        Me.PictureBoxToolbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxToolbox.Location = New System.Drawing.Point(277, 14)
         Me.PictureBoxToolbox.Name = "PictureBoxToolbox"
+        Me.PictureBoxToolbox.Padding = New System.Windows.Forms.Padding(3)
         Me.PictureBoxToolbox.Size = New System.Drawing.Size(56, 55)
         Me.PictureBoxToolbox.TabIndex = 4
         Me.PictureBoxToolbox.TabStop = False

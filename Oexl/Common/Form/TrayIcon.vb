@@ -6,7 +6,7 @@
         Height = Screen.PrimaryScreen.Bounds.Height
         Width = Screen.PrimaryScreen.Bounds.Width
 
-        Positioner(Me, "Center")
+        Positioner(Me, "Center-Center")
 
         PrepareTray()
 

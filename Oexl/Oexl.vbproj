@@ -85,7 +85,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>panoptes-root.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>panoptesdreams.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -220,6 +220,12 @@
     <Compile Include="Common\Form\DesktopClockSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Form\DiagnosticPanel.Designer.vb">
+      <DependentUpon>DiagnosticPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\DiagnosticPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Common\Form\Game.Designer.vb">
       <DependentUpon>Game.vb</DependentUpon>
     </Compile>
@@ -254,6 +260,18 @@
       <DependentUpon>Operators.vb</DependentUpon>
     </Compile>
     <Compile Include="Common\Form\Operators.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\Recap.Designer.vb">
+      <DependentUpon>Recap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\Recap.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Common\Form\RoundedForm.Designer.vb">
@@ -328,6 +346,9 @@
     <Compile Include="Common\Form\WingetInstaller.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Common\Objects\HartPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Common\Objects\HartTabs.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -368,6 +389,9 @@
     <EmbeddedResource Include="Common\Form\DesktopClockSettings.resx">
       <DependentUpon>DesktopClockSettings.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\DiagnosticPanel.resx">
+      <DependentUpon>DiagnosticPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Game.resx">
       <DependentUpon>Game.vb</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\Operators.resx">
       <DependentUpon>Operators.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\Recap.resx">
+      <DependentUpon>Recap.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\RoundedForm.resx">
       <DependentUpon>RoundedForm.vb</DependentUpon>
@@ -421,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Form\WingetInstaller.resx">
       <DependentUpon>WingetInstaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Objects\HartPanel.resx">
+      <DependentUpon>HartPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Objects\RoundedButton.resx">
       <DependentUpon>RoundedButton.vb</DependentUpon>
@@ -472,6 +502,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Common\Resources\circle.png" />
+    <None Include="Resources\toolbox.png" />
     <None Include="Common\Resources\triangle_grey.png" />
     <None Include="Common\Resources\circle_grey.png" />
     <None Include="Common\Resources\clock.png" />
@@ -494,6 +525,7 @@
     <Content Include="Common\Resources\operator_default.png" />
     <Content Include="Common\Resources\square.png" />
     <None Include="Common\Resources\square_grey.png" />
+    <Content Include="Common\Resources\toolbox.png" />
     <Content Include="Common\Resources\triangle.png" />
   </ItemGroup>
   <ItemGroup>
