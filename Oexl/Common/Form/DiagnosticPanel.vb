@@ -4,11 +4,13 @@
 
     Private Sub DiagnosticPanel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        LabelDiagnosticPositionResult.Text = ParentForm.Location.ToString()
+        Dim ParentalForm As Form = FindForm()
 
-        LabelDiagnosticWidthResult.Text = ParentForm.Width.ToString()
+        LabelDiagnosticPositionResult.Text = ParentalForm.Location.ToString()
 
-        LabelDiagnosticHeightResult.Text = ParentForm.Height.ToString()
+        LabelDiagnosticWidthResult.Text = ParentalForm.Width.ToString()
+
+        LabelDiagnosticHeightResult.Text = ParentalForm.Height.ToString()
 
     End Sub
 

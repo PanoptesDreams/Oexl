@@ -11,6 +11,8 @@
 
         PictureBoxToolbox.Image = ResizeImage(My.Resources.toolbox, PictureBoxToolbox.Width - 3, PictureBoxToolbox.Height - 3)
 
+        PictureBoxShutdown.Image = ResizeImage(My.Resources.close, PictureBoxToolbox.Width - 3, PictureBoxToolbox.Height - 3)
+
         If My.Settings.DestopClockActive = True Then
 
             Summon(DesktopClock)
@@ -88,5 +90,9 @@
 
     End Sub
 
+    Private Sub PictureBoxShutdown_Click(sender As Object, e As EventArgs) Handles PictureBoxShutdown.Click
 
+        Application.Exit()
+
+    End Sub
 End Class

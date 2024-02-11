@@ -40,6 +40,8 @@ Partial Class Toolbox
         Me.ButtonToDo = New Oexl.RoundedButton()
         Me.ButtonUpdater = New Oexl.RoundedButton()
         Me.ButtonWebHome = New Oexl.RoundedButton()
+        Me.ButtonWifi = New Oexl.RoundedButton()
+        Me.ButtonNoptix = New Oexl.RoundedButton()
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,26 +49,23 @@ Partial Class Toolbox
         '
         'PictureBoxClose
         '
-        Me.PictureBoxClose.Location = New System.Drawing.Point(444, 2)
-        Me.PictureBoxClose.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
+        Me.PictureBoxClose.Location = New System.Drawing.Point(400, 2)
         '
         'PictureBoxMax
         '
-        Me.PictureBoxMax.Location = New System.Drawing.Point(447, 25)
-        Me.PictureBoxMax.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
+        Me.PictureBoxMax.Location = New System.Drawing.Point(402, 24)
         '
         'PictureBoxMinimize
         '
-        Me.PictureBoxMinimize.Location = New System.Drawing.Point(447, 49)
-        Me.PictureBoxMinimize.Margin = New System.Windows.Forms.Padding(3, 10, 10, 3)
+        Me.PictureBoxMinimize.Location = New System.Drawing.Point(402, 47)
         '
         'ButtonAddFont
         '
         Me.ButtonAddFont.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonAddFont.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonAddFont.Location = New System.Drawing.Point(255, 7)
+        Me.ButtonAddFont.Location = New System.Drawing.Point(229, 6)
         Me.ButtonAddFont.Name = "ButtonAddFont"
-        Me.ButtonAddFont.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonAddFont.Size = New System.Drawing.Size(106, 60)
         Me.ButtonAddFont.TabIndex = 0
         Me.ButtonAddFont.Text = "Add Font"
         Me.ButtonAddFont.UseVisualStyleBackColor = False
@@ -75,9 +74,9 @@ Partial Class Toolbox
         '
         Me.ButtonRenameSystem.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonRenameSystem.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonRenameSystem.Location = New System.Drawing.Point(255, 283)
+        Me.ButtonRenameSystem.Location = New System.Drawing.Point(229, 270)
         Me.ButtonRenameSystem.Name = "ButtonRenameSystem"
-        Me.ButtonRenameSystem.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonRenameSystem.Size = New System.Drawing.Size(106, 60)
         Me.ButtonRenameSystem.TabIndex = 1
         Me.ButtonRenameSystem.Text = "Rename System"
         Me.ButtonRenameSystem.UseVisualStyleBackColor = False
@@ -86,9 +85,9 @@ Partial Class Toolbox
         '
         Me.ButtonAddOperator.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonAddOperator.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonAddOperator.Location = New System.Drawing.Point(255, 76)
+        Me.ButtonAddOperator.Location = New System.Drawing.Point(229, 72)
         Me.ButtonAddOperator.Name = "ButtonAddOperator"
-        Me.ButtonAddOperator.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonAddOperator.Size = New System.Drawing.Size(106, 60)
         Me.ButtonAddOperator.TabIndex = 2
         Me.ButtonAddOperator.Text = "Add Operator"
         Me.ButtonAddOperator.UseVisualStyleBackColor = False
@@ -97,9 +96,9 @@ Partial Class Toolbox
         '
         Me.ButtonBuildOperatorTree.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonBuildOperatorTree.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonBuildOperatorTree.Location = New System.Drawing.Point(255, 145)
+        Me.ButtonBuildOperatorTree.Location = New System.Drawing.Point(229, 139)
         Me.ButtonBuildOperatorTree.Name = "ButtonBuildOperatorTree"
-        Me.ButtonBuildOperatorTree.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonBuildOperatorTree.Size = New System.Drawing.Size(106, 60)
         Me.ButtonBuildOperatorTree.TabIndex = 3
         Me.ButtonBuildOperatorTree.Text = "Build Op Tree"
         Me.ButtonBuildOperatorTree.UseVisualStyleBackColor = False
@@ -108,9 +107,9 @@ Partial Class Toolbox
         '
         Me.ButtonWingetInstall.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonWingetInstall.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonWingetInstall.Location = New System.Drawing.Point(255, 352)
+        Me.ButtonWingetInstall.Location = New System.Drawing.Point(229, 336)
         Me.ButtonWingetInstall.Name = "ButtonWingetInstall"
-        Me.ButtonWingetInstall.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonWingetInstall.Size = New System.Drawing.Size(106, 60)
         Me.ButtonWingetInstall.TabIndex = 4
         Me.ButtonWingetInstall.Text = "Winget Install"
         Me.ButtonWingetInstall.UseVisualStyleBackColor = False
@@ -119,9 +118,9 @@ Partial Class Toolbox
         '
         Me.ButtonAlcoholCalc.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonAlcoholCalc.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonAlcoholCalc.Location = New System.Drawing.Point(7, 76)
+        Me.ButtonAlcoholCalc.Location = New System.Drawing.Point(6, 72)
         Me.ButtonAlcoholCalc.Name = "ButtonAlcoholCalc"
-        Me.ButtonAlcoholCalc.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonAlcoholCalc.Size = New System.Drawing.Size(106, 60)
         Me.ButtonAlcoholCalc.TabIndex = 5
         Me.ButtonAlcoholCalc.Text = "Alcohol Calculator"
         Me.ButtonAlcoholCalc.UseVisualStyleBackColor = False
@@ -130,9 +129,9 @@ Partial Class Toolbox
         '
         Me.ButtonNotes.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonNotes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonNotes.Location = New System.Drawing.Point(7, 214)
+        Me.ButtonNotes.Location = New System.Drawing.Point(6, 205)
         Me.ButtonNotes.Name = "ButtonNotes"
-        Me.ButtonNotes.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonNotes.Size = New System.Drawing.Size(106, 60)
         Me.ButtonNotes.TabIndex = 6
         Me.ButtonNotes.Text = "Notes"
         Me.ButtonNotes.UseVisualStyleBackColor = False
@@ -141,9 +140,9 @@ Partial Class Toolbox
         '
         Me.ButtonSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonSettings.Location = New System.Drawing.Point(255, 560)
+        Me.ButtonSettings.Location = New System.Drawing.Point(229, 534)
         Me.ButtonSettings.Name = "ButtonSettings"
-        Me.ButtonSettings.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonSettings.Size = New System.Drawing.Size(106, 60)
         Me.ButtonSettings.TabIndex = 7
         Me.ButtonSettings.Text = "Settings"
         Me.ButtonSettings.UseVisualStyleBackColor = False
@@ -152,9 +151,9 @@ Partial Class Toolbox
         '
         Me.ButtonTemplate.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonTemplate.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonTemplate.Location = New System.Drawing.Point(7, 560)
+        Me.ButtonTemplate.Location = New System.Drawing.Point(6, 534)
         Me.ButtonTemplate.Name = "ButtonTemplate"
-        Me.ButtonTemplate.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonTemplate.Size = New System.Drawing.Size(106, 60)
         Me.ButtonTemplate.TabIndex = 8
         Me.ButtonTemplate.Text = "Template"
         Me.ButtonTemplate.UseVisualStyleBackColor = False
@@ -163,9 +162,9 @@ Partial Class Toolbox
         '
         Me.ButtonApplications.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonApplications.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonApplications.Location = New System.Drawing.Point(7, 7)
+        Me.ButtonApplications.Location = New System.Drawing.Point(6, 6)
         Me.ButtonApplications.Name = "ButtonApplications"
-        Me.ButtonApplications.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonApplications.Size = New System.Drawing.Size(106, 60)
         Me.ButtonApplications.TabIndex = 9
         Me.ButtonApplications.Text = "App Boi"
         Me.ButtonApplications.UseVisualStyleBackColor = False
@@ -174,9 +173,9 @@ Partial Class Toolbox
         '
         Me.ButtonNotesPlusOne.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonNotesPlusOne.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonNotesPlusOne.Location = New System.Drawing.Point(131, 214)
+        Me.ButtonNotesPlusOne.Location = New System.Drawing.Point(118, 205)
         Me.ButtonNotesPlusOne.Name = "ButtonNotesPlusOne"
-        Me.ButtonNotesPlusOne.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonNotesPlusOne.Size = New System.Drawing.Size(106, 60)
         Me.ButtonNotesPlusOne.TabIndex = 10
         Me.ButtonNotesPlusOne.Text = "Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Note"
         Me.ButtonNotesPlusOne.UseVisualStyleBackColor = False
@@ -185,9 +184,9 @@ Partial Class Toolbox
         '
         Me.ButtonShortcutArrowRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonShortcutArrowRemove.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonShortcutArrowRemove.Location = New System.Drawing.Point(255, 214)
+        Me.ButtonShortcutArrowRemove.Location = New System.Drawing.Point(229, 205)
         Me.ButtonShortcutArrowRemove.Name = "ButtonShortcutArrowRemove"
-        Me.ButtonShortcutArrowRemove.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonShortcutArrowRemove.Size = New System.Drawing.Size(106, 60)
         Me.ButtonShortcutArrowRemove.TabIndex = 11
         Me.ButtonShortcutArrowRemove.Text = "Remove Lnk Arrow"
         Me.ButtonShortcutArrowRemove.UseVisualStyleBackColor = False
@@ -196,9 +195,9 @@ Partial Class Toolbox
         '
         Me.ButtonSystemStats.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonSystemStats.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonSystemStats.Location = New System.Drawing.Point(7, 284)
+        Me.ButtonSystemStats.Location = New System.Drawing.Point(6, 271)
         Me.ButtonSystemStats.Name = "ButtonSystemStats"
-        Me.ButtonSystemStats.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonSystemStats.Size = New System.Drawing.Size(106, 60)
         Me.ButtonSystemStats.TabIndex = 12
         Me.ButtonSystemStats.Text = "System Stats"
         Me.ButtonSystemStats.UseVisualStyleBackColor = False
@@ -207,9 +206,9 @@ Partial Class Toolbox
         '
         Me.ButtonGame.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonGame.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonGame.Location = New System.Drawing.Point(7, 145)
+        Me.ButtonGame.Location = New System.Drawing.Point(6, 139)
         Me.ButtonGame.Name = "ButtonGame"
-        Me.ButtonGame.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonGame.Size = New System.Drawing.Size(106, 60)
         Me.ButtonGame.TabIndex = 13
         Me.ButtonGame.Text = "Game"
         Me.ButtonGame.UseVisualStyleBackColor = False
@@ -218,9 +217,9 @@ Partial Class Toolbox
         '
         Me.ButtonToDo.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonToDo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonToDo.Location = New System.Drawing.Point(7, 353)
+        Me.ButtonToDo.Location = New System.Drawing.Point(6, 337)
         Me.ButtonToDo.Name = "ButtonToDo"
-        Me.ButtonToDo.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonToDo.Size = New System.Drawing.Size(106, 60)
         Me.ButtonToDo.TabIndex = 14
         Me.ButtonToDo.Text = "ToDo"
         Me.ButtonToDo.UseVisualStyleBackColor = False
@@ -229,9 +228,9 @@ Partial Class Toolbox
         '
         Me.ButtonUpdater.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonUpdater.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonUpdater.Location = New System.Drawing.Point(255, 491)
+        Me.ButtonUpdater.Location = New System.Drawing.Point(229, 468)
         Me.ButtonUpdater.Name = "ButtonUpdater"
-        Me.ButtonUpdater.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonUpdater.Size = New System.Drawing.Size(106, 60)
         Me.ButtonUpdater.TabIndex = 15
         Me.ButtonUpdater.Text = "Oexl" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Updater"
         Me.ButtonUpdater.UseVisualStyleBackColor = False
@@ -240,18 +239,42 @@ Partial Class Toolbox
         '
         Me.ButtonWebHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ButtonWebHome.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonWebHome.Location = New System.Drawing.Point(7, 422)
+        Me.ButtonWebHome.Location = New System.Drawing.Point(6, 403)
         Me.ButtonWebHome.Name = "ButtonWebHome"
-        Me.ButtonWebHome.Size = New System.Drawing.Size(118, 63)
+        Me.ButtonWebHome.Size = New System.Drawing.Size(106, 60)
         Me.ButtonWebHome.TabIndex = 16
         Me.ButtonWebHome.Text = "Web Home"
         Me.ButtonWebHome.UseVisualStyleBackColor = False
         '
+        'ButtonWifi
+        '
+        Me.ButtonWifi.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonWifi.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonWifi.Location = New System.Drawing.Point(117, 468)
+        Me.ButtonWifi.Name = "ButtonWifi"
+        Me.ButtonWifi.Size = New System.Drawing.Size(106, 60)
+        Me.ButtonWifi.TabIndex = 17
+        Me.ButtonWifi.Text = "Wifi"
+        Me.ButtonWifi.UseVisualStyleBackColor = False
+        '
+        'ButtonNoptix
+        '
+        Me.ButtonNoptix.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ButtonNoptix.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonNoptix.Location = New System.Drawing.Point(117, 534)
+        Me.ButtonNoptix.Name = "ButtonNoptix"
+        Me.ButtonNoptix.Size = New System.Drawing.Size(106, 60)
+        Me.ButtonNoptix.TabIndex = 18
+        Me.ButtonNoptix.Text = "Noptix"
+        Me.ButtonNoptix.UseVisualStyleBackColor = False
+        '
         'Toolbox
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(416, 637)
+        Me.ClientSize = New System.Drawing.Size(374, 608)
+        Me.Controls.Add(Me.ButtonNoptix)
+        Me.Controls.Add(Me.ButtonWifi)
         Me.Controls.Add(Me.ButtonWebHome)
         Me.Controls.Add(Me.ButtonUpdater)
         Me.Controls.Add(Me.ButtonToDo)
@@ -271,7 +294,7 @@ Partial Class Toolbox
         Me.Controls.Add(Me.ButtonAddFont)
         Me.ForeColor = System.Drawing.Color.Purple
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(7, 9, 7, 9)
+        Me.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Name = "Toolbox"
         Me.Text = "Toolbox"
         Me.Controls.SetChildIndex(Me.ButtonAddFont, 0)
@@ -294,6 +317,8 @@ Partial Class Toolbox
         Me.Controls.SetChildIndex(Me.ButtonToDo, 0)
         Me.Controls.SetChildIndex(Me.ButtonUpdater, 0)
         Me.Controls.SetChildIndex(Me.ButtonWebHome, 0)
+        Me.Controls.SetChildIndex(Me.ButtonWifi, 0)
+        Me.Controls.SetChildIndex(Me.ButtonNoptix, 0)
         CType(Me.PictureBoxClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -318,4 +343,6 @@ Partial Class Toolbox
     Friend WithEvents ButtonToDo As RoundedButton
     Friend WithEvents ButtonUpdater As RoundedButton
     Friend WithEvents ButtonWebHome As RoundedButton
+    Friend WithEvents ButtonWifi As RoundedButton
+    Friend WithEvents ButtonNoptix As RoundedButton
 End Class

@@ -33,6 +33,7 @@ Partial Class TrayIcon
         Me.TrayMenuSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TrayMenuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrayCommon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TrayMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,48 +45,49 @@ Partial Class TrayIcon
         Me.TrayMenu.ImageScalingSize = New System.Drawing.Size(18, 18)
         Me.TrayMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrayMenuLauncher, Me.TrayMenuSeparator1, Me.TrayMenuDestopClock, Me.TrayMenuShortcuts, Me.TrayMenuToolbox, Me.TrayMenuSeparator2, Me.TrayMenuExit})
         Me.TrayMenu.Name = "TrayMenu"
-        Me.TrayMenu.Size = New System.Drawing.Size(200, 156)
+        Me.TrayMenu.Size = New System.Drawing.Size(188, 168)
         '
         'TrayMenuLauncher
         '
         Me.TrayMenuLauncher.Name = "TrayMenuLauncher"
-        Me.TrayMenuLauncher.Size = New System.Drawing.Size(199, 28)
+        Me.TrayMenuLauncher.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuLauncher.Text = "Show Launcher"
         '
         'TrayMenuSeparator1
         '
         Me.TrayMenuSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.TrayMenuSeparator1.Name = "TrayMenuSeparator1"
-        Me.TrayMenuSeparator1.Size = New System.Drawing.Size(196, 6)
+        Me.TrayMenuSeparator1.Size = New System.Drawing.Size(184, 6)
         '
         'TrayMenuDestopClock
         '
         Me.TrayMenuDestopClock.Name = "TrayMenuDestopClock"
-        Me.TrayMenuDestopClock.Size = New System.Drawing.Size(199, 28)
+        Me.TrayMenuDestopClock.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuDestopClock.Text = "Desktop Clock"
         '
         'TrayMenuShortcuts
         '
         Me.TrayMenuShortcuts.Name = "TrayMenuShortcuts"
-        Me.TrayMenuShortcuts.Size = New System.Drawing.Size(199, 28)
+        Me.TrayMenuShortcuts.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuShortcuts.Tag = "shortcut"
         Me.TrayMenuShortcuts.Text = "Shortcut"
         '
         'TrayMenuToolbox
         '
         Me.TrayMenuToolbox.Name = "TrayMenuToolbox"
-        Me.TrayMenuToolbox.Size = New System.Drawing.Size(199, 28)
+        Me.TrayMenuToolbox.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuToolbox.Text = "Toolbox"
         '
         'TrayMenuSeparator2
         '
         Me.TrayMenuSeparator2.Name = "TrayMenuSeparator2"
-        Me.TrayMenuSeparator2.Size = New System.Drawing.Size(196, 6)
+        Me.TrayMenuSeparator2.Size = New System.Drawing.Size(184, 6)
         '
         'TrayMenuExit
         '
+        Me.TrayMenuExit.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem})
         Me.TrayMenuExit.Name = "TrayMenuExit"
-        Me.TrayMenuExit.Size = New System.Drawing.Size(199, 28)
+        Me.TrayMenuExit.Size = New System.Drawing.Size(187, 26)
         Me.TrayMenuExit.Text = "Exit"
         '
         'TrayCommon
@@ -94,6 +96,12 @@ Partial Class TrayIcon
         Me.TrayCommon.Icon = CType(resources.GetObject("TrayCommon.Icon"), System.Drawing.Icon)
         Me.TrayCommon.Text = "OEXL"
         Me.TrayCommon.Visible = True
+        '
+        'UpdateToolStripMenuItem
+        '
+        Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'TrayIcon
         '
@@ -124,4 +132,5 @@ Partial Class TrayIcon
     Friend WithEvents TrayMenuSeparator2 As ToolStripSeparator
     Friend WithEvents TrayMenuExit As ToolStripMenuItem
     Friend WithEvents TrayCommon As NotifyIcon
+    Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
 End Class

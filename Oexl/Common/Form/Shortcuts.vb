@@ -112,14 +112,15 @@
 
         If File.Exists(shortcutPath) Then
             Dim icon As Icon = Icon.ExtractAssociatedIcon(shortcutPath)
-            PictureBoxIcon.Image = icon.ToBitmap()
+            PictureBoxIcon.Image = ResizeImage(icon.ToBitmap, PictureBoxIcon.Width, PictureBoxIcon.Height)
         Else
             shortcutPath = Path.Combine(ShortcutDirectory, selectedShortcut & ".url")
             Dim icon As Icon = Icon.ExtractAssociatedIcon(shortcutPath)
-            PictureBoxIcon.Image = icon.ToBitmap()
+            PictureBoxIcon.Image = ResizeImage(icon.ToBitmap, PictureBoxIcon.Width, PictureBoxIcon.Height)
         End If
 0:
     End Sub
+
 
     ' Drag and drop
 
@@ -133,7 +134,7 @@
     End Sub
 
 
-    Private Sub ListBoxShortcuts_DragDrop(sender As Object, e As DragEventArgs) Handles ListBoxShortcuts.DragDrop
+    Private Sub ListBoxShortcuts_DragDrop(sender As Object, e As DragEventArgs) Handles ListBoxShortcuts.DragEnter
 
         ' Check if the Drop event contains a list of files
         If e.Data.GetDataPresent(DataFormats.FileDrop) Then
@@ -167,13 +168,10 @@
 0:
     End Sub
 
-    Private Sub ListBoxShortcuts_DragLeave(sender As Object, e As EventArgs) Handles ListBoxShortcuts.DragLeave
-
-    End Sub
 
 #Region "Buttons"
 
-    Private Sub ListBoxShortcuts_DoubleClick(sender As Object, e As EventArgs) Handles ListBoxShortcuts.DoubleClick
+    Private Sub ListBoxShortcuts_DoubleClick(sender As Object, e As EventArgs)
 
         StartApp()
 
@@ -232,7 +230,7 @@
         ShellExecuteEx(sei)
     End Sub
 
-    Private Sub RoundedButton1_Click(sender As Object, e As EventArgs) Handles ButtonEditShortcut.Click
+    Private Sub ButtonEditShortcut_Click(sender As Object, e As EventArgs) Handles ButtonEditShortcut.Click
         Try
 
             Dim Link As String = Path.Combine(ShortcutDirectory, ListBoxShortcuts.SelectedItem.ToString & ".lnk")
@@ -261,6 +259,47 @@
 
     End Sub
 
+    Private Sub ButtonDeleteShortcut_Click(sender As Object, e As EventArgs) Handles ButtonDeleteShortcut.Click
+
+
+        If MsgBox("Daddy", MsgBoxStyle.YesNo, "Oopsie") = vbYes Then
+
+            Try
+
+                Dim Link As String = Path.Combine(ShortcutDirectory, ListBoxShortcuts.SelectedItem.ToString & ".lnk")
+
+
+                If File.Exists(Link) = True Then
+
+                    File.Delete(Link)
+
+                Else
+
+                    Link = Path.Combine(ShortcutDirectory, ListBoxShortcuts.SelectedItem.ToString & ".url")
+                    File.Delete(Link)
+
+
+                End If
+
+            Catch ex As Exception
+
+                MsgBox("Shortcut doesn't exist, and I shit my pants")
+
+                MsgBox(ex.ToString)
+
+            End Try
+
+        End If
+
+        AddShortcutFilesToListBox()
+
+
+    End Sub
+
+
+
 
 #End Region
+
+
 End Class

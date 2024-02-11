@@ -86,11 +86,12 @@ Public Class RoundedButton
         'RoundedButton
         '
         Me.BackColor = System.Drawing.Color.Plum
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.DarkOrchid
         Me.UseVisualStyleBackColor = False
         Me.ResumeLayout(False)
 
     End Sub
+
 End Class
 

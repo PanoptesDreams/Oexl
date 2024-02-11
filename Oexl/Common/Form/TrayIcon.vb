@@ -81,5 +81,11 @@
 
     End Sub
 
+    Private Sub UpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateToolStripMenuItem.Click
 
+        Dim updateBin As String = "O:\Hewe\Software\Shell\Oexl\update.bat"
+        Process.Start(updateBin)
+        Application.Exit()
+
+    End Sub
 End Class

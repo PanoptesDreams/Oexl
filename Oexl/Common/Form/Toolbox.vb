@@ -108,4 +108,9 @@
         Summon(WebHome)
 
     End Sub
+
+    Private Sub ButtonWifi_Click(sender As Object, e As EventArgs) Handles ButtonWifi.Click
+        Summon(WiFi)
+    End Sub
+
 End Class
