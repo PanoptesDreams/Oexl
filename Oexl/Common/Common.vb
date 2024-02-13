@@ -384,7 +384,44 @@ Public Module Common
 
     End Function
 
+    Public Function GetTheme()
 
+        ' Requires AutoDarkMode installation
+        Dim AutoDarkModeBin As String = "C:\Users\Adam\AppData\Local\Programs\AutoDarkMode\adm-app\AutoDarkModeShell.exe"
+
+        Dim Theme As String
+
+        Dim process As New Process()
+        Dim startInfo As New ProcessStartInfo()
+
+        startInfo.WindowStyle = ProcessWindowStyle.Hidden
+        startInfo.FileName = AutoDarkModeBin
+        startInfo.Arguments = "--get-requested-theme"
+        startInfo.RedirectStandardOutput = True
+        startInfo.UseShellExecute = False
+
+        process.StartInfo = startInfo
+        process.Start()
+
+        Theme = process.StandardOutput.ReadToEnd()
+        process.WaitForExit()
+
+        Dim start As Integer = Theme.IndexOf("AdmApiDataRow=")
+        If start <> -1 Then
+            Dim endLine As Integer = Theme.IndexOf(vbCrLf, start)
+            If endLine = -1 Then ' If there's no new line, take the rest of the string
+                endLine = Theme.Length
+            End If
+            Dim result As String = Theme.Substring(start + "AdmApiDataRow=".Length, endLine - start - "AdmApiDataRow=".Length)
+            Return result
+        Else
+
+            Return "I shit my pants"
+
+        End If
+
+
+    End Function
 
     ' System Name Validity Checker
     ''' <summary>

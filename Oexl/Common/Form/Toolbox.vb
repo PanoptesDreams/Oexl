@@ -113,4 +113,7 @@
         Summon(WiFi)
     End Sub
 
+    Private Sub ButtonThemeMode_Click(sender As Object, e As EventArgs) Handles ButtonThemeMode.Click
+        MsgBox(GetTheme.ToString)
+    End Sub
 End Class
